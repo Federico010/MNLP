@@ -1,51 +1,49 @@
 import pandas as pd
+from tqdm import tqdm
 from wikidata.client import Client
-from tqdm import tqdm  # Importa tqdm per la barra di progresso
+
 from modules import paths
 
 
-def extract_entity_id(item_url: str) -> str:
+def extract_id(url: str) -> str:
     """
-    Estrae l'ID dell'entità (es. Q306) dal campo item contenente l'URL.
+    Extract the id from the wikidata url
     """
-    return item_url.split('/')[-1]  # Prende l'ultima parte dell'URL
 
+    return url.split('/')[-1]
 
-def get_num_languages(entity_id: str, client: Client) -> int|None:
+def get_num_languages(id: str, client: Client) -> int|None:
     """
-    Calcola il numero di lingue in cui un'entità è tradotta su Wikipedia.
+    Find the number of languages in wich wikipedia has a page for the entity
     """
+
     try:
-        entity = client.get(entity_id)  # Ottieni l'entità da Wikidata
-        sitelinks = entity.attributes.get('sitelinks', {})  # Collegamenti ai siti Wikimedia
-        """num_languages = 0
+        entity = client.get(id)
+        sitelinks = entity.attributes.get('sitelinks', {})
+        num_languages: int = 0
         for _, data in sitelinks.items():
             if '.wikipedia.org' in data['url']:
                 num_languages += 1
-        return num_languages  # Ritorna il numero di lingue"""
-        return len(sitelinks)
+        return num_languages
     except Exception as e:
-        print(f"Error processing entity {entity_id}: {e}")
-        return None  # Ritorna 0 in caso di errore
+        print(f"Error processing entity {id}: {e}")
+        return None
 
 
 def main() -> None:
-    # Caricamento del dataset
+    # load the dataset
     df: pd.DataFrame = pd.read_csv(paths.TRAINING_SET, sep='\t')
-    print("Dataset loaded:")
-    print(df.head())
 
-    # Estrai l'ID dell'entità dal campo 'item'
-    df['entity_id'] = df['item'].apply(extract_entity_id)
+    # exctract the id from the url
+    df['id'] = df['item'].apply(extract_id)
 
-    # Inizializza il client di Wikidata
-    client = Client()
 
-    # Calcola il numero di lingue per ogni riga del dataset con tqdm
-    tqdm.pandas(desc="Processing entities")  # Inizializza tqdm con una descrizione
-    df['num_languages'] = df['entity_id'].progress_apply(lambda eid: get_num_languages(eid, client))
+    # add the column with the number of languages
+    client: Client = Client()
+    tqdm.pandas(desc="Processing entities")
+    df['num_languages'] = df['id'].progress_apply(lambda id: get_num_languages(id, client))
 
-    # Salva il dataset aggiornato in un nuovo file
+    # save the updated dataset to a new file
     output_file = "updated_dataset.csv"
     df.to_csv(output_file, sep='\t', index=False)
     print(f"Updated dataset saved to {output_file}")
