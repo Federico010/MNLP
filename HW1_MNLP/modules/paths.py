@@ -9,5 +9,5 @@ USEFUL CONSTANTS:
 from pathlib import Path
 
 DATA_FOLDER: Path = Path('dataset')
-TRAINING_SET: Path = DATA_FOLDER / 'training.tsv'
-UPDATED_TRAINING_SET: Path = DATA_FOLDER / 'updated_training.csv'
+UPDATED_TRAIN_SET: Path = DATA_FOLDER / 'updated_train.csv'
+UPDATED_VALID_SET: Path = DATA_FOLDER / 'updated_valid.csv'

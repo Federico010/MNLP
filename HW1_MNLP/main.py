@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Literal
 
 import pandas as pd
 from pathlib import Path
@@ -45,11 +45,19 @@ def process_batch(entity_ids: list[str]) -> list[dict[str, Any]]:
         })
     return results
 
+def prepare_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
+    """
+    Function to load and prepare the dataset.
+    """
 
-def main() -> None:
+    output_file: Path = paths.UPDATED_TRAIN_SET if split == 'train' else paths.UPDATED_VALID_SET
+
+    # Check if the updated dataset already exists
+    if output_file.is_file():
+        return pd.read_csv(output_file)
 
     # Load the dataset
-    df: pd.DataFrame = pd.read_csv(paths.TRAINING_SET, sep='\t')
+    df: pd.DataFrame = pd.read_csv(f'hf://datasets/sapienzanlp/nlp2025_hw1_cultural_dataset/{split}.csv')
 
     # Extract the IDs from the URLs and add them to the DataFrame
     df['id'] = df['item'].apply(utils.extract_id)
@@ -71,9 +79,22 @@ def main() -> None:
     df = df.merge(pd.DataFrame(new_data), on='id', how='left')
 
     # Save the updated dataset to a new file
-    output_file: Path = paths.UPDATED_TRAINING_SET
     df.to_csv(output_file, index=False)
     print(f"Updated dataset saved to {output_file}")
+
+    return df
+
+
+def main() -> None:
+    """
+    Main function to run the script.
+    """
+
+    # Prepare the training set
+    prepare_dataset('train')
+
+    # Prepare the validation set
+    prepare_dataset('valid')
 
 
 if __name__ == '__main__':
