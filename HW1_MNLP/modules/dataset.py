@@ -18,6 +18,10 @@ from modules import paths, utils
 def get_sitelinks(entity_ids: list[str], batch_size: int = 50) -> dict[str, Any]:
     """
     Use the Wikidata API to fetch sitelinks for a list of entity IDs.
+
+    Args:
+        entity_ids: List of entity IDs to fetch sitelinks for.
+        batch_size: Number of IDs to fetch in each API call.
     """
 
     sitelinks: dict[str, Any] = {}
@@ -45,39 +49,90 @@ def get_sitelinks(entity_ids: list[str], batch_size: int = 50) -> dict[str, Any]
     return sitelinks
 
 
-def get_common_pages(sitelinks: dict[str, dict[str, dict[str, Any]]], num_pages: int) -> list[str]:
+class CommonPages:
     """
-    Get the most common pages in the sitelinks.
-    """
+    Class to handle the common pages.
 
-    # find the most common pages in the sitelinks
-    page_counts: dict[str, int] = {}
-    for sitelink in sitelinks.values():
-        for page in sitelink:
-            page_counts[page] = page_counts.get(page, 0) + 1
-
-    # take the top pages
-    sorted_pages: list[tuple[str, int]] = sorted(page_counts.items(), key=lambda x: x[1], reverse=True)
-    top_pages: list[str] = [lang for lang, _ in sorted_pages[:num_pages]]
-    print(f"Top {num_pages} pages: {top_pages}")
-
-    return top_pages
-
-
-def get_common_page_lenght(sitelinks: dict[str, dict[str, dict[str, Any]]], num_pages: int = 20, batch_size: int = 50) -> dict[str, dict[str, int]]:
-    """
-    Get for each id the number of characters in the most common pages.
+    Useful functions:
+    - set: Set the most common pages in the sitelinks.
+    - get: Get the most common pages.
     """
 
-    top_pages: list[str] = get_common_pages(sitelinks, num_pages)
+    top_pages: list[str] = []
 
-    # group by pages in order to make batch requests for each different page
-    page_to_title_to_id: dict[str, dict[str, str]] = {page: {} for page in top_pages}
+    @classmethod
+    def set(cls, sitelinks: dict[str, dict[str, dict[str, Any]]], num_pages: int) -> None:
+        """
+        Set the most common pages in the sitelinks.
+
+        Args:
+            sitelinks: Dictionary of sitelinks.
+            num_pages: Number of pages to find.
+        """
+
+        # find the most common pages in the sitelinks
+        page_counts: dict[str, int] = {}
+        for sitelink in sitelinks.values():
+            for page in sitelink:
+                page_counts[page] = page_counts.get(page, 0) + 1
+
+        # take the top pages
+        sorted_pages: list[tuple[str, int]] = sorted(page_counts.items(), key=lambda x: x[1], reverse=True)
+        cls.top_pages: list[str] = [lang for lang, _ in sorted_pages[:num_pages]]
+        print(f"Top {num_pages} pages: {cls.top_pages}")
+    
+    @classmethod
+    def get(cls) -> list[str]:
+        """
+        Get the most common pages sorted by their number of sitelinks.
+        """
+
+        if not cls.top_pages:
+            raise ValueError("Top pages not set. Call set() method first.")
+
+        return cls.top_pages
+
+
+def group_by_page(sitelinks: dict[str, dict[str, dict[str, Any]]], pages: list[str]) -> dict[str, dict[str, str]]:
+    """
+    Group the sitelinks by page.
+    
+    Args:
+        sitelinks: Dictionary of sitelinks.
+        pages: List of pages to group by.
+
+    Returns:
+        Dictionary mapping each page to a dictionary of titles and their corresponding IDs.
+    """
+
+    page_to_title_to_id: dict[str, dict[str, str]] = {page: {} for page in pages}
     for id, sitelink in sitelinks.items():
-        for page in top_pages:
+        for page in pages:
             if page in sitelink:
                 title: str = sitelink[page]['title']
                 page_to_title_to_id[page][title] = id
+
+    return page_to_title_to_id
+
+
+def get_common_page_lenght(sitelinks: dict[str, dict[str, dict[str, Any]]], find_common_pages: bool = False, num_pages: int = 20, batch_size: int = 50) -> dict[str, dict[str, int]]:
+    """
+    Get for each id the number of characters in the most common pages.
+
+    Args:
+        sitelinks: Dictionary of sitelinks.
+        find_common_pages: Whether to find the most common pages. Set to True to find the most common pages, otherwise the previously set pages will be used.
+        num_pages: Number of pages to find.
+        batch_size: Number of IDs to fetch in each API call.
+    """
+
+    if find_common_pages:
+        # find the most common pages in the sitelinks
+        CommonPages.set(sitelinks, num_pages)
+    top_pages: list[str] = CommonPages.get()
+
+    # group the sitelinks by pages
+    page_to_title_to_id: dict[str, dict[str, str]] = group_by_page(sitelinks, top_pages)
 
     # map the pages names to their URLs
     site_map: dict[str, str] = utils.site_to_url()
@@ -139,7 +194,8 @@ def prepare_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
     df['num_sitelinks'] = df['id'].map(lambda x: len(sitelinks.get(x, {})))
 
     # add the sitelinks lengths to the DataFrame
-    common_page_lenght: dict[str, dict[str, int]] = get_common_page_lenght(sitelinks)
+    find_common_pages: bool = split == 'train' # find common pages only during training
+    common_page_lenght: dict[str, dict[str, int]] = get_common_page_lenght(sitelinks, find_common_pages = find_common_pages)
     common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index').fillna(0).astype(int)
     df = df.merge(common_page_lenght_df, left_on='id', right_index=True, how='left')
     
