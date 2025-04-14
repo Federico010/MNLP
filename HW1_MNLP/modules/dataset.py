@@ -17,10 +17,10 @@ from modules import paths, utils
 
 def get_sitelinks(entity_ids: list[str], batch_size: int = 50) -> dict[str, Any]:
     """
-    Use the Wikidata API to fetch sitelinks for a list of entity IDs.
+    Use the Wikidata API to fetch sitelinks for a set of entity IDs.
 
     Args:
-        entity_ids: List of entity IDs to fetch sitelinks for.
+        entity_ids: set of entity IDs to fetch sitelinks for.
         batch_size: Number of IDs to fetch in each API call.
     """
 
@@ -61,13 +61,13 @@ class CommonPages:
     top_pages: list[str] = []
 
     @classmethod
-    def set(cls, sitelinks: dict[str, dict[str, dict[str, Any]]], num_pages: int) -> None:
+    def set(cls, sitelinks: dict[str, dict[str, dict[str, Any]]], max_pages: int) -> None:
         """
         Set the most common pages in the sitelinks.
 
         Args:
             sitelinks: Dictionary of sitelinks.
-            num_pages: Number of pages to find.
+            max_pages: Maximim number of pages to consider. If <= 0, all pages will be considered.
         """
 
         # find the most common pages in the sitelinks
@@ -78,8 +78,11 @@ class CommonPages:
 
         # take the top pages
         sorted_pages: list[tuple[str, int]] = sorted(page_counts.items(), key=lambda x: x[1], reverse=True)
-        cls.top_pages: list[str] = [lang for lang, _ in sorted_pages[:num_pages]]
-        print(f"Top {num_pages} pages: {cls.top_pages}")
+        if max_pages > 0:
+            cls.top_pages: list[str] = [lang for lang, _ in sorted_pages[:max_pages]]
+        else:
+            cls.top_pages: list[str] = [lang for lang, _ in sorted_pages]
+        print(f"Top {max_pages} pages: {cls.top_pages}")
     
     @classmethod
     def get(cls) -> list[str]:
@@ -99,7 +102,7 @@ def group_by_page(sitelinks: dict[str, dict[str, dict[str, Any]]], pages: list[s
     
     Args:
         sitelinks: Dictionary of sitelinks.
-        pages: List of pages to group by.
+        pages: list of pages to group by.
 
     Returns:
         Dictionary mapping each page to a dictionary of titles and their corresponding IDs.
@@ -115,27 +118,27 @@ def group_by_page(sitelinks: dict[str, dict[str, dict[str, Any]]], pages: list[s
     return page_to_title_to_id
 
 
-def get_common_page_lenght(sitelinks: dict[str, dict[str, dict[str, Any]]], find_common_pages: bool = False, num_pages: int = 20, batch_size: int = 50) -> dict[str, dict[str, int]]:
+def get_common_page_lenght(sitelinks: dict[str, dict[str, dict[str, Any]]], find_common_pages: bool = False, max_pages: int = 20, batch_size: int = 50) -> dict[str, dict[str, int]]:
     """
     Get for each id the number of characters in the most common pages.
 
     Args:
         sitelinks: Dictionary of sitelinks.
         find_common_pages: Whether to find the most common pages. Set to True to find the most common pages, otherwise the previously set pages will be used.
-        num_pages: Number of pages to find.
+        max_pages: Maximim number of pages to consider.
         batch_size: Number of IDs to fetch in each API call.
     """
 
     if find_common_pages:
         # find the most common pages in the sitelinks
-        CommonPages.set(sitelinks, num_pages)
+        CommonPages.set(sitelinks, max_pages)
     top_pages: list[str] = CommonPages.get()
 
     # group the sitelinks by pages
     page_to_title_to_id: dict[str, dict[str, str]] = group_by_page(sitelinks, top_pages)
 
     # map the pages names to their URLs
-    site_map: dict[str, str] = utils.site_to_url()
+    site_map: dict[str, str] = utils.PageHandler.get_site_to_url()
 
     # make the requests in batches
     results: dict[str, dict[str, int]] = {}
@@ -181,6 +184,7 @@ def prepare_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
 
     # Load the dataset
     df: pd.DataFrame = pd.read_csv(f'hf://datasets/sapienzanlp/nlp2025_hw1_cultural_dataset/{split}.csv')
+    df = df.head(50)  # For testing purposes, remove this line in production
 
     # Extract the IDs from the URLs and add them to the DataFrame
     df['id'] = df['item'].map(utils.extract_id)
