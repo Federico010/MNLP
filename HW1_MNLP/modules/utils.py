@@ -22,6 +22,9 @@ def extract_id(url: str) -> str:
 class PageHandler:
     """
     Class to handle the pages.
+
+    Useful methods:
+    - get_site_to_url: Get the site to URL mapping.
     """
 
     site_to_url: dict[str, str] = {}

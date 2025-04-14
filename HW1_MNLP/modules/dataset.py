@@ -53,7 +53,7 @@ class CommonPages:
     """
     Class to handle the common pages.
 
-    Useful functions:
+    Useful methods:
     - set: Set the most common pages in the sitelinks.
     - get: Get the most common pages.
     """
