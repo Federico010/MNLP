@@ -26,7 +26,7 @@ class PageHandler:
     Class to handle the pages.
 
     Useful methods:
-    - get_site_to_url: Get the site to URL mapping.
+    - get_site_to_url
     """
 
     site_to_url: dict[str, str] = {}
@@ -37,6 +37,7 @@ class PageHandler:
         Static method to get the sitematrix.
         """
 
+        # API request to get the sitematrix
         url: str = 'https://meta.wikimedia.org/w/api.php'
         params: dict[str, str] = {
             'action': 'sitematrix',
@@ -46,8 +47,9 @@ class PageHandler:
         response.raise_for_status()
         data: dict[str, Any] = response.json()
 
-        # Parse the response to get the sitematrix
+        # Parse the response
         return data.get('sitematrix', {})
+
 
     @classmethod
     def get_site_to_url(cls) -> dict[str, str]:
@@ -55,9 +57,11 @@ class PageHandler:
         Class method that returns a dictionary mapping site names (dbname) to their URLs.
         """
 
+        # return the cached value if it exists
         if cls.site_to_url:
             return cls.site_to_url
 
+        # create the dictionary starting from the sitematrix
         sitematrix: dict[str, Any] = PageHandler._get_sitematrix()
         for key, val in sitematrix.items():
             if key.isdigit():
