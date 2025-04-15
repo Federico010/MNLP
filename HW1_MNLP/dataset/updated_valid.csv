@@ -1,301 +1,301 @@
-item,name,description,type,category,subcategory,label,id,num_sitelinks,enwiki,frwiki,dewiki,eswiki,itwiki,ruwiki,ptwiki,nlwiki,jawiki,arwiki,plwiki,ukwiki,zhwiki,svwiki,fawiki,cawiki,kowiki,fiwiki,cswiki,commonswiki
-http://www.wikidata.org/entity/Q15786,1. FC Nürnberg,"German sports club based in Nuremberg, Bavaria",entity,sports,sports club,cultural representative,Q15786,61,52212,30193,230315,29939,42344,44585,15147,44258,39790,6276,16128,4085,9649,7308,3975,6650,38366,3582,47320,0
-http://www.wikidata.org/entity/Q268530,77 Records,UK record label,entity,music,record label,cultural exclusive,Q268530,7,2666,3341,2732,0,0,2331,0,1042,0,0,0,0,0,0,0,0,0,0,0,63
-http://www.wikidata.org/entity/Q216153,A Bug's Life,1998 animated film directed by John Lasseter and Andrew Stanton,entity,comics and anime,animated film,cultural representative,Q216153,68,81442,14953,10248,18375,33731,49256,60355,12086,51248,15640,5925,9235,13032,5243,11072,4385,3613,9292,4124,0
-http://www.wikidata.org/entity/Q593,A Gang Story,2011 film by Olivier Marchal,entity,films,film,cultural exclusive,Q593,12,2225,10604,6321,0,3637,6420,573,3468,11172,0,0,0,0,0,0,0,2573,0,0,0
-http://www.wikidata.org/entity/Q192185,Aaron Copland,"American composer, composition teacher, writer, and conductor (1900-1990)",entity,performing arts,choreographer,cultural representative,Q192185,60,85317,18525,16175,13846,8592,13952,16173,17654,8613,17170,7489,6629,4948,8421,8619,13030,5212,4460,3051,484
-http://www.wikidata.org/entity/Q265890,Aarwangen Castle,"castle in Aarwangen in the canton of Bern, Switzerland",entity,architecture,architectural structure,cultural exclusive,Q265890,5,1937,0,5870,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,321
-http://www.wikidata.org/entity/Q305718,abaya,"simple, loose over-garment wore by humans, especially Muslim women",concept,fashion,traditional costume,cultural representative,Q305718,44,14965,30198,6195,5086,1048,1399,3115,5030,6859,7433,2651,1351,0,4670,6552,2744,1086,2181,2701,254
-http://www.wikidata.org/entity/Q337267,Academy of San Carlos,"Located in Mexico City, it was the first major art academy and the first art museum in the Americas",entity,visual arts,art gallery,cultural exclusive,Q337267,14,18440,1818,2916,10915,5194,4958,2023,0,5332,0,0,4003,7155,0,0,0,0,0,0,1090
-http://www.wikidata.org/entity/Q15,Africa,continent,entity,geography,geographic location,cultural representative,Q15,389,218087,546177,76437,134804,66736,179090,91910,18183,97827,124994,197593,361957,56689,38747,63339,53226,89924,52372,98860,11354
-http://www.wikidata.org/entity/Q388170,African American literature,body of literature by Americans of African descent,entity,literature,literary genre,cultural representative,Q388170,20,100210,21573,23395,6624,55836,10668,0,0,0,13193,0,0,5001,0,0,30147,0,0,0,0
-http://www.wikidata.org/entity/Q11453,agricultural irrigation,artificial application of water to cultivated land,concept,transportation,transport,cultural agnostic,Q11453,115,83360,50900,39080,30475,16044,45397,11765,14531,54249,18389,8483,46898,28575,13710,22188,36907,5215,7530,23139,1017
-http://www.wikidata.org/entity/Q11436,aircraft,machine that is able to fly by gaining support from the air other than the reactions of the air against the earth’s surface,concept,transportation,mode of transport,cultural agnostic,Q11436,110,30053,20843,21134,48659,8580,96328,21695,3512,44901,2598,4606,22632,71657,6871,9214,34581,9111,4978,4806,3640
-http://www.wikidata.org/entity/Q583479,Alcantara,trademark of a synthetic fabric,concept,fashion,textile,cultural agnostic,Q583479,26,10626,3543,6406,4277,6007,7823,2279,1394,3769,1895,2302,1483,1635,612,8699,0,0,1475,3392,243
-http://www.wikidata.org/entity/Q91717,alcazaba,type of fortress,concept,history,monument,cultural representative,Q91717,20,57,2143,1095,7291,813,7804,2144,753,0,2669,0,8350,0,0,0,7383,0,0,0,0
-http://www.wikidata.org/entity/Q1453,Alexandra Stan,Romanian singer,entity,fashion,model,cultural representative,Q1453,44,92784,19614,12724,84916,16841,32737,28253,3709,5654,7853,5276,3106,16547,2830,13466,5235,1689,6626,5065,0
-http://www.wikidata.org/entity/Q9570,Amitabh Bachchan,Indian film actor (born 1942),entity,books,writer,cultural representative,Q9570,122,187767,18987,15082,40826,16003,24096,11393,8219,121894,84976,12027,12982,4052,1666,30654,24885,2530,10674,1401,0
-http://www.wikidata.org/entity/Q46392,Amjad Khan,Indian actor (1940-1992),entity,films,film director,cultural representative,Q46392,30,17605,4889,0,0,2205,7773,0,13657,17379,4463,0,0,0,0,6625,0,0,1195,0,0
-http://www.wikidata.org/entity/Q487265,Anasyrma,The culturally framed gesture of lifting the skirt or kilt,concept,gestures and habits,body language,cultural representative,Q487265,19,12834,14056,13819,5229,12828,18181,20229,10564,8607,0,20241,0,1287,11373,2649,9757,0,4314,0,562
-http://www.wikidata.org/entity/Q25314,Angiosperms,clade of flowering plants (in APG I-III),concept,biology,plant,cultural agnostic,Q25314,138,82499,78073,15440,41602,17251,31961,18613,18515,22775,29207,19265,42159,45639,8515,101754,17055,26171,4096,37062,2324
-http://www.wikidata.org/entity/Q1107,anime,Japanese style of animation,concept,films,film genre,cultural representative,Q1107,145,152842,43022,151149,126495,121626,107849,33981,29228,128917,28190,23482,85802,23449,64319,17107,98792,41808,7301,15314,0
-http://www.wikidata.org/entity/Q27585,AOL,American web portal and online service provider,entity,media,media company,cultural exclusive,Q27585,51,126992,20976,28446,28805,10814,76674,13503,4618,17565,22003,5428,8339,7193,3318,7041,1639,6521,3918,2895,0
-http://www.wikidata.org/entity/Q192150,apéritif,alcoholic drink normally served before a meal,concept,food,drink,cultural representative,Q192150,37,78,12330,5695,0,12579,6165,0,1172,4524,0,1507,3416,0,1643,0,2062,3198,2594,1732,0
-http://www.wikidata.org/entity/Q618238,Aperol,"Italian bitter apéritif made of gentian, rhubarb, and cinchona",entity,food,drink,cultural representative,Q618238,23,4259,7598,3231,2643,9913,9001,2415,2420,2218,0,1306,948,0,4642,0,0,606,1499,4055,188
-http://www.wikidata.org/entity/Q207241,applied arts,arts that apply design and decoration to everyday objects,concept,visual arts,visual arts,cultural agnostic,Q207241,55,5229,9357,2557,3983,1333,31016,1734,6672,2404,9450,1278,36387,1963,1948,2414,2095,1832,2567,955,0
-http://www.wikidata.org/entity/Q17045537,aragoto,boisterous masculine style of kabuki acting,concept,films,acting style,cultural exclusive,Q17045537,8,3937,1602,0,1180,3184,0,2265,0,0,0,2113,0,0,0,0,1326,0,0,0,261
-http://www.wikidata.org/entity/Q42973,architect,"person trained to plan and design buildings, and oversee their construction",concept,fashion,designer,cultural agnostic,Q42973,108,30051,74555,36588,22538,14044,89778,10530,14056,247769,6174,8293,15317,16333,11451,14305,5638,3764,7101,7015,0
-http://www.wikidata.org/entity/Q3151019,architectural engineer,engineer specialising in the design and operation of buildings,concept,architecture,architect,cultural agnostic,Q3151019,3,6535,25985,0,0,0,0,0,0,2700,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q45418,argan oil,argan oil is found in argan tree,concept,food,ingredient,cultural agnostic,Q45418,31,16909,27722,18747,21095,19392,5709,2867,6844,3567,8997,1587,24471,0,12952,16768,2543,1029,0,6083,160
-http://www.wikidata.org/entity/Q1792450,art historian,humanist who is engaged in history of art,concept,history,historian,cultural agnostic,Q1792450,17,25,31,5569,49,0,68,0,0,4683,46,0,48,0,28,0,0,27,0,0,0
-http://www.wikidata.org/entity/Q11629,art of painting,"practice of applying paint, pigment, color or other medium to a surface",concept,visual arts,visual arts,cultural agnostic,Q11629,209,92729,15961,48384,60556,9289,49110,12919,41312,18322,4758,2479,83372,21014,26553,39741,58664,8150,10329,60193,5750
-http://www.wikidata.org/entity/Q7066,atheism,absence of belief in the existence of deities; the opposite of theism,concept,philosophy and religion,philosophical movement,cultural agnostic,Q7066,220,172790,93357,165722,195055,122611,237495,129516,17837,42268,130436,114096,162876,154883,42308,204215,178540,77562,68451,38525,0
-http://www.wikidata.org/entity/Q552300,"Baa, Baa, Black Sheep",English nursery rhyme,entity,books,book,cultural exclusive,Q552300,21,12163,2058,0,0,7909,19276,0,0,13590,15036,2498,15116,7584,11907,0,0,0,0,0,135
-http://www.wikidata.org/entity/Q31444638,Baldegg railway station,railway station in Switzerland,entity,transportation,station,cultural exclusive,Q31444638,4,2738,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,335
-http://www.wikidata.org/entity/Q890297,Baltic song festivals,song and dance festivals in Baltic states,concept,music,music festival,cultural representative,Q890297,26,3270,3311,2932,0,0,8731,1980,0,0,4718,5080,7152,0,0,0,0,1868,0,0,171
-http://www.wikidata.org/entity/Q6658,Bamboula,kind of drum,concept,performing arts,dance,cultural representative,Q6658,5,4771,16145,5473,3020,0,0,0,2047,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q807725,Barbarastollen underground archive,archive in Germany,concept,history,archive,cultural exclusive,Q807725,6,2345,0,23979,0,4224,0,0,0,0,0,0,0,0,0,0,0,0,0,0,351
-http://www.wikidata.org/entity/Q353936,Baselland Transport,transport company,entity,transportation,transport company,cultural exclusive,Q353936,7,7017,14727,25485,0,4419,2441,0,0,0,0,0,0,0,0,0,0,0,0,0,201
-http://www.wikidata.org/entity/Q66705,Bassecourt,"village and former municipality in Haute-Sorne in the canton of Jura, Switzerland",entity,geography,neighborhood,cultural exclusive,Q66705,22,19502,10178,9472,2186,3278,0,1795,2441,0,0,1734,0,481,3523,0,586,0,0,0,454
-http://www.wikidata.org/entity/Q811389,Bauhaus Archive,museum and archive in Berlin,entity,history,archive,cultural representative,Q811389,19,4810,2589,9456,9890,3654,0,0,2299,0,0,8296,0,762,1955,0,0,0,1672,1653,483
-http://www.wikidata.org/entity/Q812609,Bayrisch Kraut,Bavarian cabbage dish,entity,food,dish,cultural representative,Q812609,3,1248,0,1235,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q815611,Biblioteca Ambrosiana,conservation library in Italy,entity,history,archive,cultural exclusive,Q815611,39,22493,9531,7201,8003,21523,4473,9925,2419,5328,3366,3726,11299,2272,8919,5977,7926,6267,0,3166,1200
-http://www.wikidata.org/entity/Q11442,bicycle,pedal-driven two-wheel vehicle,entity,transportation,mode of transport,cultural agnostic,Q11442,197,94779,109371,74003,65833,56284,145702,32663,43220,71393,16489,45770,105978,8370,34585,29772,35019,16842,46015,30416,15969
-http://www.wikidata.org/entity/Q5173,Bilateria,"animals with bilateral symmetry, at least as embryo",concept,biology,animal,cultural agnostic,Q5173,70,33784,31790,22804,26686,9929,24048,9752,9717,6981,7162,7549,5118,4942,2270,5909,5208,5107,2837,15477,0
-http://www.wikidata.org/entity/Q489,Bill Maher,American stand-up comedian and television host,entity,films,film producer,cultural representative,Q489,53,124509,14143,11717,31560,8379,6121,48253,3232,18437,12337,8191,13946,8872,5543,10609,2351,4341,5802,6515,0
-http://www.wikidata.org/entity/Q49759,bloc party,non-ruling but legal political parties in an authoritarian or totalitarian regime as auxiliary parties and members of a ruling coalition,concept,politics,political party,cultural agnostic,Q49759,15,22494,0,31055,4690,0,0,0,7749,8281,3166,0,0,13541,4390,0,0,8425,12497,0,0
-http://www.wikidata.org/entity/Q3641631,boho-chic,1990s fashion trend incorporating bohemian and hippie influences,concept,fashion,fashion trend,cultural representative,Q3641631,9,49659,2886,4411,0,5933,0,0,0,0,0,1314,1639,0,0,0,0,0,0,0,261
-http://www.wikidata.org/entity/Q157906,Boomerang,American cable television channel,entity,media,streaming service,cultural exclusive,Q157906,39,14806,10147,0,10974,0,14349,11378,2108,5705,8752,29664,2675,15461,6707,4158,3441,2534,2770,1787,0
-http://www.wikidata.org/entity/Q549322,bullfighter,profession,concept,sports,athlete,cultural representative,Q549322,30,13169,3721,6965,84300,4267,0,0,5887,3398,1961,653,0,0,0,50,1101,3082,0,1444,327
-http://www.wikidata.org/entity/Q1132695,calico,"balanced plain-weave cotton or cotton-blend fabric, often with a small printed pattern",concept,fashion,textile,cultural representative,Q1132695,31,12480,3760,3545,8813,2880,15519,1924,5171,3346,0,701,2794,0,633,0,0,687,428,3022,142
-http://www.wikidata.org/entity/Q65997,Caliph,monarchical title based on claim to be a successor of Muhammad,concept,philosophy and religion,religious leader,cultural representative,Q65997,85,198,19636,22684,23606,23727,23417,3975,11460,9224,29995,3489,5862,5749,15511,16710,17552,4989,14329,2908,0
-http://www.wikidata.org/entity/Q5119,capital city,"primary governing city of a top-level (country) or first-level and second-level subdivision (country, state, province, regency, etc) political entity",concept,geography,city,cultural agnostic,Q5119,230,56393,9781,37770,19523,2924,30215,7313,16013,40481,16709,3128,36301,25756,7295,4752,27872,3759,3986,9700,0
-http://www.wikidata.org/entity/Q584540,captain,member of a sports team,concept,sports,athlete,cultural agnostic,Q584540,38,5230,1912,6940,1623,6214,0,5044,1743,5625,5497,0,0,658,3441,2580,2357,1385,3463,2431,0
-http://www.wikidata.org/entity/Q180449,carbatina,"shoe cut from a single piece of leather and secured with a lace, worn in Ancient Rome and later throughout Central Europe",concept,fashion,traditional costume,cultural representative,Q180449,14,8106,1451,2282,6229,0,11352,0,1802,0,0,0,10345,0,0,0,1124,0,0,0,444
-http://www.wikidata.org/entity/Q410,Carl Sagan,"American astrophysicist, cosmologist and author (1934–1996)",entity,books,writer,cultural representative,Q410,140,153787,32931,21287,92451,49139,63709,101089,16425,38011,17111,8371,38626,25068,15272,25430,17644,20155,19975,59229,1017
-http://www.wikidata.org/entity/Q18240,carnivorous plant,plant that traps and consumes animals or protozoans,concept,biology,plant,cultural agnostic,Q18240,74,105139,35455,14776,16237,83322,42137,9759,8493,27842,12455,8093,22536,16720,3375,138474,4099,25864,25869,5588,0
-http://www.wikidata.org/entity/Q568286,cento,literary genre,concept,literature,poetry,cultural exclusive,Q568286,19,8401,5456,2826,2294,7505,16263,3702,0,0,1621,2476,2642,0,0,0,1561,0,0,3212,0
-http://www.wikidata.org/entity/Q154996,Charlottenburg Palace,"Baroque palace in Berlin, Germany",entity,history,museum,cultural representative,Q154996,49,19818,14239,40703,16190,6439,87084,17857,4019,2196,5613,7430,5129,5481,4639,4595,3699,2129,11570,12366,4559
-http://www.wikidata.org/entity/Q251672,Château Borély,museum,entity,history,museum,cultural exclusive,Q251672,6,3944,15808,6080,10199,0,0,0,0,0,0,0,0,1688,0,0,0,0,0,0,563
-http://www.wikidata.org/entity/Q45982,Chittagong Kings,"Bangladesh Premier League team based in Chittagong, Bangladesh",entity,sports,sports team,cultural exclusive,Q45982,7,16602,0,11014,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q1604035,Choc Stars,Congolese soukous band,entity,music,musical group,cultural exclusive,Q1604035,5,2499,22956,0,15433,3319,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q222344,cinematographer,chief over the camera and lighting crews working on a film,concept,visual arts,artist,cultural agnostic,Q222344,58,10118,14636,21265,9009,6496,8402,2485,2446,17783,3267,1991,6527,3764,7429,7258,6405,1726,5752,1947,0
-http://www.wikidata.org/entity/Q118865,clarinetist,musician who plays the clarinet,concept,music,musical profession,cultural agnostic,Q118865,11,22,14953,137,0,0,50,0,0,0,41,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q265418,Classic Produktion Osnabrück,record label,entity,music,record label,cultural exclusive,Q265418,7,7103,4417,5196,0,1708,0,0,1994,0,0,1474,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q11955,Club Deportivo Guadalajara,Spanish football club,entity,sports,sports club,cultural exclusive,Q11955,20,25683,4038,3819,58683,2536,13585,3405,2176,20963,1577,20781,23120,1814,0,0,1664,2199,1677,0,0
-http://www.wikidata.org/entity/Q280015,Colorado Gold Kings,sports team,entity,sports,sports team,cultural exclusive,Q280015,2,7632,0,3578,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q245068,comedian,"person who seeks to entertain an audience, primarily by making them laugh",concept,visual arts,artist,cultural agnostic,Q245068,74,24742,6556,3447,3212,4697,8585,22,3099,8446,10812,816,1794,3620,1648,4543,1929,1994,927,0,0
-http://www.wikidata.org/entity/Q27773,common sole,flatfish,concept,food,food,cultural agnostic,Q27773,45,6827,9300,4944,3122,6574,10940,2464,4723,3322,1797,5351,5476,1505,4920,1567,5270,0,3218,5996,504
-http://www.wikidata.org/entity/Q233591,communist party,political party that promotes communist philosophy and values,concept,politics,political party,cultural agnostic,Q233591,56,14817,0,160273,4299,11145,33308,3339,2169,49221,12193,3968,9275,23993,0,4917,3633,42990,10278,7931,0
-http://www.wikidata.org/entity/Q379282,community journalism,journalism genre,concept,media,magazine,cultural agnostic,Q379282,8,18133,0,13714,0,3591,21276,8503,0,31282,0,0,0,0,0,2179,0,0,0,0,0
-http://www.wikidata.org/entity/Q36834,composer,person who is an author of music in any form,concept,music,musician,cultural agnostic,Q36834,128,24954,18725,31974,7528,14806,7936,5444,3065,4650,59357,1471,10061,2005,1284,3717,4655,1412,2265,1757,0
-http://www.wikidata.org/entity/Q158852,conductor,person who directs a musical group during a performance,concept,music,musician,cultural agnostic,Q158852,69,102,25999,23728,24803,29514,43986,0,17064,17911,86,5655,7791,23414,4424,9798,2860,1564,10032,3989,0
-http://www.wikidata.org/entity/Q376596,courtship,"ritual, period in a couple's relationship which precedes their engagement and marriage",concept,gestures and habits,ritual,cultural agnostic,Q376596,48,124665,0,166,21827,29538,8932,1993,1752,0,2717,0,5921,11086,0,7318,3019,15739,0,7534,169
-http://www.wikidata.org/entity/Q134426,crime comic,comic genre,concept,comics and anime,comics,cultural agnostic,Q134426,5,12063,2822,0,13577,7744,0,0,0,0,0,0,0,0,0,0,2613,0,0,0,0
-http://www.wikidata.org/entity/Q506002,crosier,a staff resembling a shepherd's crook carried by bishops and abbots as a symbol of office ceremonial staff in Christianity,entity,fashion,clothing,cultural representative,Q506002,48,21652,8949,16118,3447,9312,7137,1690,12748,1139,2716,6090,8728,0,603,4519,16868,8596,7892,2813,175
-http://www.wikidata.org/entity/Q172349,crown molding,"decorative element to gracefully flare out to a finished top edge such as capping walls, pilasters, and cabinets",concept,architecture,building material,cultural agnostic,Q172349,4,3721,1993,0,0,0,0,0,0,0,0,0,0,0,396,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q1142035,Crunchyroll,American video streaming service,entity,media,streaming service,cultural representative,Q1142035,39,95775,143077,27192,122711,19970,32036,88913,4261,39468,10494,10479,5426,20238,5254,3765,6299,6125,5796,31590,0
-http://www.wikidata.org/entity/Q597600,Cuban Institute of Radio and Television,State broadcaster of Cuba,entity,politics,government agency,cultural exclusive,Q597600,9,8310,1204,2740,12303,0,0,0,0,2961,0,0,0,2829,0,0,371,0,0,0,153
-http://www.wikidata.org/entity/Q7367,Culicidae,family of nematoceran flies,concept,biology,animal,cultural agnostic,Q7367,188,95355,133322,51124,36234,71496,60566,13831,29849,52024,13875,13502,38713,31295,19999,4695,32419,23294,19086,10755,3099
-http://www.wikidata.org/entity/Q8690,Cultural Revolution,1966–1976 Maoist sociopolitical movement in China,entity,history,historical event,cultural representative,Q8690,119,201771,102850,120109,88943,49468,67684,32898,35064,104549,73663,30748,28300,340270,24355,14445,29876,120391,41476,12750,0
-http://www.wikidata.org/entity/Q247979,curia,"group of officials who assist in the governance of a particular Church, in Roman Catholicism",concept,politics,government,cultural representative,Q247979,8,3622,4671,0,4066,0,0,0,0,666,0,1060,0,4392,0,0,1355,0,0,3988,0
-http://www.wikidata.org/entity/Q5203792,D. Rajarathinam,Indian politician,entity,politics,government,cultural exclusive,Q5203792,2,2754,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q11639,dance,rhythmic movement of the body,concept,sports,sport,cultural agnostic,Q11639,219,68041,26443,44310,34562,38048,49097,14518,5210,21901,12547,13333,38963,14417,10288,25411,33701,28728,18774,6459,5755
-http://www.wikidata.org/entity/Q765,Dario Fo,"Italian actor, playwright, comedian, singer-songwriter, theater director, painter, and political activist (1926-2016)",entity,performing arts,theatrical director,cultural representative,Q765,108,63805,29109,22090,32063,88374,15834,7868,5367,10776,67088,16971,20759,4728,11115,23176,7779,5897,5598,13741,0
-http://www.wikidata.org/entity/Q15647884,Dato Sri Tahir,Indonesian businessman,entity,politics,government,cultural representative,Q15647884,5,6863,0,0,0,0,0,0,0,0,2332,2371,0,5788,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q850794,dhoti,traditional men's garment of South Asia,concept,fashion,traditional costume,cultural exclusive,Q850794,46,26302,3106,3404,2622,1617,2173,1253,600,2218,7734,595,2896,6642,867,0,0,0,0,0,111
-http://www.wikidata.org/entity/Q430,dinosaur,clade of archosaurian reptiles (Archosauria),concept,biology,animal,cultural agnostic,Q430,190,294928,202181,116532,228727,159276,194422,190471,122387,106632,270564,214176,48517,156257,49597,54133,133148,26939,42931,219183,9808
-http://www.wikidata.org/entity/Q3290343,Dione Lucas,British chef (1909–1971),entity,food,cook,cultural exclusive,Q3290343,6,5815,0,0,3416,0,0,903,0,0,0,0,0,0,0,0,2497,0,0,0,0
-http://www.wikidata.org/entity/Q130857,disc jockey,person who plays recorded music for an audience,concept,music,musician,cultural agnostic,Q130857,86,65656,45041,32257,23806,21085,17275,11040,8248,21570,6435,13985,5256,12968,4792,8220,3244,3022,6111,9454,0
-http://www.wikidata.org/entity/Q2722359,Dnyaneshwari,13th-century treatise on the Bhagavad Gita in Marathi language,entity,books,religious book,cultural exclusive,Q2722359,8,7159,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q386854,drummer,percussionist who creates and accompanies music using drums,entity,music,musical profession,cultural agnostic,Q386854,39,8035,963,94,1344,4131,12940,1364,720,4913,2299,0,4204,684,1722,1472,2012,1464,512,0,0
-http://www.wikidata.org/entity/Q15964121,Ebikon railway station,railway station in Switzerland,entity,transportation,station,cultural exclusive,Q15964121,8,2954,0,9990,5017,3380,0,0,0,0,0,0,0,0,0,0,0,1775,0,0,586
-http://www.wikidata.org/entity/Q1350189,egyptologist,person who studies Ancient Egypt and its antiquities,concept,history,historian,cultural agnostic,Q1350189,15,120,107525,96,5652,0,0,0,4435,0,5380,0,0,0,48,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q367660,Eid Mubarak,traditional Muslim greeting,entity,gestures and habits,greeting,cultural representative,Q367660,32,9634,3163,0,1734,1650,4917,6725,1568,7082,8345,0,4449,0,0,1571,0,0,0,0,129
-http://www.wikidata.org/entity/Q31444654,Emmenbrücke Gersag railway station,railway station in Switzerland,entity,transportation,station,cultural exclusive,Q31444654,4,3211,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,437
-http://www.wikidata.org/entity/Q1706696,engastration,Cooking technique,concept,food,cooking technique,cultural agnostic,Q1706696,4,2307,0,0,2280,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q9465,ethics,"branch of philosophy that systematizes, defends, and recommends concepts of right and wrong conduct",concept,philosophy and religion,philosophy,cultural agnostic,Q9465,169,206195,67522,75482,32931,83855,48302,60884,73894,220720,26462,14032,54836,35783,10827,54097,30176,8249,24501,24462,0
-http://www.wikidata.org/entity/Q1371394,ethnographic film,film genre,entity,films,film genre,cultural agnostic,Q1371394,12,20323,1853,14223,2859,3798,0,3773,0,12389,7594,0,0,0,0,7320,3973,0,0,0,0
-http://www.wikidata.org/entity/Q188907,etiquette,customary code of polite behaviour,concept,gestures and habits,mores,cultural agnostic,Q188907,86,39770,13076,10342,39311,9830,15635,12017,6830,15146,6688,0,6442,5996,1697,8438,37447,1993,3948,6793,0
-http://www.wikidata.org/entity/Q46706,Eugène Ionesco,Romanian-French playwright (1909–1994),entity,films,film director,cultural representative,Q46706,102,29398,62354,18883,21090,38367,40720,5843,3216,20250,27401,7793,30137,12071,4501,9838,29561,3543,2682,7604,0
-http://www.wikidata.org/entity/Q387284,European comics,comics produced in Continental Europe,concept,comics and anime,comics,cultural representative,Q387284,7,4676,6140,27781,0,0,0,0,0,1522,0,0,0,1026,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q24649,European political party,transnational political party operating at the level of the European Union,concept,politics,political party,cultural representative,Q24649,38,86224,90837,57223,44030,37592,24226,31913,37564,8906,18426,4050,3471,78515,18184,42513,1440,5754,9532,7710,0
-http://www.wikidata.org/entity/Q38066,existentialism,philosophical and literary current,concept,philosophy and religion,philosophical movement,cultural agnostic,Q38066,113,95309,53824,21640,48267,48401,47438,97323,11216,22366,46478,12658,12947,14543,7658,51252,23421,12486,41256,18656,0
-http://www.wikidata.org/entity/Q658371,extra,"actor with a very minor part, typically non-speaking and in the background",concept,performing arts,actor,cultural agnostic,Q658371,48,14144,6232,2800,2968,2938,4418,6864,2386,13023,2613,1152,3724,4461,2629,2314,5075,4398,2057,7694,101
-http://www.wikidata.org/entity/Q693,fable,short fictional story that often anthropomorphises non-humans to illustrate a moral lesson,concept,literature,literary genre,cultural agnostic,Q693,110,27106,72871,36418,24899,30082,41726,8094,5902,7999,3653,6923,49220,6344,2718,8458,22306,695,3039,13082,0
-http://www.wikidata.org/entity/Q699,fairy tale,fictional story typically featuring folkloric fantasy characters and magic,entity,literature,literary genre,cultural agnostic,Q699,116,104598,20860,59094,73122,39144,96277,43851,31892,20763,12005,8836,50783,16989,4689,7901,71832,2774,7256,24434,0
-http://www.wikidata.org/entity/Q9764,flamenco,genre of Spanish music and dance,concept,performing arts,folk dance,cultural representative,Q9764,106,77817,136722,74836,73830,30498,43197,30417,34801,39612,42433,7034,30441,13803,2587,10264,42412,9850,9890,4646,566
-http://www.wikidata.org/entity/Q62449,flat white,espresso-based coffee beverage,concept,food,drink,cultural representative,Q62449,24,16422,10956,3743,7776,2707,3653,14183,3294,1073,8770,1115,9240,3868,0,1251,0,2517,0,2614,149
-http://www.wikidata.org/entity/Q36192,folklore,"cultural expressions of a particular group of people, manifested in verbal form (proverbs, jokes, legends, songs), material form (objects of art), customs (beliefs and ways of doing things)",entity,gestures and habits,tradition,cultural agnostic,Q36192,136,83688,14527,14837,64010,22747,24279,13671,7568,6438,12964,9443,148870,6263,2606,14177,17042,1786,5864,14074,0
-http://www.wikidata.org/entity/Q1968,Formula One,motorsport championship held worldwide,entity,sports,sport,cultural agnostic,Q1968,139,239383,359972,141373,192458,189899,160685,121433,100523,175093,49492,30494,31393,61867,69454,47822,126644,28810,101598,31855,13268
-http://www.wikidata.org/entity/Q3102,Francis Coventry,English novelist,entity,literature,writer,cultural exclusive,Q3102,8,2296,0,6505,0,0,0,0,565,2156,1077,0,0,0,0,0,0,0,0,0,491
-http://www.wikidata.org/entity/Q84629,Franz Ziehl,German microbiologist (1857–1926),entity,biology,biologist,cultural exclusive,Q84629,9,1447,0,1379,0,0,2352,0,508,0,0,0,0,1008,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q6534,French Revolution,revolution in France from 1789 to 1799,entity,history,historical event,cultural representative,Q6534,183,152431,247091,152043,57988,170391,188109,86073,94499,113569,80833,162113,94819,59227,32509,92325,59833,84162,41863,80973,0
-http://www.wikidata.org/entity/Q764,fungi,"biological kingdom, separate from plants and animals",concept,biology,organism,cultural agnostic,Q764,202,208556,120597,83611,93930,38125,141686,143202,41722,43227,46569,26470,153565,170985,34638,16418,41330,9776,50557,64152,4596
-http://www.wikidata.org/entity/Q169325,Funimation,American video streaming service,entity,media,streaming service,cultural representative,Q169325,25,77545,54716,38093,11095,29108,6567,108758,2452,25681,4330,3181,5879,23413,3459,7290,0,1891,4240,0,0
-http://www.wikidata.org/entity/Q618710,gauze,thin translucent fabric with a open weave,entity,fashion,textile,cultural agnostic,Q618710,34,10871,2139,13511,4419,2644,5325,3440,0,4484,2524,4675,5613,614,726,2280,4274,761,834,3766,82
-http://www.wikidata.org/entity/Q3204,Geneva Open Challenger,tennis tournament,entity,sports,recurring sporting event,cultural representative,Q3204,5,11808,10369,12351,10110,12490,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q764233,geoponici,"collective term, ancient Greek and Roman writers on husbandry and agriculture, regarded at the time as a branch of economics",concept,books,non-fiction writer,cultural representative,Q764233,7,8803,7590,0,5055,0,8164,0,0,0,0,0,2657,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q3335,George Orwell,British writer and journalist (1903–1950),entity,literature,writer,cultural representative,Q3335,203,185159,78486,43070,37607,33668,105234,38321,22008,33747,191892,31649,59816,23675,28168,29702,17195,102730,14621,20917,3528
-http://www.wikidata.org/entity/Q1255562,Glasgow School,"art movement part of Art Nouveau in Glasgow, Scotland",entity,visual arts,art movement,cultural representative,Q1255562,10,13878,1743,6638,3836,10664,19868,0,0,9516,0,1501,0,0,0,4193,0,0,0,0,0
-http://www.wikidata.org/entity/Q172964,goalkeeper,sports position played in defense of one's own goal,concept,sports,athlete,cultural agnostic,Q172964,69,30906,4347,27196,20911,14020,8799,0,2818,6446,3127,7811,2095,9266,1597,4434,17838,2383,3719,1114,0
-http://www.wikidata.org/entity/Q14924,golf ball retriever,tool used by golfers,concept,sports,sports equipment,cultural agnostic,Q14924,3,68,568,0,0,674,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q627325,graphic designer,"professional who assembles images, typography or motion graphics to create a piece of design",concept,fashion,designer,cultural agnostic,Q627325,38,22778,18781,0,9567,19145,0,6268,5457,9422,8344,1714,10850,1542,890,2991,0,4315,0,1528,0
-http://www.wikidata.org/entity/Q45594,greeting,act of communication to acknowledge another person,concept,gestures and habits,ritual,cultural agnostic,Q45594,70,20048,8668,31342,3865,5189,5541,14978,9842,13518,6213,2276,12452,10592,4247,7167,1034,1090,7328,8419,0
-http://www.wikidata.org/entity/Q6663,hamburger,American sandwich of ground beef patty,concept,food,dish,cultural representative,Q6663,114,76861,22980,15058,43694,6810,29597,7911,4856,46906,8498,3045,8089,14272,13080,6195,34467,5569,11959,2887,0
-http://www.wikidata.org/entity/Q655556,Heimatschutz Architecture,Architectural style,entity,architecture,architectural style,cultural representative,Q655556,10,11311,5064,14020,0,9386,9659,0,1536,0,0,0,0,0,0,0,0,0,0,0,298
-http://www.wikidata.org/entity/Q23565,Hessischer Rundfunk,German public broadcaster,entity,media,production company,cultural exclusive,Q23565,25,12467,4681,65748,8490,6330,34243,0,1585,1873,1994,1818,0,1263,452,6776,7877,0,0,0,0
-http://www.wikidata.org/entity/Q51677,High Priest of Israel,Chief religious official of ancient Judaism,entity,philosophy and religion,religious leader,cultural representative,Q51677,33,23987,42340,18329,17403,35532,31239,5486,4395,37371,5804,13740,2739,1282,0,10294,1357,1932,0,3966,0
-http://www.wikidata.org/entity/Q578269,HM Treasury,United Kingdom government department,entity,politics,government agency,cultural exclusive,Q578269,26,53145,4756,3576,4779,4899,9910,2011,1622,8994,2307,15556,2915,10238,1541,3100,2753,0,2775,0,0
-http://www.wikidata.org/entity/Q65707,Horst P. Horst,German-American photographer,entity,visual arts,photographer,cultural representative,Q65707,15,12673,6221,7309,8334,6386,19368,0,0,2692,3251,0,0,0,0,0,0,0,0,9547,596
-http://www.wikidata.org/entity/Q59243,Hyundai Motor Group,"car manufacturer headquartered in Seoul, South Korea",entity,transportation,automobile manufacturer,cultural representative,Q59243,32,13258,5013,4344,3475,0,24137,5194,0,10433,2642,5856,0,8120,739,78841,1046,18815,1390,0,0
-http://www.wikidata.org/entity/Q132137,icon,"religious work of art, generally a panel painting, in Eastern Christianity",entity,visual arts,painting,cultural representative,Q132137,85,63160,41901,85899,25533,18902,44900,17491,10928,51123,44201,30633,38295,1540,5419,2865,17831,2826,20339,8157,13523
-http://www.wikidata.org/entity/Q8538,Image Engine,visual effects company,entity,comics and anime,animation studio,cultural exclusive,Q8538,7,18701,0,0,5196,2603,0,1998,0,17743,0,0,0,0,0,0,0,1398,0,0,0
-http://www.wikidata.org/entity/Q22865,independent city of Germany,city or town in Germany that does not form part of another general-purpose local government entity,concept,geography,city,cultural exclusive,Q22865,32,61,1491,28131,0,4913,49159,0,874,0,0,1431,0,2312,4774,0,0,0,0,15640,0
-http://www.wikidata.org/entity/Q643996,Industrial Culture Handbook,book about industrial music and performance art,entity,books,book,cultural agnostic,Q643996,2,2097,2591,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q58968,intellectual,person who engages in critical thinking and reasoning,concept,philosophy and religion,philosopher,cultural agnostic,Q58968,69,42376,62692,24371,54831,27696,6003,52734,2437,5164,16035,6602,8858,12628,1037,43,2187,2034,6727,3676,0
-http://www.wikidata.org/entity/Q3298,Intercontinental Champions' Supercup,Football competition,entity,sports,recurring sporting event,cultural representative,Q3298,16,9199,21496,2909,20850,6441,46501,7258,2952,0,5454,3222,0,6777,3088,12394,0,0,0,0,0
-http://www.wikidata.org/entity/Q580340,Irish poetry,poetry written by poets from the Island of Ireland,concept,literature,poetry,cultural representative,Q580340,8,67796,46821,0,44015,0,0,0,0,0,18368,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q400,Jenna Jameson,American former pornographic actor (born 1974),entity,fashion,model,cultural exclusive,Q400,74,106077,77293,51901,37302,23506,44449,26889,9317,68655,62100,29465,33080,90452,8039,11030,6734,3993,7544,5124,0
-http://www.wikidata.org/entity/Q161439,jewelry,"creation of objects of personal adornment, which may fulfill both decorative and functional purposes",concept,visual arts,visual arts,cultural agnostic,Q161439,104,103292,25076,15946,38983,26757,69734,4706,6629,40009,13236,0,8870,2735,62870,10402,12917,2696,5052,10195,3413
-http://www.wikidata.org/entity/Q10940,jockstrap,undergarment originally designed for supporting the male genitalia,concept,fashion,clothing,cultural agnostic,Q10940,36,16083,4299,6123,5920,1666,20901,14076,1079,4178,1315,3901,0,8760,1549,2267,2770,601,593,4528,282
-http://www.wikidata.org/entity/Q224644,Joe Kubert,Polish-born American comic book artist (1926-2012),entity,comics and anime,comics artist,cultural representative,Q224644,17,56878,20338,4269,11899,9644,4639,3760,4654,0,3335,5309,0,0,2023,10994,2526,2251,0,0,639
-http://www.wikidata.org/entity/Q1294605,Jugendstil,artistic movement; German equivalent of art nouveau,concept,visual arts,art movement,cultural representative,Q1294605,14,18763,11118,63959,0,5392,0,11488,0,13144,0,0,0,0,0,26768,0,0,0,0,0
-http://www.wikidata.org/entity/Q84405,Karl Landsteiner,"Jewish-Austrian biologist, physician and Nobel Prize laureate",entity,biology,biologist,cultural representative,Q84405,84,16226,9568,29616,13662,10503,16318,11866,6000,5333,7519,5473,6985,5000,2867,9056,2632,2752,3317,8358,0
-http://www.wikidata.org/entity/Q43416,Keanu Reeves,Canadian actor and musician (born 1964),entity,films,film producer,cultural representative,Q43416,121,213992,67488,25454,51342,34702,71127,52361,17055,46451,24468,25719,33474,31361,51078,35974,16261,13177,16392,17522,0
-http://www.wikidata.org/entity/Q80866,Khalifa,Sufi religious leader and teacher in North and West Africa,concept,philosophy and religion,philosopher,cultural representative,Q80866,32,24367,20983,9132,18705,6596,2934,1252,703,8168,2980,716,1525,0,2159,0,1887,0,5042,1830,96
-http://www.wikidata.org/entity/Q2890234,Kinpira,Japanese cooking style,entity,food,cooking technique,cultural exclusive,Q2890234,11,3676,0,0,955,0,1798,0,0,2281,3264,0,2527,0,0,1593,0,757,0,0,81
-http://www.wikidata.org/entity/Q6418545,Kitty Foyle,"dress style of the 1940s characterized by a dark fabric and contrasting light collar and cuffs, typically of navy blue and white",entity,fashion,fashion trend,cultural exclusive,Q6418545,1,2976,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q693461,KREEP,"Geochemical component of some lunar rocks, potassium, lanthanides, and phosphorus",entity,food,ingredient,cultural agnostic,Q693461,21,8897,6480,15891,3346,3764,12384,671,533,0,9116,939,10424,7855,0,0,5067,7522,0,1156,0
-http://www.wikidata.org/entity/Q489774,Kyobo Book Centre,book store chain and company in South Korea,entity,books,bookstore,cultural exclusive,Q489774,6,7301,0,0,0,0,0,0,0,5708,0,0,0,974,0,0,0,22380,0,0,104
-http://www.wikidata.org/entity/Q12494,ladyfinger,biscuit,entity,food,food,cultural representative,Q12494,35,4595,4424,3866,8808,6638,2493,0,1748,2272,8186,0,8444,1957,6634,4042,3681,8774,0,6560,258
-http://www.wikidata.org/entity/Q284465,lectionary,book of scripture readings for a particular day or occasion,concept,books,religious book,cultural representative,Q284465,25,22376,6501,7955,15458,19997,5893,3210,2798,6002,14524,4568,0,0,0,1980,0,6630,0,1921,0
-http://www.wikidata.org/entity/Q17563,Leonard Law,California law passed in 1992,entity,politics,law,cultural exclusive,Q17563,2,7042,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1281,0,0,0
-http://www.wikidata.org/entity/Q3086695,Les Trois Accords,band,entity,music,musical group,cultural exclusive,Q3086695,6,3628,27654,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,334
-http://www.wikidata.org/entity/Q493858,"Lions' Commentary on UNIX 6th Edition, with Source Code",book,entity,books,book,cultural agnostic,Q493858,7,12323,0,2487,0,0,3468,0,0,0,0,2408,0,0,0,3423,0,0,0,0,73
-http://www.wikidata.org/entity/Q3257761,Loco Locass,Canadian hip hop group from Quebec,entity,music,musical group,cultural exclusive,Q3257761,4,7005,13876,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,389
-http://www.wikidata.org/entity/Q1133078,logographer,historical profession,concept,history,historian,cultural agnostic,Q1133078,28,5997,2819,6453,5468,3622,8760,1696,1064,7545,0,1967,2884,0,1633,0,1205,0,1412,1651,0
-http://www.wikidata.org/entity/Q84,London,capital and largest city of England and the United Kingdom,entity,geography,geographic location,cultural representative,Q84,347,271423,181105,121504,194850,155661,197478,163841,75093,233960,60887,57191,137482,215400,35382,122396,78495,91291,51407,71478,57282
-http://www.wikidata.org/entity/Q182357,lyric poetry,formal type of poetry,concept,literature,poetry,cultural agnostic,Q182357,74,24970,21,38907,14975,19325,49260,2655,1700,26848,14023,6571,9642,71283,6727,1387,21491,7418,0,11839,0
-http://www.wikidata.org/entity/Q48221,Malikism,one of four major schools of madhhab of Islamic jurisprudence within Sunni Islam,entity,philosophy and religion,religious movement,cultural representative,Q48221,64,20228,20425,10134,4159,3289,16334,5103,2249,15889,121681,858,9429,1002,1826,4578,1645,3044,8187,2018,0
-http://www.wikidata.org/entity/Q8274,manga,"comics employing a set of Japanese stylistic conventions, produced in Japan or elsewhere",concept,comics and anime,comics,cultural representative,Q8274,128,116628,97124,147714,41317,40388,129786,130325,14945,54605,36734,14940,67778,21351,30814,22791,105431,14961,29827,38237,0
-http://www.wikidata.org/entity/Q131165,Manichaeism,Persian religion founded in the 3rd century CE,concept,philosophy and religion,religion,cultural agnostic,Q131165,87,139292,51624,36576,27134,38826,153476,3458,59725,51290,10283,9101,32271,55810,6179,161968,8199,74609,8141,14501,0
-http://www.wikidata.org/entity/Q8362,manuscript illumination,picture in an ancient or medieval illuminated manuscript,concept,visual arts,painting,cultural representative,Q8362,42,56888,6051,113409,41401,18566,29026,4309,0,25954,13438,0,14317,0,0,18728,35190,3784,0,5863,48
-http://www.wikidata.org/entity/Q3281,Marit Paulsen,Norwegian-born Swedish politician,entity,literature,writer,cultural exclusive,Q3281,20,8041,3203,2629,0,1774,8068,7958,0,0,1988,5323,0,0,11151,0,1687,0,2637,0,668
-http://www.wikidata.org/entity/Q11417,martial art,codified systems and traditions of combat practices,concept,gestures and habits,tradition,cultural agnostic,Q11417,123,48540,63824,21737,36099,26694,39330,19660,3642,17779,24914,11106,49645,19179,5837,23726,29502,6637,4028,4188,0
-http://www.wikidata.org/entity/Q98714302,master of the works,historical term for stonemasons and other craftsmen who ran building huts in the Middle Ages,concept,architecture,architect,cultural agnostic,Q98714302,7,3907,19435,0,32934,4464,0,0,0,0,0,0,2201,0,0,0,14461,0,0,0,0
-http://www.wikidata.org/entity/Q162875,mausoleum,monument enclosing the interment space or burial chamber of a deceased person or people,concept,history,monument,cultural agnostic,Q162875,77,38616,6287,36674,12132,8784,32697,4626,3955,6040,9698,4202,17105,9396,2542,2637,1033,5719,3713,4741,0
-http://www.wikidata.org/entity/Q257153,Mausoleum of Saladin,resting place and grave of the medieval Muslim Ayyubid Sultan Saladin,entity,architecture,architectural structure,cultural exclusive,Q257153,19,6282,0,0,2276,4369,0,3751,0,0,14080,0,0,0,0,1799,2831,0,4451,0,158
-http://www.wikidata.org/entity/Q76574,maypole,tall wooden pole erected as a part of various European folk festivals,concept,gestures and habits,ritual,cultural representative,Q76574,41,52312,30094,29019,0,9181,32819,8249,24459,0,1914,4409,29220,1159,24490,1549,2382,0,2139,4780,212
-http://www.wikidata.org/entity/Q2321,Mega-Łada Togliatti,speedway club,entity,sports,sports club,cultural exclusive,Q2321,4,4107,0,2393,0,0,53311,0,0,0,0,2448,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q203827,Melbourne shuffle,rave dance from the 1980s,entity,performing arts,dance,cultural representative,Q203827,25,5296,8895,4458,6295,6878,14109,21459,6143,3415,4752,3662,3762,2842,1955,1800,3671,10222,1529,0,0
-http://www.wikidata.org/entity/Q2185917,mennonites in Bolivia,Denomination in South America,entity,philosophy and religion,religious movement,cultural exclusive,Q2185917,4,21163,8167,0,10222,0,0,0,2193,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q873,Meryl Streep,American actress,entity,films,film producer,cultural representative,Q873,128,194961,142863,25727,91348,76712,190329,166863,22735,37660,51197,54189,100223,26066,47241,25231,131623,53368,69623,26449,4618
-http://www.wikidata.org/entity/Q3333382,mesocosm,outdoor controlled environment for experimental purposes,concept,geography,environment,cultural agnostic,Q3333382,5,11428,5555,0,12421,0,0,0,0,0,0,0,0,0,1482,7171,0,0,0,0,0
-http://www.wikidata.org/entity/Q344299,Metro Istanbul,public transportation company of Istanbul,entity,transportation,transport company,cultural exclusive,Q344299,10,4491,0,26003,6966,6316,12415,0,0,0,5574,0,0,0,0,1223,0,0,0,0,112
-http://www.wikidata.org/entity/Q5592,Michelangelo,Italian artist and architect (1475–1564),entity,literature,poet,cultural representative,Q5592,255,83451,233012,78335,125376,168601,108428,152956,26345,66769,82600,21023,183485,25781,14387,99179,111724,21117,34484,27217,29737
-http://www.wikidata.org/entity/Q6836765,Michele Jolin,American social entrepreneur,entity,politics,policy,cultural exclusive,Q6836765,1,8406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q220011,Mike DeCarlo,Comic artist,entity,comics and anime,comics artist,cultural exclusive,Q220011,3,8931,0,2364,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,112
-http://www.wikidata.org/entity/Q835,Mikhail Bulgakov,Russian author (1891–1940),entity,performing arts,theatrical director,cultural representative,Q835,114,51887,80707,26499,19053,35761,171050,12700,15516,8474,21138,29164,131398,9502,30339,23698,19220,5448,5521,6583,2503
-http://www.wikidata.org/entity/Q1750272,milk bar,suburban local general store or café,concept,architecture,building,cultural agnostic,Q1750272,10,7942,20510,2492,0,5632,11098,0,0,4190,7082,0,0,0,4057,0,0,0,0,0,3702
-http://www.wikidata.org/entity/Q674067,mime artist,someone who uses mime as a theatrical medium or in performance art,concept,performing arts,actor,cultural agnostic,Q674067,35,14866,13013,0,8093,0,27548,0,0,0,2738,1950,10936,82,0,10037,4689,1050,0,4056,0
-http://www.wikidata.org/entity/Q1628649,Minhag,an accepted tradition or group of traditions in Judaism,concept,gestures and habits,mores,cultural exclusive,Q1628649,15,14661,4892,1263,0,1974,0,1646,0,5450,0,0,0,0,0,2681,0,0,0,6250,0
-http://www.wikidata.org/entity/Q460039,Mixed team,Olympic delegation,concept,sports,sports team,cultural agnostic,Q460039,29,37241,4602,4223,2557,5795,7089,3054,842,10881,902,14083,0,3144,7443,23639,3430,985,1957,0,0
-http://www.wikidata.org/entity/Q687,Molière,French playwright and actor (1622–1673),entity,performing arts,theatrical director,cultural representative,Q687,216,46044,295455,35539,58276,24270,79217,21320,18211,187529,46410,7518,71676,19718,12066,22095,34458,92554,11930,41550,1886
-http://www.wikidata.org/entity/Q429088,mons,mountain on a celestial body,concept,geography,mountain,cultural agnostic,Q429088,6,10575,990,0,0,10037,0,0,5450,0,0,0,16134,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q23402,Musée d'Orsay,"art museum in Paris, France",entity,media,production company,cultural representative,Q23402,121,27869,224483,23721,39324,16704,18365,5380,10569,115927,9940,8299,16329,12336,17897,9991,3638,6507,5599,17749,8845
-http://www.wikidata.org/entity/Q2743,musical,"stage work that combines songs, music, spoken dialogue, acting, and dance",concept,performing arts,theatrical genre,cultural agnostic,Q2743,85,127349,27419,67128,58363,8242,27916,20175,16025,24263,11752,13538,3346,23207,43356,1441,112998,25182,3463,5855,0
-http://www.wikidata.org/entity/Q229724,Naoko Takeuchi,Japanese manga artist,entity,comics and anime,comics artist,cultural representative,Q229724,37,31857,14192,7630,7989,9315,25569,10490,14366,21947,2535,6081,4359,6474,2465,2781,4162,2621,6828,0,0
-http://www.wikidata.org/entity/Q616753,Naryshkin Baroque,Russian architectural style,entity,architecture,architectural style,cultural representative,Q616753,20,13529,9433,2552,11924,4005,61865,3579,0,2675,0,0,0,0,0,0,3435,0,0,2406,117
-http://www.wikidata.org/entity/Q479102,National Festival of Polish Song in Opole,"annual Polish song festival (Opole, Poland)",entity,music,music festival,cultural exclusive,Q479102,11,4694,1175,1754,0,0,0,3564,0,0,0,30920,12882,0,0,0,0,0,0,2176,0
-http://www.wikidata.org/entity/Q56000,naturalism,"belief that only natural laws, entities and forces operate in the universe",entity,philosophy and religion,philosophical movement,cultural agnostic,Q56000,53,58004,30533,59383,27280,14477,17071,14808,5484,0,17967,2740,5046,19229,4892,22165,19555,29622,60429,1801,0
-http://www.wikidata.org/entity/Q194285,Nebula Award,literature prize for science fiction and fantasy works from the United States,concept,literature,literary award,cultural exclusive,Q194285,53,21291,45875,24882,20498,56976,33094,3573,12203,12109,3863,36315,5562,41714,42093,3152,1115,156224,5616,2772,0
-http://www.wikidata.org/entity/Q25648,New York Film Festival,annual film festival held every autumn in New York City,entity,films,film festival,cultural representative,Q25648,27,17343,3688,1986,2871,2465,3214,712,0,2505,8998,0,3597,5685,0,2704,4166,2419,0,2255,0
-http://www.wikidata.org/entity/Q264238,newsletter,"printed or electronic report containing news concerning the activities of a business or an organization that is sent to its members, customers, employees or other subscribers",concept,media,magazine,cultural agnostic,Q264238,35,5763,3070,12583,3605,2890,4012,2972,1464,7519,2765,2552,0,3070,1567,3176,2630,1431,734,2345,0
-http://www.wikidata.org/entity/Q265169,Nitro Records,US record label,entity,music,record label,cultural exclusive,Q265169,15,3711,4062,1393,3293,2876,3092,2994,1604,0,0,3053,2957,0,1770,0,2098,1561,0,0,0
-http://www.wikidata.org/entity/Q518390,nod,gesture,concept,gestures and habits,gesture,cultural agnostic,Q518390,16,5215,0,2228,6113,0,7985,0,2074,0,2199,1235,7733,1140,0,0,0,0,0,0,166
-http://www.wikidata.org/entity/Q1377546,nunsploitation,film genre,concept,films,film genre,cultural representative,Q1377546,8,14846,3933,5567,9364,3614,0,9963,0,34968,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q216929,Oliver & Company,1988 animated film directed by George Scribner,entity,comics and anime,animated film,cultural representative,Q216929,97,70582,71225,15111,17043,22067,27207,10928,12230,14990,5163,14124,17529,6760,6508,5540,3070,5429,6408,2515,836
-http://www.wikidata.org/entity/Q2425502,onnagata,male actors who impersonate women in Japanese kabuki theatre,concept,films,acting style,cultural exclusive,Q2425502,16,11803,3898,7847,3812,17123,23748,0,1051,23493,0,3918,0,909,0,0,4562,8116,0,23269,0
-http://www.wikidata.org/entity/Q1344,opera,artform combining sung text and musical score in a theatrical setting,concept,performing arts,theatrical genre,cultural representative,Q1344,165,110182,45943,114995,67485,26369,144402,31982,11434,105998,22324,24208,50542,54170,53787,18735,30701,10404,14380,77199,0
-http://www.wikidata.org/entity/Q1772945,Opera dei Pupi,typical sicilian marionette theatre,entity,performing arts,theatrical genre,cultural exclusive,Q1772945,18,30825,29232,25040,23315,34166,2054,0,973,0,2955,0,0,747,0,0,4816,0,0,0,0
-http://www.wikidata.org/entity/Q470137,original English-language manga,type of comic book or graphic novel in English,concept,comics and anime,manga,cultural representative,Q470137,13,22074,1638,8931,4280,23,8985,15463,0,3046,0,0,0,0,0,0,14489,1001,0,5762,0
-http://www.wikidata.org/entity/Q43091,orthography,set of conventions for writing a language,concept,politics,policy,cultural agnostic,Q43091,106,14645,31519,9461,24365,5154,24653,6205,63,11333,2477,21118,13124,5771,10399,2270,17601,2511,6288,24573,0
-http://www.wikidata.org/entity/Q27207,Osteichthyes,superclass of fish,concept,biology,fish,cultural agnostic,Q27207,87,33101,5297,50741,34960,17550,17797,7797,3840,12941,5298,11077,21924,5687,4970,9861,11347,2615,2722,20892,0
-http://www.wikidata.org/entity/Q29536,paganism,polytheistic religious groups,concept,philosophy and religion,religion,cultural representative,Q29536,106,64548,28693,24716,22530,6687,27140,25801,10219,27628,32600,5370,21920,5588,5237,14131,23666,21548,19928,16133,0
-http://www.wikidata.org/entity/Q182370,paint-on-glass animation,animation technique,entity,comics and anime,animation technique,cultural agnostic,Q182370,6,11959,11213,2129,0,0,14064,0,0,0,0,0,4638,3217,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q130898,Palace of Iturbide,Former Imperial Palace of Mexico (1822-1823),entity,visual arts,art gallery,cultural representative,Q130898,12,10590,0,0,12332,0,9617,5746,0,0,0,0,0,5480,0,3819,0,0,0,0,493
-http://www.wikidata.org/entity/Q7845,pataphysics,philosophy or pseudophilosophy dedicated to studying what lies beyond the realm of metaphysics,concept,philosophy and religion,philosophy,cultural representative,Q7845,26,49535,25835,14256,5575,24495,18650,3934,3876,9761,0,6359,6878,0,4226,0,10394,1558,3638,37506,0
-http://www.wikidata.org/entity/Q557,Patti Smith,"American singer, songwriter, author and poet",entity,visual arts,photographer,cultural representative,Q557,73,109148,42209,26748,45122,32906,67472,98037,21139,15402,6386,24032,32819,31653,12749,12910,20902,8206,16556,7937,5839
-http://www.wikidata.org/entity/Q272,Paul Morand,French writer (1888-1976),entity,literature,poet,cultural representative,Q272,43,23652,43278,8097,31306,8544,17507,4197,4113,5670,8095,2112,11136,1519,1470,2875,3712,0,2009,4021,0
-http://www.wikidata.org/entity/Q84809,Peter Schuster,Austrian chemist,entity,biology,biologist,cultural exclusive,Q84809,9,4395,0,7574,0,5053,0,0,0,0,1581,0,0,0,0,2197,0,0,0,0,566
-http://www.wikidata.org/entity/Q23407,philosophy of mind,branch of philosophy that studies the nature of the mind,concept,philosophy and religion,philosophy,cultural agnostic,Q23407,68,98406,115942,94736,61877,35761,65644,19269,61440,93103,144436,73204,99042,90043,62072,43590,18581,15886,33599,2734,0
-http://www.wikidata.org/entity/Q551835,physician writer,physicians who write creatively in fields outside their practice of medicine,concept,books,non-fiction writer,cultural agnostic,Q551835,7,66435,0,5929,9335,0,0,7959,0,0,19977,0,0,0,0,0,0,0,0,0,368
-http://www.wikidata.org/entity/Q486748,pianist,musician who plays the piano,concept,music,musical profession,cultural agnostic,Q486748,63,8571,3287,10680,2239,11741,6951,5419,5455,37874,3687,3070,6008,6031,109,5012,1359,2439,1269,0,0
-http://www.wikidata.org/entity/Q7194764,pin and hanger assembly,assembly used to connect two plate girders of a bridge,concept,architecture,construction,cultural agnostic,Q7194764,1,3423,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q2095595,Pinewood Toronto Studios,filming location,entity,media,film studio,cultural exclusive,Q2095595,6,6214,4894,5197,7692,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q12024,Pinus,genus of plants in the conifer family Pinaceae,concept,biology,tree,cultural agnostic,Q12024,142,72564,103749,29544,25225,9582,55715,17532,13643,118625,19084,83156,22142,17263,11240,3960,49340,11891,23334,95421,7253
-http://www.wikidata.org/entity/Q127552,Pixar,American computer animation studio,entity,comics and anime,animation studio,cultural representative,Q127552,93,127952,84098,25745,111524,47728,54111,86425,21339,206002,37013,6862,6057,40949,8881,57701,85810,8665,9635,16627,0
-http://www.wikidata.org/entity/Q200751,pixilation,type of stop-motion animation using live actors,concept,comics and anime,animation technique,cultural agnostic,Q200751,15,8787,13727,2728,7622,0,0,1536,0,9196,0,0,0,0,0,1851,7319,588,833,0,45
-http://www.wikidata.org/entity/Q756,plant,living thing in the kingdom of photosynthetic eukaryotes,concept,biology,organism,cultural agnostic,Q756,260,98007,60015,11115,134319,54518,61820,92309,28161,44308,22526,33183,27167,99379,17178,40346,39601,16463,54039,41188,9884
-http://www.wikidata.org/entity/Q3307548,Po,title character and the protagonist of the Kung Fu Panda franchise,concept,food,cook,cultural representative,Q3307548,14,23922,9534,0,11897,7895,0,0,0,0,0,0,11522,0,0,8006,0,0,4681,0,758
-http://www.wikidata.org/entity/Q19546,pope,leader of the worldwide Catholic Church,concept,philosophy and religion,religious leader,cultural representative,Q19546,191,176751,70275,68426,64636,51066,42612,194997,19729,67743,67674,56899,28991,20291,10708,50770,119974,79064,60023,15486,19765
-http://www.wikidata.org/entity/Q27114292,posting style,style of quoting and replying to an email or post on an Internet forum,concept,literature,writing style,cultural agnostic,Q27114292,3,39485,0,0,0,0,0,0,0,0,0,0,0,8755,0,0,0,1606,0,0,0
-http://www.wikidata.org/entity/Q30461,president,"leader of a country or part of a country, usually in republics",entity,politics,politician,cultural agnostic,Q30461,163,54610,45,11201,94573,14102,78405,20564,2232,18109,29049,6877,16126,16153,3574,4016,4638,12391,10401,7191,0
-http://www.wikidata.org/entity/Q38817,Prishtina International Film Festival,"annual film festival held in Pristina, Kosovo",entity,films,film festival,cultural exclusive,Q38817,8,17820,0,1543,0,0,8876,0,0,0,2461,5779,10275,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q10892,protist,"eukaryotic organisms that are not animals, plants or fungi",concept,biology,organism,cultural agnostic,Q10892,122,220642,17690,10396,36307,10268,55763,12867,18395,11492,11629,20015,20309,19076,5238,7133,33359,2524,9371,11196,0
-http://www.wikidata.org/entity/Q12516,pyramid,structure whose shape is roughly that of a pyramid in the geometric sense,entity,architecture,building,cultural agnostic,Q12516,141,40580,6867,40739,53843,9572,40373,11926,7597,41975,18584,13406,38600,17277,6470,3038,55438,9145,5846,9102,4884
-http://www.wikidata.org/entity/Q434,Pyrus,genus of plants,concept,biology,tree,cultural agnostic,Q434,144,44102,10715,26142,19911,8649,40124,17460,6958,8267,5742,12466,26056,6425,2617,13058,16984,4173,4508,3469,3608
-http://www.wikidata.org/entity/Q41800,Raquel Argandoña,Chilean entertainer and mayor,entity,fashion,model,cultural exclusive,Q41800,10,8754,2610,0,24722,0,0,624,0,0,0,0,0,0,0,0,0,0,0,0,360
-http://www.wikidata.org/entity/Q4692,Renaissance,cultural movement that spanned the period roughly from the 14th to the 17th century,concept,visual arts,art movement,cultural representative,Q4692,184,122499,110375,117904,122479,58122,71693,166725,92245,42783,129487,29793,62753,53209,20691,94335,58075,30173,14638,88757,11185
-http://www.wikidata.org/entity/Q11707,restaurant,"single establishment which prepares and serves food, located in building",concept,architecture,building,cultural agnostic,Q11707,106,53986,32407,24651,20856,10304,28445,7700,10016,30417,10095,3597,5062,21416,7336,13184,3498,15071,20072,3509,0
-http://www.wikidata.org/entity/Q66854,Rietheim,"village and former municipality in Zurzach in the canton of Aargau, Switzerland",entity,geography,neighborhood,cultural exclusive,Q66854,26,12024,2102,15093,0,1642,4908,1696,1473,0,0,0,3622,358,2014,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q383845,rigaudon,cheerful Baroque dance movement in duple meter,concept,performing arts,folk dance,cultural exclusive,Q383845,20,3968,17275,8848,1696,2026,15280,882,485,806,0,1699,0,0,1042,0,1261,913,0,0,138
-http://www.wikidata.org/entity/Q66768,Rossens,village and former municipality in Gibloux in the canton of Fribourg in Switzerland,entity,geography,neighborhood,cultural exclusive,Q66768,20,18417,5044,7425,1190,3031,0,1533,1220,0,0,0,0,584,1504,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q18702,Royal free city,cities in the Kingdom of Hungary,concept,geography,city,cultural exclusive,Q18702,17,9023,1756,21741,15225,4657,0,0,4793,0,0,0,0,0,0,0,0,0,0,20554,0
-http://www.wikidata.org/entity/Q54829,RTVE,public broadcaster of Spain,entity,media,media company,cultural exclusive,Q54829,29,31592,14037,12725,227784,6861,19542,11799,12403,5039,0,7450,44648,3843,3143,0,28627,1700,0,7354,0
-http://www.wikidata.org/entity/Q172582,Sahitya Akademi Award,literary honour awarded to authors of outstanding literary works in India,entity,literature,literary award,cultural exclusive,Q172582,18,24592,0,2234,0,614,0,0,0,0,0,0,0,0,0,0,0,2847,0,0,1050
-http://www.wikidata.org/entity/Q1509703,Saintonge,former French province,entity,geography,geographic location,cultural exclusive,Q1509703,24,8728,21759,24031,20236,9396,14707,0,1608,0,0,775,3695,2415,1692,0,2055,0,0,0,0
-http://www.wikidata.org/entity/Q11122366,sandalwood,name of a class of fragrant woods from trees in the genus Santalum,concept,architecture,construction,cultural agnostic,Q11122366,33,34396,9144,0,0,2282,0,0,1473,0,4260,0,0,4631,9836,1745,0,3189,0,2206,131
-http://www.wikidata.org/entity/Q25814,seed plant,division of plants,concept,biology,plant,cultural agnostic,Q25814,85,15908,32,10274,40552,3941,8198,32367,7416,5271,7312,5558,3572,7208,2891,2706,24593,1298,3301,4147,0
-http://www.wikidata.org/entity/Q237338,seinen,manga marketed primarily to late adolescent young adults (18 yr and older),concept,comics and anime,manga,cultural representative,Q237338,45,10249,5814,12928,4783,4733,12591,5008,2665,24654,5443,1178,12716,1033,9955,4193,3254,5251,2686,3770,0
-http://www.wikidata.org/entity/Q145234,Seiun Awards,Japanese science fiction awards,entity,literature,literary award,cultural exclusive,Q145234,20,154413,26335,21303,40020,30939,5477,104204,39646,47676,1792,12622,44771,33228,0,0,0,41238,1166,0,0
-http://www.wikidata.org/entity/Q15761,servus,salutation,concept,gestures and habits,greeting,cultural representative,Q15761,14,6531,0,4106,3290,1911,0,0,2141,0,0,0,5794,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q1503157,Shakespeare and Company,bookstore in Paris founded by George Whitman in 1951,entity,books,bookstore,cultural representative,Q1503157,27,18071,16469,6731,8392,3858,9400,17749,2740,14544,21769,0,7814,2449,2510,16069,10001,3454,3439,3174,885
-http://www.wikidata.org/entity/Q7372,shark,clade of predatory cartilaginous fish (Chondrichthyes),concept,biology,fish,cultural agnostic,Q7372,168,148044,105958,54920,52788,152633,175579,128695,34804,59139,37450,5667,55761,39323,25525,27239,31758,14076,23358,76437,4793
-http://www.wikidata.org/entity/Q211367,sheet metal,"metal formed into thin, flat pieces, usually by an industrial process",entity,architecture,building material,cultural agnostic,Q211367,54,45983,7575,10778,1581,8509,9424,0,2556,5235,3829,3705,7143,818,4487,53281,9849,4226,1710,2482,0
-http://www.wikidata.org/entity/Q2278256,Shepperton Studios,"film studio, special effects studios and pre- and post-production centre",entity,media,film studio,cultural exclusive,Q2278256,21,12796,4953,8915,12704,1737,22021,6453,0,0,0,868,0,0,2018,9808,0,3108,0,0,265
-http://www.wikidata.org/entity/Q231302,shōnen,manga marketed primarily to adolescent boys,concept,comics and anime,manga,cultural representative,Q231302,53,34475,8969,30596,4464,31886,10724,4174,6652,7635,4566,3182,9113,5166,1066,4590,4450,6419,6102,2018,0
-http://www.wikidata.org/entity/Q23589,Showtime,American premium cable TV channel,entity,media,production company,cultural exclusive,Q23589,47,119047,19126,7244,18784,14961,11878,10603,4823,15913,6697,11000,18258,2898,5708,5936,4149,1356,2335,3877,0
-http://www.wikidata.org/entity/Q340709,shrug,"gesture indicating an individual does not know an answer to a question, or does not care about something",concept,gestures and habits,gesture,cultural agnostic,Q340709,12,5885,48,1386,1018,0,0,0,686,3459,3735,0,0,844,0,0,0,0,0,0,71
-http://www.wikidata.org/entity/Q737377,Singer House,house in Saint Petersburg,entity,books,bookstore,cultural representative,Q737377,17,18883,4353,6279,5237,2793,51918,4699,0,0,0,0,0,6266,0,0,3564,0,2919,0,1490
-http://www.wikidata.org/entity/Q139932,single whip law,fiscal law of the Ming dynasty,entity,politics,law,cultural exclusive,Q139932,7,3632,0,0,2370,0,0,0,0,2202,0,0,0,6890,0,0,0,2022,0,7278,0
-http://www.wikidata.org/entity/Q124619225,Siuuu,Football celebration gesture,entity,gestures and habits,gesture,cultural representative,Q124619225,1,138,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q15783,skateboard,wheeled board used for skateboarding,concept,sports,sports equipment,cultural agnostic,Q15783,71,12952,72,35640,15995,20575,13276,7758,3696,25621,17943,10208,6523,6043,11738,9953,11579,4561,6592,10183,0
-http://www.wikidata.org/entity/Q1661080,small press,publisher with low annual sales revenue and/or few titles,concept,literature,publisher,cultural agnostic,Q1661080,11,13510,20432,5886,0,0,0,3566,2559,0,0,0,0,0,0,1508,0,0,0,0,0
-http://www.wikidata.org/entity/Q17084639,socks and sandals,wearing socks and sandals together,concept,fashion,fashion trend,cultural agnostic,Q17084639,14,16271,6054,0,0,0,14613,0,0,0,0,8917,14834,0,0,2756,0,0,0,12158,90
-http://www.wikidata.org/entity/Q7554349,software publisher,publishing company in the software industry between the developer and the distributor,concept,literature,publisher,cultural agnostic,Q7554349,6,2197,0,89,0,0,0,0,0,2398,0,0,3852,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q178406,solo dance,dance performed by a single dancer,entity,performing arts,dance,cultural agnostic,Q178406,7,1210,0,619,0,0,0,0,0,0,0,0,0,998,424,718,0,0,0,0,0
-http://www.wikidata.org/entity/Q359293,Soo Line Railroad,American class I railroad,entity,transportation,transport company,cultural exclusive,Q359293,8,15204,11716,9249,0,2751,0,0,5099,9703,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q884,South Korea,country in East Asia,entity,politics,government agency,cultural representative,Q884,342,285443,136555,270781,172375,68943,161517,175366,45801,330371,212616,50250,117210,167599,38480,50153,32945,196359,60741,117120,26557
-http://www.wikidata.org/entity/Q236913,space rock,genre of rock music,concept,music,music genre,cultural representative,Q236913,31,10595,9338,2807,4249,6698,17913,6470,1284,5822,0,1570,4396,3191,1177,5024,6152,1132,3428,4350,0
-http://www.wikidata.org/entity/Q27185,Stone Bell House,house in Prague,concept,visual arts,art gallery,cultural exclusive,Q27185,8,22226,2820,3118,0,1212,0,0,0,0,0,0,0,809,0,0,0,0,0,26089,408
-http://www.wikidata.org/entity/Q6539,Storming of the Bastille,1789 part of the French Revolution,entity,history,historical event,cultural representative,Q6539,58,38661,61878,12217,44008,34078,46531,10570,13170,28007,32801,0,4710,6010,0,2238,16883,14227,16303,11343,0
-http://www.wikidata.org/entity/Q182361,Studio 4°C,Japanese animation studio,entity,comics and anime,animation studio,cultural exclusive,Q182361,14,15278,7605,2940,9759,8434,10870,6772,0,31038,0,4496,5040,9126,0,0,0,486,0,0,0
-http://www.wikidata.org/entity/Q465501,stunt performer,person who performs stunts,concept,performing arts,actor,cultural agnostic,Q465501,45,47080,13362,8189,39512,2573,6310,0,1772,26885,12251,1930,2662,3289,6214,3095,4274,4850,1886,2573,0
-http://www.wikidata.org/entity/Q1140845,subterranean river,river that runs wholly or partly beneath the ground surface,concept,geography,river,cultural agnostic,Q1140845,27,12519,2837,0,8580,0,2041,2726,0,4362,3765,1171,0,774,4021,0,3681,1024,1650,1775,0
-http://www.wikidata.org/entity/Q9603,Sufism,body of mystical practice within Islam,concept,philosophy and religion,religious movement,cultural representative,Q9603,139,165009,77780,57540,86746,55913,86507,12412,19273,24181,180036,6675,78825,18337,10294,99785,35685,4747,14538,17725,0
-http://www.wikidata.org/entity/Q1365,Swept Away,1974 film by Lina Wertmüller,entity,films,film,cultural representative,Q1365,19,13969,16491,6209,4589,7445,5736,0,0,6241,13296,2647,0,0,2540,3043,0,1592,0,0,0
-http://www.wikidata.org/entity/Q11254,table salt,"mineral used as food ingredient, composed primarily of sodium chloride",concept,food,ingredient,cultural agnostic,Q11254,196,74789,46443,46874,95133,28090,37261,17780,13356,76220,33092,8252,57505,78969,5329,29243,34122,9536,26,5804,3133
-http://www.wikidata.org/entity/Q2465121,Tajikfilm,Soviet and Tajik film studio,entity,media,film studio,cultural exclusive,Q2465121,13,3496,2971,2930,3425,0,6938,0,0,0,0,1217,11236,0,0,2392,0,0,0,0,0
-http://www.wikidata.org/entity/Q7679703,Talk to Me,happening,entity,visual arts,happening,cultural exclusive,Q7679703,1,3977,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q1568338,technical writer,professional information communicator,concept,books,non-fiction writer,cultural agnostic,Q1568338,18,34759,5877,31387,0,3529,17016,0,7948,2452,9529,0,3010,22933,0,17792,0,3110,2204,1853,0
-http://www.wikidata.org/entity/Q7696211,Telegram style,clipped language used in telegrams,concept,literature,writing style,cultural agnostic,Q7696211,5,9538,0,106,0,0,0,0,4218,0,0,0,0,0,0,0,8409,0,0,0,0
-http://www.wikidata.org/entity/Q674413,tell,term in poker,concept,gestures and habits,body language,cultural agnostic,Q674413,4,3841,0,4293,0,0,0,0,4090,0,0,0,0,0,295,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q175122,terrestrial television,television content transmitted via signals in the air,concept,media,television,cultural agnostic,Q175122,30,18548,6239,12883,6495,9063,0,3986,0,4492,21174,11125,0,5936,1877,4115,4709,1014,0,0,0
-http://www.wikidata.org/entity/Q595,The Intouchables,2011 film directed by Olivier Nakache and Éric Toledano,entity,films,film,cultural representative,Q595,61,86853,174950,31200,9003,15974,32580,14975,8739,19503,39349,13829,12075,12740,4282,8593,6535,10041,4960,9862,211
-http://www.wikidata.org/entity/Q270844,The World,artificial archipelago of various small islands,entity,architecture,architectural structure,cultural representative,Q270844,46,31573,6469,9620,7181,6625,38086,1459,5804,3539,11457,2362,38409,3075,8405,20722,1908,948,5333,3629,1768
-http://www.wikidata.org/entity/Q1074069,tidal river,river whose flow and level are influenced by tides,concept,geography,river,cultural agnostic,Q1074069,11,8536,1446,1607,0,0,0,0,2851,8443,0,0,0,3595,0,6217,0,1575,0,1822,0
-http://www.wikidata.org/entity/Q187120,time shifting,recording a program to be viewed or listened to after the airing time,concept,media,television,cultural agnostic,Q187120,18,6673,8015,3639,1924,0,1370,0,2099,3139,0,380,2421,1718,1747,0,2596,900,1764,2108,0
-http://www.wikidata.org/entity/Q3267562,Tina Nordström,Swedish chef,entity,food,cook,cultural representative,Q3267562,10,3140,0,3109,2468,0,0,0,0,1989,0,0,0,0,5817,0,0,0,2114,0,545
-http://www.wikidata.org/entity/Q685935,trade magazine,periodical dedicated to a particular field,concept,media,magazine,cultural agnostic,Q685935,16,4565,11105,5591,3832,0,5494,0,2953,132,11423,0,0,0,921,2024,0,0,0,0,0
-http://www.wikidata.org/entity/Q184781,traditional animation,animation technique in which frames are hand-drawn,concept,comics and anime,animation technique,cultural agnostic,Q184781,26,55699,0,0,0,0,17843,32773,12730,6568,3572,0,4210,12883,0,1679,15788,713,2210,0,0
-http://www.wikidata.org/entity/Q235858,traditional folk music,"local or regional traditional music that was originally produced in performance and transmitted in community conditions, as well as music written stylistically and/or ideologically within these traditions",entity,music,music genre,cultural agnostic,Q235858,81,173,34403,14935,37,14486,58176,19351,2137,3270,39,2666,8291,2671,4968,1644,3346,35343,4267,12592,0
-http://www.wikidata.org/entity/Q870,train,form of rail transport consisting of a series of connected vehicles,concept,transportation,mode of transport,cultural agnostic,Q870,197,66581,41939,9723,30369,54576,155651,57167,14050,45774,9587,16597,76419,21967,23894,43607,36688,15601,8273,14742,0
-http://www.wikidata.org/entity/Q28543,transport in Hungary,transport in Hungary,entity,transportation,transport,cultural agnostic,Q28543,18,12547,8798,0,5267,3820,8503,0,0,6140,0,0,23567,714,0,0,0,0,0,9730,0
-http://www.wikidata.org/entity/Q479716,university press,publisher associated with a university,concept,literature,publisher,cultural agnostic,Q479716,10,21961,5712,9528,6722,4808,7557,6867,1737,10388,0,0,0,0,0,0,0,0,0,0,0
-http://www.wikidata.org/entity/Q13178,Vaccinium sect. Cyanococcus,section of plants,concept,food,food,cultural agnostic,Q13178,44,52288,3778,0,0,0,0,0,0,34066,72351,0,14262,19245,0,8392,5923,13352,0,0,75
-http://www.wikidata.org/entity/Q194363,Vaslav Nijinsky,Polish-Russian ballet dancer and choreographer,entity,performing arts,choreographer,cultural representative,Q194363,60,67679,32838,28364,26724,18653,48439,7011,9366,13876,8332,12515,13827,17109,9510,4982,18110,16068,22473,3126,0
-http://www.wikidata.org/entity/Q49024,Venice Film Festival,"annual film festival held in Venice, Italy",entity,films,film festival,cultural representative,Q49024,80,36584,77439,6698,38974,93709,20557,8354,11943,27370,13885,3688,15408,20769,7565,11955,69770,6289,7198,1896,207
-http://www.wikidata.org/entity/Q8072,volcano,"natural, surface vent or fissure usually in a mountainous form",concept,geography,mountain,cultural agnostic,Q8072,227,99303,84280,28881,51235,40493,55029,29626,12769,46482,54428,26874,57536,51165,20693,12217,36440,9433,78803,283545,16998
-http://www.wikidata.org/entity/Q246,Volkswagen,German automotive brand; manufacturing subsidiary of Volkswagen Group,entity,transportation,automobile manufacturer,cultural representative,Q246,120,156152,53457,68716,82886,13292,75110,29757,18801,94209,30180,20211,63303,29764,27758,27530,21518,15474,35017,45193,8114
-http://www.wikidata.org/entity/Q177764,Voodoo Church,"religion practiced by the Aja, Ewe, and Fon people",concept,philosophy and religion,religion,cultural representative,Q177764,87,49122,34523,41039,19740,17402,24153,24190,7046,12992,5836,0,7775,3064,10087,3073,9136,2389,27112,5893,174
-http://www.wikidata.org/entity/Q375,waffle,"batter- or dough-based food cooked between two patterned, shaped plates",concept,food,dish,cultural representative,Q375,64,61710,25252,10083,8551,4676,13305,3095,3477,8536,4135,3456,17816,9473,5055,2572,2481,8625,1615,941,861
-http://www.wikidata.org/entity/Q59183,Wanderer,"German manufacturer of bicycles, motorcycles and automobiles",entity,transportation,automobile manufacturer,cultural exclusive,Q59183,28,13086,6345,31679,16557,14187,7367,3412,2836,3451,3833,4817,45418,2135,4130,2585,3854,1344,1759,4049,0
-http://www.wikidata.org/entity/Q911871,wilderness,undisturbed natural environment,concept,geography,environment,cultural agnostic,Q911871,49,68631,62387,116201,18542,2609,34097,4139,8908,4014,20625,2256,0,14783,1299,2304,0,3160,4821,0,0
-http://www.wikidata.org/entity/Q1552567,wolf pit,pit for trapping wolves,entity,architecture,construction,cultural agnostic,Q1552567,8,70,0,6722,4658,0,0,0,1850,0,0,0,0,0,0,0,0,0,0,0,111
-http://www.wikidata.org/entity/Q36180,writer,person who uses written words to communicate ideas and to produce literary works,concept,visual arts,artist,cultural agnostic,Q36180,175,73989,17032,18846,49845,17273,10002,5462,1929,8194,2355,2453,4803,2623,29,6658,1735,1228,9023,2515,0
-http://www.wikidata.org/entity/Q156316,Würzburg Residence,"cultural heritage monument D-6-63-000-454 (0) in Würzburg, Bavaria",entity,history,museum,cultural representative,Q156316,46,29230,14403,56145,11741,15890,11462,16035,2876,3624,8477,6719,9344,8252,1940,3838,3971,1641,1658,1732,524
-http://www.wikidata.org/entity/Q56911,xunfu,high government official of the Chinese Ming and Qing dynasties,concept,politics,politician,cultural exclusive,Q56911,11,8059,5912,514,0,0,0,7511,0,1320,0,0,0,12571,0,0,0,2132,0,34632,0
-http://www.wikidata.org/entity/Q377,Yanka Kupala,Belarusian writer (1882–1942),entity,literature,poet,cultural representative,Q377,94,14060,4336,11357,7623,2814,69431,3422,5152,8029,2401,17021,40833,1319,2543,2228,5925,980,7652,2264,0
-http://www.wikidata.org/entity/Q615394,Yếm,a traditional Vietnamese bodice,concept,fashion,clothing,cultural exclusive,Q615394,12,11984,0,5473,11640,1840,0,0,2083,11920,0,0,0,0,0,3997,0,0,0,0,731
+enwiki,frwiki,dewiki,eswiki,itwiki,ruwiki,ptwiki,nlwiki,jawiki,plwiki,ukwiki,svwiki,cawiki,kowiki,fiwiki,cswiki,zhwiki,arwiki,fawiki,commonswiki,label
+49535,25835,14256,5575,24495,18650,3934,3876,9761,6359,6878,4226,10394,1558,3638,37506,0,0,0,0,cultural representative
+8728,21759,24031,20236,9396,14707,0,1608,0,775,3695,1692,2055,0,0,0,2415,0,0,0,cultural exclusive
+22074,1638,8931,4280,23,8985,15463,0,3046,0,0,0,14489,1001,0,5762,0,0,0,0,cultural representative
+14645,31519,9461,24365,5154,24653,6205,63,11333,21118,13124,10399,17601,2511,6288,24573,5771,2477,2270,0,cultural agnostic
+33101,5297,50741,34960,17550,17797,7797,3840,12941,11077,21924,4970,11347,2615,2722,20892,5687,5298,9861,0,cultural agnostic
+64548,28693,24716,22530,6687,27140,25801,10219,27628,5370,21920,5237,23666,21548,19928,16133,5588,32600,14131,0,cultural representative
+11959,11213,2129,0,0,14064,0,0,0,0,4638,0,0,0,0,0,3217,0,0,0,cultural agnostic
+10590,0,0,12332,0,9617,5746,0,0,0,0,0,0,0,0,0,5480,0,3819,493,cultural representative
+109148,42209,26748,45122,32906,67472,98037,21139,15402,24032,32819,12749,20902,8206,16556,7937,31653,6386,12910,5839,cultural representative
+23652,43278,8097,31306,8544,17507,4197,4113,5670,2112,11136,1470,3712,0,2009,4021,1519,8095,2875,0,cultural representative
+44102,10715,26142,19911,8649,40124,17460,6958,8267,12466,26056,2617,16984,4173,4508,3469,6425,5742,13058,3608,cultural agnostic
+4395,0,7574,0,5053,0,0,0,0,0,0,0,0,0,0,0,0,1581,2197,566,cultural exclusive
+98406,115942,94736,61877,35761,65644,19269,61440,93103,73204,99042,62072,18581,15886,33599,2734,90043,144436,43590,0,cultural agnostic
+66435,0,5929,9335,0,0,7959,0,0,0,0,0,0,0,0,0,0,19977,0,368,cultural agnostic
+8571,3287,10680,2239,11741,6951,5419,5455,37874,3070,6008,109,1359,2439,1269,0,6031,3687,5012,0,cultural agnostic
+3423,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural agnostic
+72564,103749,29544,25225,9582,55715,17532,13643,118625,83156,22142,11240,49340,11891,23334,95421,17263,19084,3960,7253,cultural agnostic
+6214,4894,5197,7692,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+127952,84098,25745,111524,47728,54111,86425,21339,206002,6862,6057,8881,85810,8665,9635,16627,40949,37013,57701,0,cultural representative
+8787,13727,2728,7622,0,0,1536,0,9196,0,0,0,7319,588,833,0,0,0,1851,45,cultural agnostic
+98007,60015,11115,134319,54518,61820,92309,28161,44308,33183,27167,17178,39601,16463,54039,41188,99379,22526,40346,9884,cultural agnostic
+23922,9534,0,11897,7895,0,0,0,0,0,11522,0,0,0,4681,0,0,0,8006,758,cultural representative
+176751,70275,68426,64636,51066,42612,194997,19729,67743,56899,28991,10708,119974,79064,60023,15486,20291,67674,50770,19765,cultural representative
+39485,0,0,0,0,0,0,0,0,0,0,0,0,1606,0,0,8755,0,0,0,cultural agnostic
+54610,45,11201,94573,14102,78405,20564,2232,18109,6877,16126,3574,4638,12391,10401,7191,16153,29049,4016,0,cultural agnostic
+17820,0,1543,0,0,8876,0,0,0,5779,10275,0,0,0,0,0,0,2461,0,0,cultural exclusive
+220603,17690,10396,36307,10268,55763,12867,18395,11492,20015,20309,5238,33359,2524,9371,11196,19076,11629,7133,0,cultural agnostic
+40580,6867,40739,53843,9572,40373,11926,7597,41975,13406,38600,6470,55438,9145,5846,9102,17277,18584,3038,4884,cultural agnostic
+31592,14037,12725,227784,6861,19542,11799,12403,5039,7450,44648,3143,28627,1700,0,7354,3843,0,0,0,cultural exclusive
+8754,2610,0,24722,0,0,624,0,0,0,0,0,0,0,0,0,0,0,0,360,cultural exclusive
+122499,110375,117904,122479,58122,71693,166725,92245,42783,29793,62753,20691,58075,30173,14638,88757,53209,129487,94335,11185,cultural representative
+53986,32407,24651,20856,10304,28445,7700,10016,30417,3597,5062,7336,3498,15071,20072,3509,21416,10095,13184,0,cultural agnostic
+12024,2102,15093,0,1642,4908,1696,1473,0,0,3622,2014,0,0,0,0,358,0,0,0,cultural exclusive
+3968,17275,8848,1696,2026,15280,882,485,806,1699,0,1042,1261,913,0,0,0,0,0,138,cultural exclusive
+18417,5044,7425,1190,3031,0,1533,1220,0,0,0,1504,0,0,0,0,584,0,0,0,cultural exclusive
+9023,1756,21741,15225,4657,0,0,4793,0,0,0,0,0,0,0,20554,0,0,0,0,cultural exclusive
+24592,0,2234,0,614,0,0,0,0,0,0,0,0,2847,0,0,0,0,0,1050,cultural exclusive
+34396,9144,0,0,2282,0,0,1473,0,0,0,9836,0,3189,0,2206,4631,4260,1745,131,cultural agnostic
+15908,32,10274,40552,3941,8198,32367,7416,5271,5558,3572,2891,24593,1298,3301,4147,7208,7312,2706,0,cultural agnostic
+10249,5814,12928,4783,4733,12591,5008,2665,24654,1178,12716,9955,3254,5251,2686,3770,1033,5443,4193,0,cultural representative
+154413,26335,21303,40020,30939,5477,104204,39646,47676,12622,44771,0,0,41238,1166,0,33228,1792,0,0,cultural exclusive
+6531,0,4106,3290,1911,0,0,2141,0,0,5794,0,0,0,0,0,0,0,0,0,cultural representative
+18071,16469,6731,8392,3858,9400,17749,2740,14544,0,7814,2510,10001,3454,3439,3174,2449,21769,16069,885,cultural representative
+148044,105958,54920,52788,152633,175579,128695,34804,59139,5667,55761,25525,31758,14076,23358,76437,39323,37450,27239,4793,cultural agnostic
+45983,7575,10778,1581,8509,9424,0,2556,5235,3705,7143,4487,9849,4226,1710,2482,818,3829,53281,0,cultural agnostic
+12796,4953,8915,12704,1737,22021,6453,0,0,868,0,2018,0,3108,0,0,0,0,9808,265,cultural exclusive
+119047,19126,7244,18784,14961,11878,10603,4823,15913,11000,18258,5708,4149,1356,2335,3877,2898,6697,5936,0,cultural exclusive
+5885,48,1386,1018,0,0,0,686,3459,0,0,0,0,0,0,0,844,3735,0,71,cultural agnostic
+34475,8969,30596,4464,31886,10724,4174,6652,7635,3182,9113,1066,4450,6419,6102,2018,5166,4566,4590,0,cultural representative
+18883,4353,6279,5237,2793,51918,4699,0,0,0,0,0,3564,0,2919,0,6266,0,0,1490,cultural representative
+52212,30193,230315,29939,42344,44585,15147,44258,39790,16128,4085,7308,6650,38366,3582,47320,9649,6276,3975,0,cultural representative
+2666,3341,2732,0,0,2331,0,1042,0,0,0,0,0,0,0,0,0,0,0,63,cultural exclusive
+126992,20976,28446,28805,10814,76674,13503,4618,17565,5428,8339,3318,1639,6521,3918,2895,7193,22003,7041,0,cultural exclusive
+81442,14953,10248,18375,33731,49256,60355,12086,51248,5925,9235,5243,4385,3613,9292,4124,13032,15640,11072,0,cultural representative
+2225,10604,6321,0,3637,6420,573,3468,11172,0,0,0,0,2573,0,0,0,0,0,0,cultural exclusive
+85317,18525,16175,13846,8592,13952,16173,17654,8613,7489,6629,8421,13030,5212,4460,3051,4948,17170,8619,484,cultural representative
+1937,0,5870,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,321,cultural exclusive
+14965,30198,6195,5086,1048,1399,3115,5030,6859,2651,1351,4670,2744,1086,2181,2701,0,7433,6552,254,cultural representative
+18440,1818,2916,10915,5194,4958,2023,0,5332,0,4003,0,0,0,0,0,7155,0,0,1090,cultural exclusive
+218087,546177,76437,134804,66736,179090,91910,18183,97827,197593,361957,38747,53226,89924,52372,98860,56689,124994,63339,11354,cultural representative
+100210,21573,23395,6624,55836,10668,0,0,0,0,0,0,30147,0,0,0,5001,13193,0,0,cultural representative
+30053,20843,21134,48659,8580,96328,21695,3512,44901,4606,22632,6871,34581,9111,4978,4806,71657,2598,9214,3640,cultural agnostic
+10626,3543,6406,4277,6007,7823,2279,1394,3769,2302,1483,612,0,0,1475,3392,1635,1895,8699,243,cultural agnostic
+57,2143,1095,7291,813,7804,2144,753,0,0,8350,0,7383,0,0,0,0,2669,0,0,cultural representative
+92784,19614,12724,84916,16841,32737,28253,3709,5654,5276,3106,2830,5235,1689,6626,5065,16547,7853,13466,0,cultural representative
+187767,18987,15082,40826,16003,24096,11393,8219,121894,12027,12982,1666,24885,2530,10674,1401,4052,84976,30654,0,cultural representative
+17605,4889,0,0,2205,7773,0,13657,17379,0,0,0,0,0,1195,0,0,4463,6625,0,cultural representative
+12834,14056,13819,5229,12828,18181,20229,10564,8607,20241,0,11373,9757,0,4314,0,1287,0,2649,562,cultural representative
+152842,43022,151149,126495,121626,107849,33981,29228,128917,23482,85802,64319,98792,41808,7301,15314,23449,28190,17107,0,cultural representative
+4259,7598,3231,2643,9913,9001,2415,2420,2218,1306,948,4642,0,606,1499,4055,0,0,0,188,cultural representative
+5229,9357,2557,3983,1333,31016,1734,6672,2404,1278,36387,1948,2095,1832,2567,955,1963,9450,2414,0,cultural agnostic
+78,12330,5695,0,12579,6165,0,1172,4524,1507,3416,1643,2062,3198,2594,1732,0,0,0,0,cultural representative
+3937,1602,0,1180,3184,0,2265,0,0,2113,0,0,1326,0,0,0,0,0,0,261,cultural exclusive
+30051,74555,36588,22538,14044,89778,10530,14056,247769,8293,15317,11451,5638,3764,7101,7015,16333,6174,14305,0,cultural agnostic
+6535,25985,0,0,0,0,0,0,2700,0,0,0,0,0,0,0,0,0,0,0,cultural agnostic
+16909,27722,18747,21095,19392,5709,2867,6844,3567,1587,24471,12952,2543,1029,0,6083,0,8997,16768,160,cultural agnostic
+25,31,5569,49,0,68,0,0,4683,0,48,28,0,27,0,0,0,46,0,0,cultural agnostic
+172790,93357,165722,195055,122611,237495,129516,17837,42268,114096,162876,42308,178540,77562,68451,38525,154883,130436,204215,0,cultural agnostic
+12163,2058,0,0,7909,19276,0,0,13590,2498,15116,11907,0,0,0,0,7584,15036,0,135,cultural exclusive
+2738,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,335,cultural exclusive
+3270,3311,2932,0,0,8731,1980,0,0,5080,7152,0,0,1868,0,0,0,4718,0,171,cultural representative
+4771,16145,5473,3020,0,0,0,2047,0,0,0,0,0,0,0,0,0,0,0,0,cultural representative
+2345,0,23979,0,4224,0,0,0,0,0,0,0,0,0,0,0,0,0,0,351,cultural exclusive
+7017,14727,25485,0,4419,2441,0,0,0,0,0,0,0,0,0,0,0,0,0,201,cultural exclusive
+19502,10178,9472,2186,3278,0,1795,2441,0,1734,0,3523,586,0,0,0,481,0,0,454,cultural exclusive
+4810,2589,9456,9890,3654,0,0,2299,0,8296,0,1955,0,0,1672,1653,762,0,0,483,cultural representative
+1248,0,1235,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural representative
+22493,9531,7201,8003,21523,4473,9925,2419,5328,3726,11299,8919,7926,6267,0,3166,2272,3366,5977,1200,cultural exclusive
+94779,109371,74003,65833,56284,145702,32663,43220,71393,45770,105978,34585,35019,16842,46015,30416,8370,16489,29772,15969,cultural agnostic
+33784,31790,22804,26686,9929,24048,9752,9717,6981,7549,5118,2270,5208,5107,2837,15477,4942,7162,5909,0,cultural agnostic
+124509,14143,11717,31560,8379,6121,48253,3232,18437,8191,13946,5543,2351,4341,5802,6515,8872,12337,10609,0,cultural representative
+22494,0,31055,4690,0,0,0,7749,8281,0,0,4390,0,8425,12497,0,13541,3166,0,0,cultural agnostic
+49659,2886,4411,0,5933,0,0,0,0,1314,1639,0,0,0,0,0,0,0,0,261,cultural representative
+14806,10147,0,10974,0,14349,11378,2108,5705,29664,2675,6707,3441,2534,2770,1787,15461,8752,4158,0,cultural exclusive
+13169,3721,6965,84300,4267,0,0,5887,3398,653,0,0,1101,3082,0,1444,0,1961,50,327,cultural representative
+12480,3760,3545,8813,2880,15519,1924,5171,3346,701,2794,633,0,687,428,3022,0,0,0,142,cultural representative
+198,19636,22684,23606,23727,23417,3975,11460,9224,3489,5862,15511,17552,4989,14329,2908,5749,29995,16710,0,cultural representative
+82499,78073,15440,41602,17251,31961,18613,18515,22775,19265,42159,8515,17055,26171,4096,37062,45639,29207,101754,2324,cultural agnostic
+83360,50900,39080,30475,16044,45397,11765,14531,54249,8483,46898,13710,36907,5215,7530,23139,28575,18389,22188,1017,cultural agnostic
+92729,15961,48384,60556,9289,49110,12919,41312,18322,2479,83372,26553,58664,8150,10329,60193,21014,4758,39741,5750,cultural agnostic
+86224,90837,57223,44030,37592,24226,31913,37564,8906,4050,3471,18184,1440,5754,9532,7710,78515,18426,42513,0,cultural representative
+95309,53824,21640,48267,48401,47438,97323,11216,22366,12658,12947,7658,23421,12486,41256,18656,14543,46478,51252,0,cultural agnostic
+14144,6232,2800,2968,2938,4418,6864,2386,13023,1152,3724,2629,5075,4398,2057,7694,4461,2613,2314,101,cultural agnostic
+27106,72871,36418,24899,30082,41726,8094,5902,7999,6923,49220,2718,22306,695,3039,13082,6344,3653,8458,0,cultural agnostic
+104598,20860,59094,73122,39144,96277,43851,31892,20763,8836,50783,4689,71832,2774,7256,24434,16989,12005,7901,0,cultural agnostic
+77817,136722,74836,73830,30498,43197,30417,34801,39612,7034,30441,2587,42412,9850,9890,4646,13803,42433,10264,566,cultural representative
+16422,10956,3743,7776,2707,3653,14183,3294,1073,1115,9240,0,0,2517,0,2614,3868,8770,1251,149,cultural representative
+83688,14527,14837,64010,22747,24279,13671,7568,6438,9443,148870,2606,17042,1786,5864,14074,6263,12964,14177,0,cultural agnostic
+239383,359972,141373,192458,189899,160685,121433,100523,175093,30494,31393,69454,126644,28810,101598,31855,61867,49492,49438,13268,cultural agnostic
+2296,0,6505,0,0,0,0,565,2156,0,0,0,0,0,0,0,0,1077,0,491,cultural exclusive
+1447,0,1379,0,0,2352,0,508,0,0,0,0,0,0,0,0,1008,0,0,0,cultural exclusive
+152431,247091,152043,57988,170391,188109,86073,94499,113569,162113,94819,32509,59833,84162,41863,80973,59227,80833,92325,0,cultural representative
+208556,120597,83611,93930,38125,141686,143202,41722,43227,26470,153565,34638,41330,9776,50557,64152,170985,46569,16418,4596,cultural agnostic
+77545,54716,38093,11095,29108,6567,108758,2452,25681,3181,5879,3459,0,1891,4240,0,23413,4330,7290,0,cultural representative
+10871,2139,13511,4419,2644,5325,3440,0,4484,4675,5613,726,4274,761,834,3766,614,2524,2280,82,cultural agnostic
+11808,10369,12351,10110,12490,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural representative
+8803,7590,0,5055,0,8164,0,0,0,0,2657,0,0,0,0,0,0,0,0,0,cultural representative
+185159,78486,43070,37607,33668,105234,38321,22008,33747,31649,59816,28168,17195,102730,14621,20917,23675,191892,29702,3528,cultural representative
+13878,1743,6638,3836,10664,19868,0,0,9516,1501,0,0,0,0,0,0,0,0,4193,0,cultural representative
+30906,4347,27185,20911,14020,8799,0,2818,6446,7811,2095,1597,17838,2383,3719,1114,9266,3127,4434,0,cultural agnostic
+68,568,0,0,674,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural agnostic
+22778,18781,0,9567,19145,0,6268,5457,9422,1714,10850,890,0,4315,0,1528,1542,8344,2991,0,cultural agnostic
+20048,8668,31342,3865,5189,5541,14978,9842,13518,2276,12452,4247,1034,1090,7328,8419,10592,6213,7167,0,cultural agnostic
+53145,4756,3576,4779,4899,9910,2011,1622,8994,15556,2915,1541,2753,0,2775,0,10238,2307,3100,0,cultural exclusive
+76861,22980,15058,43694,6810,29597,7911,4856,46906,3045,8089,13080,34467,5569,11959,2887,14272,8498,6195,0,cultural representative
+11311,5064,14020,0,9386,9659,0,1536,0,0,0,0,0,0,0,0,0,0,0,298,cultural representative
+12467,4681,65748,8490,6330,34243,0,1585,1873,1818,0,452,7877,0,0,0,1263,1994,6776,0,cultural exclusive
+23987,42340,18329,17403,35532,31239,5486,4395,37371,13740,2739,0,1357,1932,0,3966,1282,5804,10294,0,cultural representative
+12673,6221,7309,8334,6386,19368,0,0,2692,0,0,0,0,0,0,9547,0,3251,0,596,cultural representative
+13258,5013,4344,3475,0,24137,5194,0,10433,5856,0,739,1046,18815,1390,0,8120,2642,78841,0,cultural representative
+63160,41901,85899,25533,18902,44900,17491,10928,51123,30633,38295,5419,17831,2826,20339,8157,1540,44201,2865,13523,cultural representative
+18701,0,0,5196,2603,0,1998,0,17743,0,0,0,0,1398,0,0,0,0,0,0,cultural exclusive
+61,1491,28131,0,4913,49159,0,874,0,1431,0,4774,0,0,0,15640,2312,0,0,0,cultural exclusive
+2097,2591,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural agnostic
+42376,62692,24371,54831,27696,6003,52734,2437,5164,6602,8858,1037,2187,2034,6727,3676,12628,16035,43,0,cultural agnostic
+9199,21496,2909,20850,6441,46501,7258,2952,0,3222,0,3088,0,0,0,0,6777,5454,12394,0,cultural representative
+67796,46821,0,44015,0,0,0,0,0,0,0,0,0,0,0,0,0,18368,0,0,cultural representative
+106077,77293,51901,37302,23506,44449,26889,9317,68655,29465,33080,8039,6734,3993,7544,5124,90452,62100,11030,0,cultural exclusive
+103292,25076,15946,38983,26757,69734,4706,6629,40009,0,8870,62870,12917,2696,5052,10195,2735,13236,10402,3413,cultural agnostic
+16083,4299,6123,5920,1666,20901,14076,1079,4178,3901,0,1549,2770,601,593,4528,8760,1315,2267,282,cultural agnostic
+56878,20338,4269,11899,9644,4639,3760,4654,0,5309,0,2023,2526,2251,0,0,0,3335,10994,639,cultural representative
+18763,11118,63959,0,5392,0,11488,0,13144,0,0,0,0,0,0,0,0,0,26768,0,cultural representative
+8897,6480,15891,3346,3764,12384,671,533,0,939,10424,0,5067,7522,0,1156,7855,9116,0,0,cultural agnostic
+16226,9568,29616,13662,10503,16318,11866,6000,5333,5473,6985,2867,2632,2752,3317,8358,5000,7519,9056,0,cultural representative
+213992,67488,25454,51342,34702,71127,52361,17055,46451,25719,33474,51130,16261,13177,16392,17522,31361,24468,35974,0,cultural representative
+3676,0,0,955,0,1798,0,0,2281,0,2527,0,0,757,0,0,0,3264,1593,81,cultural exclusive
+2976,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+7301,0,0,0,0,0,0,0,5708,0,0,0,0,22380,0,0,974,0,0,104,cultural exclusive
+4595,4424,3866,8808,6638,2493,0,1748,2272,0,8444,6634,3681,8774,0,6560,1957,8186,4042,258,cultural representative
+24367,20983,9132,18705,6596,2934,1252,703,8168,716,1525,2159,1887,0,5042,1830,0,2980,0,96,cultural representative
+25683,4038,3819,58683,2536,13585,3405,2176,20963,20781,23120,0,1664,2199,1677,0,1814,1577,0,0,cultural exclusive
+56393,9781,37770,19523,2924,30215,7313,16013,40481,3128,36301,7295,27872,3759,3986,9700,25756,16709,4752,0,cultural agnostic
+5230,1912,6940,1623,6214,0,5044,1743,5625,0,0,3441,2357,1385,3463,2431,658,5497,2580,0,cultural agnostic
+8106,1451,2282,6229,0,11352,0,1802,0,0,10345,0,1124,0,0,0,0,0,0,444,cultural representative
+153787,32931,21287,92451,49139,63709,101089,16425,38011,8371,38626,15272,17644,20155,19975,59229,25068,17111,25430,1017,cultural representative
+105139,35455,14776,16237,83322,42137,9759,8493,27842,8093,22536,3375,4099,25864,25869,5588,16720,12455,138474,0,cultural agnostic
+8401,5456,2826,2294,7505,16263,3702,0,0,2476,2642,0,1561,0,0,3212,0,1621,0,0,cultural exclusive
+16602,0,11014,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+2499,22956,0,15433,3319,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+3944,15808,6080,10199,0,0,0,0,0,0,0,0,0,0,0,0,1688,0,0,563,cultural exclusive
+10118,14636,21265,9009,6496,8402,2485,2446,17783,1991,6527,7429,6405,1726,5752,1947,3764,3267,7258,0,cultural agnostic
+22,14953,137,0,0,50,0,0,0,0,0,0,0,0,0,0,0,41,0,0,cultural agnostic
+7103,4417,5196,0,1708,0,0,1994,0,1474,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+7632,0,3578,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+24742,6556,3447,3212,4697,8585,22,3099,8446,816,1794,1648,1929,1994,927,0,3620,10812,4543,0,cultural agnostic
+6827,9300,4944,3122,6574,10940,2464,4723,3322,5351,5476,4920,5270,0,3218,5996,1505,1797,1567,504,cultural agnostic
+14817,0,160273,4299,11145,33308,3339,2169,49221,3968,9275,0,3633,42990,10278,7931,23993,12193,4917,0,cultural agnostic
+18133,0,13714,0,3591,21276,8503,0,31282,0,0,0,0,0,0,0,0,0,2179,0,cultural agnostic
+24954,18725,31974,7528,14806,7936,5444,3065,4650,1471,10061,1284,4655,1412,2265,1757,2005,59357,3717,0,cultural agnostic
+102,25999,23728,24803,29514,43986,0,17064,17911,5655,7791,4424,2860,1564,10032,3989,23414,86,9798,0,cultural agnostic
+124665,0,166,21827,29538,8932,1993,1752,0,0,5921,0,3019,15739,0,7534,11086,2717,7318,169,cultural agnostic
+12063,2822,0,13577,7744,0,0,0,0,0,0,0,2613,0,0,0,0,0,0,0,cultural agnostic
+3721,1993,0,0,0,0,0,0,0,0,0,396,0,0,0,0,0,0,0,0,cultural agnostic
+21652,8949,16118,3447,9312,7137,1690,12748,1139,6090,8728,603,16868,8596,7892,2813,0,2716,4519,175,cultural representative
+95775,143077,27192,122711,19970,32036,88913,4261,39468,10479,5426,5254,6299,6125,5796,31590,20238,10494,3765,0,cultural representative
+8310,1204,2740,12303,0,0,0,0,2961,0,0,0,371,0,0,0,2829,0,0,153,cultural exclusive
+201771,102850,120109,88943,49468,67684,32898,35064,104549,30748,28300,24355,29876,120391,41476,12750,340270,73663,14445,0,cultural representative
+3622,4671,0,4066,0,0,0,0,666,1060,0,0,1355,0,0,3988,4392,0,0,0,cultural representative
+2754,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+68041,26443,44310,34562,38048,49097,14518,5210,21901,13333,38963,10288,33701,28728,18774,6459,14417,12547,25411,5755,cultural agnostic
+63805,29109,22090,32063,88374,15834,7868,5367,10776,16971,20759,11115,7779,5897,5598,13741,4728,67088,23176,0,cultural representative
+26302,3106,3404,2622,1617,2173,1253,600,2218,595,2896,867,0,0,0,0,6642,7734,0,111,cultural exclusive
+294928,202181,116532,228727,159276,194422,190471,122387,106632,214176,48517,49597,133148,26939,42931,219183,156257,270564,54133,9808,cultural agnostic
+5815,0,0,3416,0,0,903,0,0,0,0,0,2497,0,0,0,0,0,0,0,cultural exclusive
+65656,45041,32257,23806,21085,17275,11040,8248,21570,13985,5256,4792,3244,3022,6111,9454,12968,6435,8220,0,cultural agnostic
+7159,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+8035,963,94,1344,4131,12940,1364,720,4913,0,4204,1722,2012,1464,512,0,684,2299,1472,0,cultural agnostic
+2954,0,9990,5017,3380,0,0,0,0,0,0,0,0,1775,0,0,0,0,0,586,cultural exclusive
+120,107525,96,5652,0,0,0,4435,0,0,0,48,0,0,0,0,0,5380,0,0,cultural agnostic
+9634,3163,0,1734,1650,4917,6725,1568,7082,0,4449,0,0,0,0,0,0,8345,1571,129,cultural representative
+3211,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,437,cultural exclusive
+2307,0,0,2280,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural agnostic
+206195,67522,75482,32931,83855,48302,60884,73894,220720,14032,54836,10827,30176,8249,24501,24462,35783,26462,54097,0,cultural agnostic
+20323,1853,14223,2859,3798,0,3773,0,12389,0,0,0,3973,0,0,0,0,7594,7320,0,cultural agnostic
+39770,13076,10342,39311,9830,15635,12017,6830,15146,0,6442,1697,37447,1993,3948,6793,5996,6688,8438,0,cultural agnostic
+29398,62354,18883,21090,38367,40720,5843,3216,20250,7793,30137,4501,29561,3543,2682,7604,12071,27401,9838,0,cultural representative
+4676,6140,27781,0,0,0,0,0,1522,0,0,0,0,0,0,0,1026,0,0,0,cultural representative
+95355,133322,51124,36234,71496,60566,13831,29849,52024,13502,38713,19999,32419,23294,19086,10755,31295,13875,4695,3099,cultural agnostic
+19818,14239,40703,16190,6439,87084,17857,4019,2196,7430,5129,4639,3699,2129,11570,12366,5481,5613,4595,4559,cultural representative
+6863,0,0,0,0,0,0,0,0,2371,0,0,0,0,0,0,5788,2332,0,0,cultural representative
+12323,0,2487,0,0,3468,0,0,0,2408,0,0,0,0,0,0,0,0,3423,73,cultural agnostic
+22376,6501,7955,15458,19997,5893,3210,2798,6002,4568,0,0,0,6630,0,1921,0,14524,1980,0,cultural representative
+7042,0,0,0,0,0,0,0,0,0,0,0,0,1281,0,0,0,0,0,0,cultural exclusive
+3628,27654,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,334,cultural exclusive
+7005,13876,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,389,cultural exclusive
+5997,2819,6453,5468,3622,8760,1696,1064,7545,1967,2884,1633,1205,0,1412,1651,0,0,0,0,cultural agnostic
+271423,181105,121514,194850,155661,197478,163841,75093,233960,57191,137482,35382,78495,91291,51407,71478,215400,60887,122396,57282,cultural representative
+24970,21,38907,14975,19325,49260,2655,1700,26848,6571,9642,6727,21491,7418,0,11839,71283,14023,1387,0,cultural agnostic
+20203,20425,10134,4159,3289,16334,5103,2249,15889,858,9429,1826,1645,3044,8187,2018,1002,121681,4578,0,cultural representative
+116628,97124,147714,41317,40388,129786,130325,14945,54605,14940,67778,30814,105431,14961,29827,38237,21351,36734,22791,0,cultural representative
+139292,51624,36576,27134,38826,153476,3458,59725,51290,9101,32271,6179,8199,74609,8141,14501,55810,10283,161968,0,cultural agnostic
+8041,3203,2629,0,1774,8068,7958,0,0,5323,0,11151,1687,0,2637,0,0,1988,0,668,cultural exclusive
+48540,63824,21737,36099,26694,39330,19660,3642,17779,11106,49645,5837,29502,6637,4028,4188,19179,24914,23726,0,cultural agnostic
+3907,19435,0,32934,4464,0,0,0,0,0,2201,0,14461,0,0,0,0,0,0,0,cultural agnostic
+38616,6287,36674,12132,8784,32697,4626,3955,6040,4202,17105,2542,1033,5719,3713,4741,9396,9698,2637,0,cultural agnostic
+6282,0,0,2276,4369,0,3751,0,0,0,0,0,2831,0,4451,0,0,14080,1799,158,cultural exclusive
+52312,30094,29019,0,9181,32819,8249,24459,0,4409,29220,24490,2382,0,2139,4780,1159,1914,1549,212,cultural representative
+4107,0,2393,0,0,53311,0,0,0,2448,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+5296,8895,4458,6295,6878,14109,21459,6143,3415,3662,3762,1955,3671,10222,1529,0,2842,4752,1800,0,cultural representative
+21163,8167,0,10222,0,0,0,2193,0,0,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+194961,142863,25727,91348,76712,190329,166863,22735,37660,54189,100223,47241,131623,53368,69623,26449,26066,51197,25231,4618,cultural representative
+11428,5555,0,12421,0,0,0,0,0,0,0,1482,0,0,0,0,0,0,7171,0,cultural agnostic
+4491,0,26003,6966,6316,12415,0,0,0,0,0,0,0,0,0,0,0,5574,1223,112,cultural exclusive
+83451,233012,78335,125376,168601,108400,152956,26345,66769,21023,183485,14387,111724,21117,34484,27217,25781,82600,99179,29737,cultural representative
+8406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+8931,0,2364,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,112,cultural exclusive
+51887,80707,26499,19053,35761,171050,12700,15516,8474,29164,131398,30339,19220,5448,5521,6583,9502,21138,23698,2503,cultural representative
+7942,20510,2492,0,5632,11098,0,0,4190,0,0,4057,0,0,0,0,0,7082,0,3702,cultural agnostic
+14866,13013,0,8093,0,27548,0,0,0,1950,10936,0,4689,1050,0,4056,82,2738,10037,0,cultural agnostic
+14661,4892,1263,0,1974,0,1646,0,5450,0,0,0,0,0,0,6250,0,0,2681,0,cultural exclusive
+56888,6051,113409,41401,18566,29026,4309,0,25954,0,14317,0,35190,3784,0,5863,0,13438,18728,48,cultural representative
+37241,4602,4223,2557,5795,7089,3054,842,10881,14083,0,7443,3430,985,1957,0,3144,902,23639,0,cultural agnostic
+46044,295455,35539,58276,24270,79217,21320,18211,187529,7518,71676,12066,34458,92554,11930,41550,19718,46410,22095,1886,cultural representative
+10575,990,0,0,10037,0,0,5450,0,0,16134,0,0,0,0,0,0,0,0,0,cultural agnostic
+127349,27419,67128,58363,8242,27916,20175,16025,24263,13538,3346,43356,112998,25182,3463,5855,23207,11752,1441,0,cultural agnostic
+27869,224483,23721,39324,16704,18365,5380,10569,115927,8299,16329,17897,3638,6507,5599,17749,12336,9940,9991,8845,cultural representative
+31857,14192,7630,7989,9315,25569,10490,14366,21947,6081,4359,2465,4162,2621,6828,0,6474,2535,2781,0,cultural representative
+13529,9433,2552,11924,4005,61865,3579,0,2675,0,0,0,3435,0,0,2406,0,0,0,117,cultural representative
+4694,1175,1754,0,0,0,3564,0,0,30920,12882,0,0,0,0,2176,0,0,0,0,cultural exclusive
+58004,30533,59383,27280,14477,17071,14808,5484,0,2740,5046,4892,19555,29622,60429,1801,19229,17967,22165,0,cultural agnostic
+21291,45875,24882,20498,56976,33094,3573,12203,12109,36315,5562,42093,1115,156224,5616,2772,41714,3863,3152,0,cultural exclusive
+17343,3688,1986,2871,2465,3214,712,0,2505,0,3597,0,4166,2419,0,2255,5685,8998,2704,0,cultural representative
+5763,3070,12583,3605,2890,4012,2972,1464,7519,2552,0,1567,2630,1431,734,2345,3070,2765,3176,0,cultural agnostic
+3711,4062,1393,3293,2876,3092,2994,1604,0,3053,2957,1770,2098,1561,0,0,0,0,0,0,cultural exclusive
+5215,0,2228,6113,0,7985,0,2074,0,1235,7733,0,0,0,0,0,1140,2199,0,166,cultural agnostic
+14846,3933,5567,9364,3614,0,9963,0,34968,0,0,0,0,0,0,0,0,0,0,0,cultural representative
+70582,71225,15111,17043,22067,27207,10928,12230,14990,14124,17529,6508,3070,5429,6408,2515,6760,5163,5540,836,cultural representative
+11803,3898,7847,3812,17123,23748,0,1051,23493,3918,0,0,4562,8116,0,23269,909,0,0,0,cultural exclusive
+110182,45943,114995,67485,26369,144402,31982,11434,105998,24208,50542,53787,30701,10404,14380,77199,54170,22324,18735,0,cultural representative
+30825,29232,25040,23315,34166,2054,0,973,0,0,0,0,4816,0,0,0,747,2955,0,0,cultural exclusive
+52288,3778,0,0,0,0,0,0,34066,0,14262,0,5923,13352,0,0,19245,72351,8392,75,cultural agnostic
+8059,5912,514,0,0,0,7511,0,1320,0,0,0,0,2132,0,34632,12571,0,0,0,cultural exclusive
+74789,46443,46874,95133,28090,37261,17780,13356,76220,8252,57505,5329,34122,9536,26,5804,78969,33092,29243,3133,cultural agnostic
+3632,0,0,2370,0,0,0,0,2202,0,0,0,0,2022,0,7278,6890,0,0,0,cultural exclusive
+138,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural representative
+12952,72,35640,15995,20575,13276,7758,3696,25621,10208,6523,11738,11579,4561,6592,10183,6043,17943,9953,0,cultural agnostic
+13510,20432,5886,0,0,0,3566,2559,0,0,0,0,0,0,0,0,0,0,1508,0,cultural agnostic
+16271,6054,0,0,0,14613,0,0,0,8917,14834,0,0,0,0,12158,0,0,2756,90,cultural agnostic
+2197,0,89,0,0,0,0,0,2398,0,3852,0,0,0,0,0,0,0,0,0,cultural agnostic
+1210,0,619,0,0,0,0,0,0,0,0,424,0,0,0,0,998,0,718,0,cultural agnostic
+15204,11716,9249,0,2751,0,0,5099,9703,0,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+285443,136555,270781,172375,68943,161517,175366,45801,330371,50250,117210,38480,32945,196359,60741,117120,167599,212616,50153,26557,cultural representative
+10595,9338,2807,4249,6698,17913,6470,1284,5822,1570,4396,1177,6152,1132,3428,4350,3191,0,5024,0,cultural representative
+22226,2820,3118,0,1212,0,0,0,0,0,0,0,0,0,0,26089,809,0,0,408,cultural exclusive
+38661,61878,12217,44008,34078,46531,10570,13170,28007,0,4710,0,16883,14227,16303,11343,6010,32801,2238,0,cultural representative
+15278,7605,2940,9759,8434,10870,6772,0,31038,4496,5040,0,0,486,0,0,9126,0,0,0,cultural exclusive
+47080,13362,8189,39512,2573,6310,0,1772,26885,1930,2662,6214,4274,4850,1886,2573,3289,12251,3095,0,cultural agnostic
+12519,2837,0,8580,0,2041,2726,0,4362,1171,0,4021,3681,1024,1650,1775,774,3765,0,0,cultural agnostic
+165009,77780,57540,86746,55913,86507,12412,19273,24181,6675,78825,10294,35685,4747,14538,17725,18337,180036,99785,0,cultural representative
+13969,16491,6209,4589,7445,5736,0,0,6241,2647,0,2540,0,1592,0,0,0,13296,3043,0,cultural representative
+3496,2971,2930,3425,0,6938,0,0,0,1217,11236,0,0,0,0,0,0,0,2392,0,cultural exclusive
+3977,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,cultural exclusive
+34759,5877,31387,0,3529,17016,0,7948,2452,0,3010,0,0,3110,2204,1853,22933,9529,17792,0,cultural agnostic
+9538,0,106,0,0,0,0,4218,0,0,0,0,8409,0,0,0,0,0,0,0,cultural agnostic
+3841,0,4293,0,0,0,0,4090,0,0,0,295,0,0,0,0,0,0,0,0,cultural agnostic
+18548,6239,12883,6495,9063,0,3986,0,4492,11125,0,1877,4709,1014,0,0,5936,21174,4115,0,cultural agnostic
+86853,174950,31200,9003,15974,32580,14975,8739,19503,13829,12075,4282,6535,10041,4960,9862,12740,39349,8593,211,cultural representative
+31573,6469,9620,7181,6625,38086,1459,5804,3539,2362,38409,8405,1908,948,5333,3629,3075,11457,20722,1768,cultural representative
+8536,1446,1607,0,0,0,0,2851,8443,0,0,0,0,1575,0,1822,3595,0,6217,0,cultural agnostic
+6673,8015,3639,1924,0,1370,0,2099,3139,380,2421,1747,2596,900,1764,2108,1718,0,0,0,cultural agnostic
+3140,0,3109,2468,0,0,0,0,1989,0,0,5817,0,0,2114,0,0,0,0,545,cultural representative
+4565,11105,5591,3832,0,5494,0,2953,132,0,0,921,0,0,0,0,0,11423,2024,0,cultural agnostic
+55699,0,0,0,0,17843,32773,12730,6568,0,4210,0,15788,713,2210,0,12883,3572,1679,0,cultural agnostic
+173,34403,14935,37,14486,58176,19351,2137,3270,2666,8291,4968,3346,35343,4267,12592,2671,39,1644,0,cultural agnostic
+66581,41939,9723,30369,54576,155651,57167,14050,45774,16597,76419,23894,36688,15601,8273,14742,21967,9587,43607,0,cultural agnostic
+12547,8798,0,5267,3820,8503,0,0,6140,0,23567,0,0,0,0,9730,714,0,0,0,cultural agnostic
+21961,5712,9528,6722,4808,7557,6867,1737,10388,0,0,0,0,0,0,0,0,0,0,0,cultural agnostic
+67679,32838,28364,26724,18653,48439,7011,9366,13876,12515,13827,9510,18110,16068,22473,3126,17109,8332,4982,0,cultural representative
+36584,77439,6698,38974,93709,20557,8354,11943,27370,3688,15408,7565,69770,6289,7198,1896,20769,13885,11955,207,cultural representative
+99303,84280,28881,51235,40493,55029,29626,12769,46482,26874,57536,20693,36440,9433,78803,283545,51165,54428,12217,16998,cultural agnostic
+156152,53457,68716,82886,13292,75110,29757,18801,94209,20211,63303,27758,21518,15474,35017,45193,29764,30180,27530,8114,cultural representative
+61710,25252,10083,8551,4676,13305,3095,3477,8536,3456,17816,5055,2481,8625,1615,941,9473,4135,2572,861,cultural representative
+13086,6345,31679,16557,14187,7367,3412,2836,3451,4817,45418,4130,3854,1344,1759,4049,2135,3833,2585,0,cultural exclusive
+49122,34523,41039,19740,17402,24153,24190,7046,12992,0,7775,10087,9136,2389,27112,5893,3064,5836,3073,174,cultural representative
+68631,62387,116201,18542,2609,34097,4139,8908,4014,2256,0,1299,0,3160,4821,0,14783,20625,2304,0,cultural agnostic
+70,0,6722,4658,0,0,0,1850,0,0,0,0,0,0,0,0,0,0,0,111,cultural agnostic
+73989,17032,18846,49845,17273,10002,5462,1929,8194,2453,4803,29,1735,1228,9023,2515,2623,2355,6658,0,cultural agnostic
+29230,14403,56145,11741,15890,11462,16035,2876,3624,6719,9344,1940,3971,1641,1658,1732,8252,8477,3838,524,cultural representative
+14060,4336,11357,7623,2814,69431,3422,5152,8029,17021,40833,2543,5925,980,7652,2264,1319,2401,2228,0,cultural representative
+11984,0,5473,11640,1840,0,0,2083,11920,0,0,0,0,0,0,0,0,0,3997,731,cultural exclusive
