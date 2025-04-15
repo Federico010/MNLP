@@ -8,9 +8,9 @@ Useful classes:
 - PageHandler
 """
 
+import aiohttp
+import asyncio
 from typing import Any
-
-import requests
 
 
 def extract_id(url: str) -> str:
@@ -30,11 +30,12 @@ class PageHandler:
     """
 
     site_to_url: dict[str, str] = {}
+    _lock: asyncio.Lock = asyncio.Lock()
 
     @staticmethod
-    def _get_sitematrix() -> dict[str, Any]:
+    async def _get_sitematrix() -> dict[str, Any]:
         """
-        Static method to get the sitematrix.
+        Async static method to get the sitematrix.
         """
 
         # API request to get the sitematrix
@@ -43,32 +44,36 @@ class PageHandler:
             'action': 'sitematrix',
             'format': 'json'
         }
-        response: requests.Response = requests.get(url, params=params)
-        response.raise_for_status()
-        data: dict[str, Any] = response.json()
 
         # Parse the response
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, params=params) as response:
+                response.raise_for_status()
+                data: dict[str, Any] = await response.json()
+
         return data.get('sitematrix', {})
 
 
     @classmethod
-    def get_site_to_url(cls) -> dict[str, str]:
+    async def get_site_to_url(cls) -> dict[str, str]:
         """
-        Class method that returns a dictionary mapping site names (dbname) to their URLs.
+        Async class method that returns a dictionary mapping site names (dbname) to their URLs.
         """
 
-        # return the cached value if it exists
+        # Return the cached value if it exists
         if cls.site_to_url:
             return cls.site_to_url
 
-        # create the dictionary starting from the sitematrix
-        sitematrix: dict[str, Any] = PageHandler._get_sitematrix()
-        for key, val in sitematrix.items():
-            if key.isdigit():
-                for site in val.get('site', []):
-                    cls.site_to_url[site['dbname']] = site['url']
-            elif key == 'specials':
-                for site in val:
-                    cls.site_to_url[site['dbname']] = site['url']
+        # Create the dictionary starting from the sitematrix
+        async with cls._lock:
+            if not cls.site_to_url:  # Double-check to avoid race conditions
+                sitematrix: dict[str, Any] = await cls._get_sitematrix()
+                for key, val in sitematrix.items():
+                    if key.isdigit():
+                        for site in val.get('site', []):
+                            cls.site_to_url[site['dbname']] = site['url']
+                    elif key == 'specials':
+                        for site in val:
+                            cls.site_to_url[site['dbname']] = site['url']
 
         return cls.site_to_url

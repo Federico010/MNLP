@@ -106,10 +106,10 @@ class _CommonPages:
             max_pages: maximim number of pages to consider. If <= 0, all pages will be considered.
         """
 
-        # find the most common pages in the sitelinks
+        # Find the most common pages in the sitelinks
         page_counts: Counter = Counter(page for sitelink in sitelinks.values() for page in sitelink)
 
-        # take the top pages
+        # Take the top pages
         top_pages_tuples: list[tuple[str, int]] = page_counts.most_common(max_pages if max_pages > 0 else None)
         cls.top_pages = tuple(page for page, _ in top_pages_tuples)
         if max_pages > 0:
@@ -176,7 +176,7 @@ async def _get_common_page_lenght(sitelinks: dict[str, dict[str, dict[str, Any]]
     page_to_title_to_id: dict[str, dict[str, str]] = _group_by_page(sitelinks, top_pages)
 
     # Map the pages names to their URLs
-    site_map: dict[str, str] = utils.PageHandler.get_site_to_url()
+    site_map: dict[str, str] = await utils.PageHandler.get_site_to_url()
 
     # Make the requests in batches
     results: dict[str, dict[str, int]] = {}
@@ -259,11 +259,11 @@ def prepare_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
     # Extract the IDs from the URLs and add them to the DataFrame
     df['id'] = df['item'].map(utils.extract_id)
 
-    # get the sitelinks for each id
+    # Get the sitelinks for each id
     sitelinks: dict[str, Any] = asyncio.run(_get_sitelinks(df['id'].tolist()))
 
-    # add the sitelinks lengths to the DataFrame
-    find_common_pages: bool = split == 'train' # find common pages only during training
+    # Add the sitelinks lengths to the DataFrame
+    find_common_pages: bool = split == 'train' # Find common pages only during training
     common_page_lenght: dict[str, dict[str, int]] = asyncio.run(_get_common_page_lenght(sitelinks, find_common_pages = find_common_pages, max_pages = 20))
     common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index').fillna(0).astype(int)
     df.set_index('id', inplace=True)
