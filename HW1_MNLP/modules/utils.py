@@ -1,9 +1,11 @@
 """
 Module containing utility functions for the whole project.
 
-USEFUL FUNCTIONS:
+Useful functions:
 - extract_id
-- site_to_url
+
+Useful classes:
+- PageHandler
 """
 
 from typing import Any
@@ -32,7 +34,7 @@ class PageHandler:
     @staticmethod
     def _get_sitematrix() -> dict[str, Any]:
         """
-        Get the sitematrix.
+        Static method to get the sitematrix.
         """
 
         url: str = 'https://meta.wikimedia.org/w/api.php'
@@ -50,7 +52,7 @@ class PageHandler:
     @classmethod
     def get_site_to_url(cls) -> dict[str, str]:
         """
-        Return a dictionary mapping site names (dbname) to their URLs.
+        Class method that returns a dictionary mapping site names (dbname) to their URLs.
         """
 
         if cls.site_to_url:

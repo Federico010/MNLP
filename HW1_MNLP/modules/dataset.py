@@ -1,7 +1,7 @@
 """
 Module to load and prepare the dataset.
 
-USEFUL FUNCTIONS:
+Useful functions:
 - prepare_dataset
 """
 
@@ -15,7 +15,7 @@ import requests
 from modules import paths, utils
 
 
-def get_sitelinks(entity_ids: list[str], batch_size: int = 50) -> dict[str, Any]:
+def _get_sitelinks(entity_ids: list[str], batch_size: int = 50) -> dict[str, Any]:
     """
     Use the Wikidata API to fetch sitelinks for a set of entity IDs.
 
@@ -49,7 +49,7 @@ def get_sitelinks(entity_ids: list[str], batch_size: int = 50) -> dict[str, Any]
     return sitelinks
 
 
-class CommonPages:
+class _CommonPages:
     """
     Class to handle the common pages.
 
@@ -63,7 +63,7 @@ class CommonPages:
     @classmethod
     def set(cls, sitelinks: dict[str, dict[str, dict[str, Any]]], max_pages: int) -> None:
         """
-        Set the most common pages in the sitelinks.
+        Class ,ethod to set the most common pages in the sitelinks.
 
         Args:
             sitelinks: Dictionary of sitelinks.
@@ -84,10 +84,11 @@ class CommonPages:
             cls.top_pages: list[str] = [lang for lang, _ in sorted_pages]
         print(f"Top {max_pages} pages: {cls.top_pages}")
     
+
     @classmethod
     def get(cls) -> list[str]:
         """
-        Get the most common pages sorted by their number of sitelinks.
+        Class method to set the most common pages sorted by their number of sitelinks.
         """
 
         if not cls.top_pages:
@@ -96,7 +97,7 @@ class CommonPages:
         return cls.top_pages
 
 
-def group_by_page(sitelinks: dict[str, dict[str, dict[str, Any]]], pages: list[str]) -> dict[str, dict[str, str]]:
+def _group_by_page(sitelinks: dict[str, dict[str, dict[str, Any]]], pages: list[str]) -> dict[str, dict[str, str]]:
     """
     Group the sitelinks by page.
     
@@ -118,24 +119,28 @@ def group_by_page(sitelinks: dict[str, dict[str, dict[str, Any]]], pages: list[s
     return page_to_title_to_id
 
 
-def get_common_page_lenght(sitelinks: dict[str, dict[str, dict[str, Any]]], find_common_pages: bool = False, max_pages: int = 20, batch_size: int = 50) -> dict[str, dict[str, int]]:
+def _get_common_page_lenght(sitelinks: dict[str, dict[str, dict[str, Any]]],
+                           find_common_pages: bool = False,
+                           max_pages: int = 0,
+                           batch_size: int = 50
+                           ) -> dict[str, dict[str, int]]:
     """
     Get for each id the number of characters in the most common pages.
 
     Args:
         sitelinks: Dictionary of sitelinks.
         find_common_pages: Whether to find the most common pages. Set to True to find the most common pages, otherwise the previously set pages will be used.
-        max_pages: Maximim number of pages to consider.
+        max_pages: Maximim number of pages to consider. If <= 0, all pages will be considered.
         batch_size: Number of IDs to fetch in each API call.
     """
 
     if find_common_pages:
         # find the most common pages in the sitelinks
-        CommonPages.set(sitelinks, max_pages)
-    top_pages: list[str] = CommonPages.get()
+        _CommonPages.set(sitelinks, max_pages)
+    top_pages: list[str] = _CommonPages.get()
 
     # group the sitelinks by pages
-    page_to_title_to_id: dict[str, dict[str, str]] = group_by_page(sitelinks, top_pages)
+    page_to_title_to_id: dict[str, dict[str, str]] = _group_by_page(sitelinks, top_pages)
 
     # map the pages names to their URLs
     site_map: dict[str, str] = utils.PageHandler.get_site_to_url()
@@ -192,14 +197,14 @@ def prepare_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
     # take ids as a list
     ids: list[str] = df['id'].tolist()
 
-    sitelinks: dict[str, Any] = get_sitelinks(ids)
+    sitelinks: dict[str, Any] = _get_sitelinks(ids)
 
     # add the number of sitelinks to the DataFrame
     df['num_sitelinks'] = df['id'].map(lambda x: len(sitelinks.get(x, {})))
 
     # add the sitelinks lengths to the DataFrame
     find_common_pages: bool = split == 'train' # find common pages only during training
-    common_page_lenght: dict[str, dict[str, int]] = get_common_page_lenght(sitelinks, find_common_pages = find_common_pages)
+    common_page_lenght: dict[str, dict[str, int]] = _get_common_page_lenght(sitelinks, find_common_pages = find_common_pages, max_pages = 20)
     common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index').fillna(0).astype(int)
     df = df.merge(common_page_lenght_df, left_on='id', right_index=True, how='left')
     
