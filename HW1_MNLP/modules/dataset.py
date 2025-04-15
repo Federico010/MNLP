@@ -3,6 +3,8 @@ Module to load and prepare the dataset.
 
 Useful functions:
 - prepare_dataset
+
+Imports: paths, utils
 """
 
 from collections import Counter
@@ -185,15 +187,12 @@ def prepare_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
 
     # Load the dataset
     df: pd.DataFrame = pd.read_csv(f'hf://datasets/sapienzanlp/nlp2025_hw1_cultural_dataset/{split}.csv')
-    df = df.head(50)  # For testing purposes, remove this line in production
 
     # Extract the IDs from the URLs and add them to the DataFrame
     df['id'] = df['item'].map(utils.extract_id)
 
-    # take ids as a list
-    ids: list[str] = df['id'].tolist()
-
-    sitelinks: dict[str, Any] = _get_sitelinks(ids)
+    # get the sitelinks for each id
+    sitelinks: dict[str, Any] = _get_sitelinks(df['id'].tolist())
 
     # add the number of sitelinks to the DataFrame
     df['num_sitelinks'] = df['id'].map(lambda x: len(sitelinks.get(x, {})))
