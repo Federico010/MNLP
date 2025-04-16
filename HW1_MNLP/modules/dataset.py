@@ -7,12 +7,12 @@ Useful functions:
 Imports: paths, utils
 """
 
-import aiohttp
 import asyncio
 from collections import Counter
 from collections.abc import Iterable, Sequence
 from typing import Any, Literal
 
+import aiohttp
 import pandas as pd
 from pathlib import Path
 from tqdm.asyncio import tqdm as async_tqdm

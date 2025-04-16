@@ -8,9 +8,10 @@ Useful classes:
 - PageHandler
 """
 
-import aiohttp
 import asyncio
 from typing import Any
+
+import aiohttp
 
 
 def extract_id(url: str) -> str:
