@@ -1,0 +1,5 @@
+dropout: 0.5
+hidden_feature: 64
+input_feature: 20
+lr: 0.001
+output_feature: 3
