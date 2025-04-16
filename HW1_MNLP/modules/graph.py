@@ -73,7 +73,7 @@ def get_similarity_graph(df: pd.DataFrame,
                          save_fig: bool = False
                          ) -> nx.Graph:
     """
-    Create a similarity graph from the given DataFrame.
+    Create a similarity graph from the given DataFrame and populate it.
 
     Args:
         df: DataFrame containing the data.
@@ -93,8 +93,14 @@ def get_similarity_graph(df: pd.DataFrame,
     
     similarity_matrix.to_csv(paths.MATRIX_SIMILARITY_FOLDER / f'{mode}_matrix.csv')
 
-    # Create a graph from the correlation matrix
+    # Create a graph
     G: nx.Graph = nx.Graph()
+
+    # Populate the nodes with the values from the DataFrame
+    for col in df.columns:
+        G.add_node(col, values=df[col].tolist())
+    
+    # Add edges based on the similarity threshold
     for i, row in similarity_matrix.iterrows():
         for j, value in row.items():
             if i != j and value >= similarity_threshold:
