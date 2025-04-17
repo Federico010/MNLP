@@ -67,13 +67,13 @@ def _filtered_correlation(df: pd.DataFrame) -> pd.DataFrame:
     return correlation_matrix
 
 
-def get_similarity_graph(df: pd.DataFrame,
+def get_similarity_graphs(df: pd.DataFrame,
                          similarity_threshold: float = 0.5,
                          mode: Literal['iou', 'correlation', 'filtered correlation'] = 'iou',
                          save_fig: bool = False
-                         ) -> nx.Graph:
+                         ) -> list[nx.Graph]:
     """
-    Create a similarity graph from the given DataFrame and populate it.
+    Create similarity graphs from the given DataFrame and populate them. They all share the same structure.
 
     Args:
         df: DataFrame containing the data.
@@ -92,21 +92,26 @@ def get_similarity_graph(df: pd.DataFrame,
         similarity_matrix = _filtered_correlation(df)
     
     similarity_matrix.to_csv(paths.MATRIX_SIMILARITY_FOLDER / f'{mode}_matrix.csv')
-
-    # Create a graph
-    G: nx.Graph = nx.Graph()
-
-    # Populate the nodes with the values from the DataFrame
-    for col in df.columns:
-        G.add_node(col, values=df[col].tolist())
     
     # Add edges based on the similarity threshold
+    egdes: list[tuple[str, str]] = []
     for i, row in similarity_matrix.iterrows():
         for j, value in row.items():
             if i != j and value >= similarity_threshold:
-                G.add_edge(i, j)
+                egdes.append((str(i), str(j)))
     
-    # Draw the graph
+    # Create the graphs
+    graphs: list[nx.Graph] = []
+    for _, row in df.iterrows():
+        graph: nx.Graph = nx.Graph()
+        for col, value in row.items():
+            graph.add_node(str(col), x=(value,))
+        graph.add_edges_from(egdes)
+        graphs.append(graph)
+    
+    # Draw the first graph
+    G: nx.Graph = graphs[0]
+    print(G.nodes(data=True))
     if save_fig:
         plt.figure(figsize=(10, 8))
         nx.draw(
@@ -116,4 +121,4 @@ def get_similarity_graph(df: pd.DataFrame,
         plt.title(f"Similarity Graph ({mode}, threshold: {similarity_threshold})")
         plt.savefig(paths.GRAPH_SIMILARITY_FOLDER / f'{mode}_graph.png')
 
-    return G
+    return graphs

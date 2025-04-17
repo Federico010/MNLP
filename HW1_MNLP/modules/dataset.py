@@ -113,7 +113,7 @@ class _CommonPages:
         top_pages_tuples: list[tuple[str, int]] = page_counts.most_common(max_pages if max_pages > 0 else None)
         cls.top_pages = tuple(page for page, _ in top_pages_tuples)
         if max_pages > 0:
-            print(f"Top {max_pages} pages: {cls.top_pages}")
+            print(f"Top {len(cls.top_pages)} pages: {cls.top_pages}")
     
 
     @classmethod
@@ -154,7 +154,7 @@ async def _get_common_page_lenght(sitelinks: dict[str, dict[str, dict[str, Any]]
                                   find_common_pages: bool = False,
                                   max_pages: int = 0,
                                   batch_size: int = 50,
-                                  concurrent_requests: int = 50
+                                  concurrent_requests: int = 10
                                   ) -> dict[str, dict[str, int]]:
     """
     Get for each id the number of characters in the most common pages asynchronously.
@@ -242,9 +242,13 @@ async def _get_common_page_lenght(sitelinks: dict[str, dict[str, dict[str, Any]]
     return results
 
 
-def prepare_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
+def prepare_dataset(split: Literal['train', 'valid'], max_pages: int = 20) -> pd.DataFrame:
     """
     Function to load and prepare the dataset.
+
+    Args:
+        split: split of the dataset to prepare ('train' or 'valid').
+        max_pages: maximum number of pages to consider. If <= 0, all pages will be considered.
     """
 
     output_file: Path = paths.UPDATED_TRAIN_SET if split == 'train' else paths.UPDATED_VALID_SET
@@ -264,8 +268,8 @@ def prepare_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
 
     # Add the sitelinks lengths to the DataFrame
     find_common_pages: bool = split == 'train' # Find common pages only during training
-    common_page_lenght: dict[str, dict[str, int]] = asyncio.run(_get_common_page_lenght(sitelinks, find_common_pages = find_common_pages, max_pages = 20))
-    common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index').fillna(0).astype(int)
+    common_page_lenght: dict[str, dict[str, int]] = asyncio.run(_get_common_page_lenght(sitelinks, find_common_pages = find_common_pages, max_pages = max_pages))
+    common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index').fillna(0)
     df.set_index('id', inplace=True)
     updated_df: pd.DataFrame = common_page_lenght_df.merge(df[['label']], left_index=True, right_index=True, how='left')
     
