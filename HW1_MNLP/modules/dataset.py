@@ -242,13 +242,9 @@ async def _get_common_page_lenght(sitelinks: dict[str, dict[str, dict[str, Any]]
     return results
 
 
-def prepare_dataset(split: Literal['train', 'valid'], max_pages: int = 20) -> pd.DataFrame:
+def get_page_len_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
     """
-    Function to load and prepare the dataset.
-
-    Args:
-        split: split of the dataset to prepare ('train' or 'valid').
-        max_pages: maximum number of pages to consider. If <= 0, all pages will be considered.
+    Function to load and prepare the dataset formed by the number of characters in the most common pages.
     """
 
     output_file: Path = paths.UPDATED_TRAIN_SET if split == 'train' else paths.UPDATED_VALID_SET
@@ -268,8 +264,8 @@ def prepare_dataset(split: Literal['train', 'valid'], max_pages: int = 20) -> pd
 
     # Add the sitelinks lengths to the DataFrame
     find_common_pages: bool = split == 'train' # Find common pages only during training
-    common_page_lenght: dict[str, dict[str, int]] = asyncio.run(_get_common_page_lenght(sitelinks, find_common_pages = find_common_pages, max_pages = max_pages))
-    common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index').fillna(0)
+    common_page_lenght: dict[str, dict[str, int]] = asyncio.run(_get_common_page_lenght(sitelinks, find_common_pages = find_common_pages, max_pages = 20))
+    common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index')
     df.set_index('id', inplace=True)
     updated_df: pd.DataFrame = common_page_lenght_df.merge(df[['label']], left_index=True, right_index=True, how='left')
     

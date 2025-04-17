@@ -5,61 +5,118 @@ Useful classes:
 - GCN
 """
 
-import pytorch_lightning as pl
+import lightning.pytorch as pl
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torch_geometric.data import Batch
 from torch_geometric.nn import GCNConv, global_mean_pool
-#from torchmetrics.classification import MulticlassAccuracy, MulticlassF1Score, MulticlassPrecision, MulticlassRecall
+from torchmetrics.classification import MulticlassAccuracy, MulticlassF1Score, MulticlassPrecision, MulticlassRecall
 
 
 class GCN(pl.LightningModule):
     """
-    Graph Convolutional Network (GCN) for node classification.
+    Graph Convolutional Network (GCN) for graph classification in 3 classes.
     """
 
-    def __init__(self, input_dim: int, hidden_dim: int, output_dim: int, lr: float = 1e-4) -> None:
+    def __init__(self, input_channels: int, hidden_channles: int, lr: float = 1e-3, dropout: float = 0., smoothing: float = 0.) -> None:
+        """
+        Initialize the GCN model.
+        """
+
         super().__init__()
-        self.save_hyperparameters({'lr': lr})
+        self.save_hyperparameters({'lr': lr, 'dropout': dropout, 'smoothing': smoothing})
 
         # Layers
-        self.conv1: GCNConv = GCNConv(input_dim, hidden_dim)
-        self.conv2: GCNConv = GCNConv(hidden_dim, hidden_dim)
-        self.fc: nn.Linear = nn.Linear(hidden_dim, output_dim)
+        self.conv1: GCNConv = GCNConv(input_channels, hidden_channles)
+        self.conv2: GCNConv = GCNConv(hidden_channles, hidden_channles)
+        self.dropout: nn.Dropout = nn.Dropout(dropout)
+        self.fc: nn.Linear = nn.Linear(hidden_channles, 3)
 
-        # Loss function
-        self.loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss()
+        # Loss
+        self.train_loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss(label_smoothing=smoothing)
+        self.val_loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss(label_smoothing=smoothing)
+
+        # Metrics
+        self.train_accuracy: MulticlassAccuracy = MulticlassAccuracy(3)
+        self.val_accuracy: MulticlassAccuracy = MulticlassAccuracy(3)
+        self.train_f1: MulticlassF1Score = MulticlassF1Score(3)
+        self.val_f1: MulticlassF1Score = MulticlassF1Score(3)
+        self.train_precision: MulticlassPrecision = MulticlassPrecision(3)
+        self.val_precision: MulticlassPrecision = MulticlassPrecision(3)
+        self.train_recall: MulticlassRecall = MulticlassRecall(3)
+        self.val_recall: MulticlassRecall = MulticlassRecall(3)
 
 
-    def forward(self, x, edge_index, batch) -> torch.Tensor:
+    def forward(self, data_batch: Batch) -> torch.Tensor:
+
+        x: torch.Tensor = data_batch.x  # type: ignore
+        edge_index: torch.Tensor = data_batch.edge_index    # type: ignore
+        batch: torch.Tensor = data_batch.batch  # type: ignore
+
         x = self.conv1(x, edge_index)
         x = F.relu(x)
         x = self.conv2(x, edge_index)
         x = F.relu(x)
         x = global_mean_pool(x, batch=batch)
+        x = self.dropout(x)
         x = self.fc(x)
         return x
 
 
-    def training_step(self, batch, batch_idx) -> torch.Tensor:
+    def training_step(self, batch: Batch, batch_idx: int) -> torch.Tensor:
 
-        logits: torch.Tensor = self(batch.x, batch.edge_index, batch.batch)
-        loss: torch.Tensor = self.loss(logits, batch.y)
+        # Make predictions
+        logits: torch.Tensor = self(batch)
+        predictions: torch.Tensor = torch.argmax(logits, dim=1)
 
-        self.log("train_loss", loss, prog_bar=True)
+        # Evaluate the model
+        labels: torch.Tensor = batch.y  # type: ignore
+
+        loss: torch.Tensor = self.train_loss(logits, labels)
+        accuracy: torch.Tensor = self.train_accuracy(predictions, labels)
+        f1: torch.Tensor = self.train_f1(predictions, labels)
+        precision: torch.Tensor = self.train_precision(predictions, labels)
+        recall: torch.Tensor = self.train_recall(predictions, labels)
+
+        # Log the metrics
+        batch_size: int = labels.shape[0]
+        self.log("train_loss", loss, prog_bar=True, batch_size=batch_size)
+        self.log("train_accuracy", accuracy, prog_bar=True, batch_size=batch_size)
+        self.log("train_f1", f1, prog_bar=True, batch_size=batch_size)
+        self.log("train_precision", precision, prog_bar=True, batch_size=batch_size)
+        self.log("train_recall", recall, prog_bar=True, batch_size=batch_size)
 
         return loss
 
 
-    def validation_step(self, batch, batch_idx) -> torch.Tensor:
+    def validation_step(self, batch: Batch, batch_idx: int) -> torch.Tensor:
 
-        logits: torch.Tensor = self(batch.x, batch.edge_index, batch.batch)
-        loss: torch.Tensor = self.loss(logits, batch.y)
+        # Make predictions
+        logits: torch.Tensor = self(batch)
+        predictions: torch.Tensor = torch.argmax(logits, dim=1)
 
-        self.log("val_loss", loss, prog_bar=True)
+        # Evaluate the model
+        labels: torch.Tensor = batch.y  # type: ignore
+
+        loss: torch.Tensor = self.val_loss(logits, labels)
+        accuracy: torch.Tensor = self.val_accuracy(predictions, labels)
+        f1: torch.Tensor = self.val_f1(predictions, labels)
+        precision: torch.Tensor = self.val_precision(predictions, labels)
+        recall: torch.Tensor = self.val_recall(predictions, labels)
+
+        # Log the metrics
+        batch_size: int = labels.shape[0]
+        self.log("val_loss", loss, prog_bar=True, batch_size=batch_size)
+        self.log("val_accuracy", accuracy, prog_bar=True, batch_size=batch_size)
+        self.log("val_f1", f1, prog_bar=True, batch_size=batch_size)
+        self.log("val_precision", precision, prog_bar=True, batch_size=batch_size)
+        self.log("val_recall", recall, prog_bar=True, batch_size=batch_size)
 
         return loss
 
 
     def configure_optimizers(self) -> torch.optim.Adam:
-        return torch.optim.Adam(self.parameters(), lr=self.hparams.lr)
+        return torch.optim.Adam(self.parameters(),
+                                lr=self.hparams.lr  # type: ignore
+                                )
