@@ -2,7 +2,7 @@
 Module to load and prepare the dataset.
 
 Useful functions:
-- prepare_dataset
+- get_page_len_dataset
 
 Imports: paths, utils
 """
@@ -112,8 +112,7 @@ class _CommonPages:
         # Take the top pages
         top_pages_tuples: list[tuple[str, int]] = page_counts.most_common(max_pages if max_pages > 0 else None)
         cls.top_pages = tuple(page for page, _ in top_pages_tuples)
-        if max_pages > 0:
-            print(f"Top {len(cls.top_pages)} pages: {cls.top_pages}")
+        print(f"Top {len(cls.top_pages)} pages: {cls.top_pages}")
     
 
     @classmethod
@@ -264,8 +263,11 @@ def get_page_len_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
 
     # Add the sitelinks lengths to the DataFrame
     find_common_pages: bool = split == 'train' # Find common pages only during training
-    common_page_lenght: dict[str, dict[str, int]] = asyncio.run(_get_common_page_lenght(sitelinks, find_common_pages = find_common_pages, max_pages = 20))
-    common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index').fillna(0)
+    common_page_lenght: dict[str, dict[str, int]] = asyncio.run(_get_common_page_lenght(sitelinks,
+                                                                                        find_common_pages = find_common_pages,
+                                                                                        max_pages = 25
+                                                                                        ))
+    common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index')
     df.set_index('id', inplace=True)
     updated_df: pd.DataFrame = common_page_lenght_df.merge(df[['label']], left_index=True, right_index=True, how='left')
     

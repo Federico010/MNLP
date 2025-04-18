@@ -19,23 +19,27 @@ class GCN(pl.LightningModule):
     Graph Convolutional Network (GCN) for graph classification in 3 classes.
     """
 
-    def __init__(self, input_channels: int, hidden_channles: int, lr: float = 1e-3, dropout: float = 0., smoothing: float = 0.) -> None:
+    def __init__(self, first_layer_channels: int, lr: float = 1e-3, dropout: float = 0.) -> None:
         """
         Initialize the GCN model.
         """
 
         super().__init__()
-        self.save_hyperparameters({'lr': lr, 'dropout': dropout, 'smoothing': smoothing})
+        self.save_hyperparameters({
+            'first_layer_channels': first_layer_channels,
+            'lr': lr,
+            'dropout': dropout
+        })
 
         # Layers
-        self.conv1: GCNConv = GCNConv(input_channels, hidden_channles)
-        self.conv2: GCNConv = GCNConv(hidden_channles, hidden_channles)
+        self.conv1: GCNConv = GCNConv(1, first_layer_channels)
+        self.conv2: GCNConv = GCNConv(first_layer_channels, first_layer_channels * 2)
         self.dropout: nn.Dropout = nn.Dropout(dropout)
-        self.fc: nn.Linear = nn.Linear(hidden_channles, 3)
+        self.fc: nn.Linear = nn.Linear(first_layer_channels * 2, 3)
 
         # Loss
-        self.train_loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss(label_smoothing=smoothing)
-        self.val_loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss(label_smoothing=smoothing)
+        self.train_loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss()
+        self.val_loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss()
 
         # Metrics
         self.train_accuracy: MulticlassAccuracy = MulticlassAccuracy(3)
@@ -57,8 +61,8 @@ class GCN(pl.LightningModule):
         x = self.conv1(x, edge_index)
         x = F.relu(x)
         x = self.conv2(x, edge_index)
-        x = F.relu(x)
         x = global_mean_pool(x, batch=batch)
+        x = F.relu(x)
         x = self.dropout(x)
         x = self.fc(x)
         return x
@@ -81,11 +85,11 @@ class GCN(pl.LightningModule):
 
         # Log the metrics
         batch_size: int = labels.shape[0]
-        self.log("train_loss", loss, prog_bar=True, batch_size=batch_size)
-        self.log("train_accuracy", accuracy, prog_bar=True, batch_size=batch_size)
-        self.log("train_f1", f1, prog_bar=True, batch_size=batch_size)
-        self.log("train_precision", precision, prog_bar=True, batch_size=batch_size)
-        self.log("train_recall", recall, prog_bar=True, batch_size=batch_size)
+        self.log("train_loss", loss, prog_bar=True, batch_size = batch_size)
+        self.log("train_accuracy", accuracy, prog_bar=True, batch_size = batch_size)
+        self.log("train_f1", f1, prog_bar=True, batch_size = batch_size)
+        self.log("train_precision", precision, prog_bar=True, batch_size = batch_size)
+        self.log("train_recall", recall, prog_bar=True, batch_size = batch_size)
 
         return loss
 
@@ -107,16 +111,16 @@ class GCN(pl.LightningModule):
 
         # Log the metrics
         batch_size: int = labels.shape[0]
-        self.log("val_loss", loss, prog_bar=True, batch_size=batch_size)
-        self.log("val_accuracy", accuracy, prog_bar=True, batch_size=batch_size)
-        self.log("val_f1", f1, prog_bar=True, batch_size=batch_size)
-        self.log("val_precision", precision, prog_bar=True, batch_size=batch_size)
-        self.log("val_recall", recall, prog_bar=True, batch_size=batch_size)
+        self.log("val_loss", loss, prog_bar=True, batch_size = batch_size)
+        self.log("val_accuracy", accuracy, prog_bar=True, batch_size = batch_size)
+        self.log("val_f1", f1, prog_bar=True, batch_size = batch_size)
+        self.log("val_precision", precision, prog_bar=True, batch_size = batch_size)
+        self.log("val_recall", recall, prog_bar=True, batch_size = batch_size)
 
         return loss
 
 
     def configure_optimizers(self) -> torch.optim.Adam:
         return torch.optim.Adam(self.parameters(),
-                                lr=self.hparams.lr  # type: ignore
+                                lr = self.hparams.lr  # type: ignore
                                 )
