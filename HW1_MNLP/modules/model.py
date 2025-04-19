@@ -32,7 +32,7 @@ class GCN(pl.LightningModule):
         })
 
         # Layers
-        self.conv1: GCNConv = GCNConv(1, hidden_dim)
+        self.conv1: GCNConv = GCNConv(2, hidden_dim)
         self.norm1: GraphNorm = GraphNorm(hidden_dim)
         self.conv2: GCNConv = GCNConv(hidden_dim, hidden_dim)
         self.norm2: GraphNorm = GraphNorm(hidden_dim)

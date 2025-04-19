@@ -11,7 +11,7 @@ from itertools import combinations
 import matplotlib.pyplot as plt
 import networkx as nx
 import pandas as pd
-
+from typing import Optional, List
 
 class SimilarityGraph:
     """
@@ -123,19 +123,18 @@ class SimilarityGraph:
         plt.show()
 
     
-    def get_graphs(self, df: pd.DataFrame) -> list[nx.Graph]:
+    def get_graphs(self, df: pd.DataFrame, global_features: Optional[List[float]] = None) -> list[nx.Graph]:
         """
         Populate the graphs with the data.
         """
-
         graphs: list[nx.Graph] = []
-
-        # Create the graphs
-        for _, row in df.iterrows():
+        for i, (_, row) in enumerate(df.iterrows()):
             graph: nx.Graph = nx.Graph()
             for col, value in row.items():
-                graph.add_node(col, x=(value,))
+                if global_features is not None:
+                    graph.add_node(col, x=(value, global_features[i]))
+                else:
+                    graph.add_node(col, x=(value,))
             graph.add_edges_from(self._edges)
             graphs.append(graph)
-        
         return graphs

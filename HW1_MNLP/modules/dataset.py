@@ -259,7 +259,14 @@ def get_page_len_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
     df['id'] = df['item'].map(utils.extract_id)
 
     # Get the sitelinks for each id
-    sitelinks: dict[str, Any] = asyncio.run(_get_sitelinks(df['id'].tolist()))
+    sitelinks: dict[str, dict[str, Any]] = asyncio.run(_get_sitelinks(df['id'].tolist()))
+
+    # Compute the number of sitelinks per item
+    sitelinks_count: dict[str, int] = {entity_id: len(lang_links) for entity_id, lang_links in sitelinks.items()}
+
+    # Add to the dataframe
+    df['num_sitelinks'] = df['id'].map(sitelinks_count).fillna(0).astype(int)
+
 
     # Add the sitelinks lengths to the DataFrame
     find_common_pages: bool = split == 'train' # Find common pages only during training
@@ -269,7 +276,8 @@ def get_page_len_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
                                                                                         ))
     common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index')
     df.set_index('id', inplace=True)
-    updated_df: pd.DataFrame = common_page_lenght_df.merge(df[['label']], left_index=True, right_index=True, how='left')
+    updated_df = common_page_lenght_df.merge(df[['num_sitelinks', 'label']], left_index=True, right_index=True, how='left')
+
     
     # Save the updated dataset to a new file
     updated_df.to_csv(output_file, index=False)
