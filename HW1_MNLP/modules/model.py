@@ -10,7 +10,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.data import Batch
-from torch_geometric.nn import GCNConv, global_mean_pool
+from torch_geometric.nn import GCNConv, GraphNorm, global_mean_pool
 from torchmetrics.classification import MulticlassAccuracy, MulticlassF1Score, MulticlassPrecision, MulticlassRecall
 
 
@@ -19,23 +19,26 @@ class GCN(pl.LightningModule):
     Graph Convolutional Network (GCN) for graph classification in 3 classes.
     """
 
-    def __init__(self, first_layer_channels: int, lr: float = 1e-3, dropout: float = 0.) -> None:
+    def __init__(self, hidden_dim: int, lr: float = 1e-3, dropout: float = 0.5) -> None:
         """
         Initialize the GCN model.
         """
 
         super().__init__()
         self.save_hyperparameters({
-            'first_layer_channels': first_layer_channels,
+            'hidden_dim': hidden_dim,
             'lr': lr,
             'dropout': dropout
         })
 
         # Layers
-        self.conv1: GCNConv = GCNConv(1, first_layer_channels)
-        self.conv2: GCNConv = GCNConv(first_layer_channels, first_layer_channels * 2)
+        self.conv1: GCNConv = GCNConv(1, hidden_dim)
+        self.norm1: GraphNorm = GraphNorm(hidden_dim)
+        self.conv2: GCNConv = GCNConv(hidden_dim, hidden_dim)
+        self.norm2: GraphNorm = GraphNorm(hidden_dim)
+        self.fc: nn.Linear = nn.Linear(hidden_dim, 3)
+
         self.dropout: nn.Dropout = nn.Dropout(dropout)
-        self.fc: nn.Linear = nn.Linear(first_layer_channels * 2, 3)
 
         # Loss
         self.train_loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss()
@@ -59,12 +62,20 @@ class GCN(pl.LightningModule):
         batch: torch.Tensor = data_batch.batch  # type: ignore
 
         x = self.conv1(x, edge_index)
-        x = F.relu(x)
-        x = self.conv2(x, edge_index)
-        x = global_mean_pool(x, batch=batch)
+        x = self.norm1(x)
         x = F.relu(x)
         x = self.dropout(x)
+
+        x = self.conv2(x, edge_index)
+        x = self.norm2(x)
+        x = F.relu(x)
+        x = self.dropout(x)
+
+        x = global_mean_pool(x, batch = batch)
+        x = self.dropout(x)
+
         x = self.fc(x)
+        
         return x
 
 
