@@ -265,7 +265,7 @@ def get_page_len_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
     find_common_pages: bool = split == 'train' # Find common pages only during training
     common_page_lenght: dict[str, dict[str, int]] = asyncio.run(_get_common_page_lenght(sitelinks,
                                                                                         find_common_pages = find_common_pages,
-                                                                                        max_pages = 25
+                                                                                        max_pages = 50
                                                                                         ))
     common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index')
     df.set_index('id', inplace=True)
