@@ -276,8 +276,8 @@ def get_page_len_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
                                                                                         ))
     common_page_lenght_df: pd.DataFrame = pd.DataFrame.from_dict(common_page_lenght, orient='index')
     df.set_index('id', inplace=True)
-    updated_df = common_page_lenght_df.merge(df[['num_sitelinks', 'label']], left_index=True, right_index=True, how='left')
-
+    updated_df = common_page_lenght_df.merge(df[['num_sitelinks','description','label']], left_index=True, right_index=True, how='left')
+    updated_df = updated_df.reset_index().rename(columns={'index':'id'})
     
     # Save the updated dataset to a new file
     updated_df.to_csv(output_file, index=False)
