@@ -1,0 +1,70 @@
+XLMRobertaSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+[I 2025-04-22 15:09:25,486] Trial 7 finished with value: 0.13333333333333333 and parameters: {'learning_rate': 2.6415805397696146e-06, 'per_device_train_batch_size': 4, 'weight_decay': 6.255086245069303e-06, 'warmup_steps': 408, 'num_train_epochs': 2}. Best is trial 7 with value: 0.13333333333333333.
+C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\transformers\training_args.py:1595: FutureWarning: using `no_cuda` is deprecated and will be removed in version 5.0 of 🤗 Transformers. Use `use_cpu` instead
+  warnings.warn(
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+C:\Users\fedur\AppData\Local\Temp\ipykernel_3024\3241216838.py:42: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[I 2025-04-22 15:18:55,682] Trial 8 finished with value: 0.13333333333333333 and parameters: {'learning_rate': 1.1385038996067455e-05, 'per_device_train_batch_size': 16, 'weight_decay': 3.016503880469062e-08, 'warmup_steps': 66, 'num_train_epochs': 3}. Best is trial 7 with value: 0.13333333333333333.
+C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\transformers\training_args.py:1595: FutureWarning: using `no_cuda` is deprecated and will be removed in version 5.0 of 🤗 Transformers. Use `use_cpu` instead
+  warnings.warn(
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+C:\Users\fedur\AppData\Local\Temp\ipykernel_3024\3241216838.py:42: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[I 2025-04-22 15:22:25,832] Trial 9 finished with value: 0.16161616161616163 and parameters: {'learning_rate': 4.3499844539279084e-05, 'per_device_train_batch_size': 16, 'weight_decay': 0.0002819963496763969, 'warmup_steps': 470, 'num_train_epochs': 1}. Best is trial 9 with value: 0.16161616161616163.
+C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\transformers\training_args.py:1595: FutureWarning: using `no_cuda` is deprecated and will be removed in version 5.0 of 🤗 Transformers. Use `use_cpu` instead
+  warnings.warn(
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+C:\Users\fedur\AppData\Local\Temp\ipykernel_3024\3241216838.py:42: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[I 2025-04-22 15:29:54,296] Trial 10 finished with value: 0.13333333333333333 and parameters: {'learning_rate': 1.8672760259721023e-06, 'per_device_train_batch_size': 8, 'weight_decay': 1.957518866009316e-06, 'warmup_steps': 403, 'num_train_epochs': 2}. Best is trial 9 with value: 0.16161616161616163.
+C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\transformers\training_args.py:1595: FutureWarning: using `no_cuda` is deprecated and will be removed in version 5.0 of 🤗 Transformers. Use `use_cpu` instead
+  warnings.warn(
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+C:\Users\fedur\AppData\Local\Temp\ipykernel_3024\3241216838.py:42: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[I 2025-04-22 15:35:14,075] Trial 11 finished with value: 0.20503883823032756 and parameters: {'learning_rate': 8.605794811468875e-06, 'per_device_train_batch_size': 4, 'weight_decay': 0.015475545455055192, 'warmup_steps': 453, 'num_train_epochs': 1}. Best is trial 11 with value: 0.20503883823032756.
+C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\transformers\training_args.py:1595: FutureWarning: using `no_cuda` is deprecated and will be removed in version 5.0 of 🤗 Transformers. Use `use_cpu` instead
+  warnings.warn(
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+C:\Users\fedur\AppData\Local\Temp\ipykernel_3024\3241216838.py:42: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[I 2025-04-22 15:50:01,978] Trial 12 finished with value: 0.4083488170444693 and parameters: {'learning_rate': 8.492803077820382e-06, 'per_device_train_batch_size': 4, 'weight_decay': 0.03397866602107577, 'warmup_steps': 300, 'num_train_epochs': 3}. Best is trial 12 with value: 0.4083488170444693.
+C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\transformers\training_args.py:1595: FutureWarning: using `no_cuda` is deprecated and will be removed in version 5.0 of 🤗 Transformers. Use `use_cpu` instead
+  warnings.warn(
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+C:\Users\fedur\AppData\Local\Temp\ipykernel_3024\3241216838.py:42: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[I 2025-04-22 16:04:54,550] Trial 13 finished with value: 0.13333333333333333 and parameters: {'learning_rate': 2.420332838528602e-06, 'per_device_train_batch_size': 4, 'weight_decay': 0.018903829313182765, 'warmup_steps': 114, 'num_train_epochs': 3}. Best is trial 12 with value: 0.4083488170444693.
+C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\transformers\training_args.py:1595: FutureWarning: using `no_cuda` is deprecated and will be removed in version 5.0 of 🤗 Transformers. Use `use_cpu` instead
+  warnings.warn(
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+C:\Users\fedur\AppData\Local\Temp\ipykernel_3024\3241216838.py:42: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[I 2025-04-22 16:08:25,103] Trial 14 finished with value: 0.13333333333333333 and parameters: {'learning_rate': 3.417312657053672e-05, 'per_device_train_batch_size': 16, 'weight_decay': 0.00021991755217366088, 'warmup_steps': 157, 'num_train_epochs': 1}. Best is trial 12 with value: 0.4083488170444693.
+C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\transformers\training_args.py:1595: FutureWarning: using `no_cuda` is deprecated and will be removed in version 5.0 of 🤗 Transformers. Use `use_cpu` instead
+  warnings.warn(
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+C:\Users\fedur\AppData\Local\Temp\ipykernel_3024\3241216838.py:42: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[I 2025-04-22 16:17:50,025] Trial 15 finished with value: 0.13333333333333333 and parameters: {'learning_rate': 5.515234308290129e-06, 'per_device_train_batch_size': 16, 'weight_decay': 0.0034584971456979433, 'warmup_steps': 459, 'num_train_epochs': 3}. Best is trial 12 with value: 0.4083488170444693.
+C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\transformers\training_args.py:1595: FutureWarning: using `no_cuda` is deprecated and will be removed in version 5.0 of 🤗 Transformers. Use `use_cpu` instead
+  warnings.warn(
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+C:\Users\fedur\AppData\Local\Temp\ipykernel_3024\3241216838.py:42: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[I 2025-04-22 16:24:17,033] Trial 16 finished with value: 0.16352201257861634 and parameters: {'learning_rate': 1.521615720701844e-06, 'per_device_train_batch_size': 16, 'weight_decay': 0.0004914961720618957, 'warmup_steps': 448, 'num_train_epochs': 2}. Best is trial 12 with value: 0.4083488170444693.
+Best params: {'learning_rate': 8.492803077820382e-06, 'per_device_train_batch_size': 4, 'weight_decay': 0.03397866602107577, 'warmup_steps': 300, 'num_train_epochs': 3}
+C:\Users\fedur\AppData\Local\Temp\ipykernel_3024\3241216838.py:102: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  train = Trainer(
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.

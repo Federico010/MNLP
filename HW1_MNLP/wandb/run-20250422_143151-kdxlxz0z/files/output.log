@@ -1,0 +1,20 @@
+XLMRobertaSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+[W 2025-04-22 14:38:29,809] Trial 5 failed with parameters: {'learning_rate': 3.4549137728673976e-05, 'per_device_train_batch_size': 16, 'weight_decay': 5.644860318607926e-06, 'warmup_steps': 415, 'num_train_epochs': 2} because of the following error: ValueError('setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (3,) + inhomogeneous part.').
+Traceback (most recent call last):
+  File "C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\optuna\study\_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "C:\Users\fedur\AppData\Local\Temp\ipykernel_17360\2710780525.py", line 54, in objective
+    preds = np.argmax(pred.predictions, axis=1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\numpy\_core\fromnumeric.py", line 1342, in argmax
+    return _wrapfunc(a, 'argmax', axis=axis, out=out, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\numpy\_core\fromnumeric.py", line 54, in _wrapfunc
+    return _wrapit(obj, method, *args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fedur\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\numpy\_core\fromnumeric.py", line 42, in _wrapit
+    conv = _array_converter(obj)
+           ^^^^^^^^^^^^^^^^^^^^^
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (3,) + inhomogeneous part.
+[W 2025-04-22 14:38:29,860] Trial 5 failed with value None.

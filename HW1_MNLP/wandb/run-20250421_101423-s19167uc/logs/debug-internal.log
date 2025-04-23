@@ -1,0 +1,8 @@
+{"time":"2025-04-21T10:14:23.8972759+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"c:\\Users\\fedur\\OneDrive\\Desktop\\MNLP\\HW1_MNLP\\wandb\\run-20250421_101423-s19167uc\\logs\\debug-core.log"}
+{"time":"2025-04-21T10:14:24.2768669+02:00","level":"INFO","msg":"created new stream","id":"s19167uc"}
+{"time":"2025-04-21T10:14:24.2772515+02:00","level":"INFO","msg":"stream: started","id":"s19167uc"}
+{"time":"2025-04-21T10:14:24.2772515+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"s19167uc"}
+{"time":"2025-04-21T10:14:24.2772515+02:00","level":"INFO","msg":"handler: started","stream_id":"s19167uc"}
+{"time":"2025-04-21T10:14:24.2777607+02:00","level":"INFO","msg":"sender: started","stream_id":"s19167uc"}
+{"time":"2025-04-21T10:14:24.5383555+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-21T10:14:49.8326283+02:00","level":"INFO","msg":"Pausing system monitor"}

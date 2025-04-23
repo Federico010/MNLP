@@ -1,0 +1,28 @@
+{"time":"2025-04-22T11:11:24.4398682+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"c:\\Users\\fedur\\OneDrive\\Desktop\\MNLP\\HW1_MNLP\\wandb\\run-20250422_111124-orhel2lz\\logs\\debug-core.log"}
+{"time":"2025-04-22T11:11:24.778255+02:00","level":"INFO","msg":"created new stream","id":"orhel2lz"}
+{"time":"2025-04-22T11:11:24.778255+02:00","level":"INFO","msg":"stream: started","id":"orhel2lz"}
+{"time":"2025-04-22T11:11:24.778255+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"orhel2lz"}
+{"time":"2025-04-22T11:11:24.778255+02:00","level":"INFO","msg":"handler: started","stream_id":"orhel2lz"}
+{"time":"2025-04-22T11:11:24.778255+02:00","level":"INFO","msg":"sender: started","stream_id":"orhel2lz"}
+{"time":"2025-04-22T11:11:25.0985281+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-22T11:26:36.9003776+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-22T11:26:36.9509095+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-22T11:26:37.0018551+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-22T11:31:19.6763414+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-22T11:31:19.6840675+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-22T11:34:12.8117692+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-22T11:34:12.8219567+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-22T11:34:22.5166337+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-22T11:34:22.5241577+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-22T11:34:29.5682513+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-22T11:34:29.7187026+02:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-22T11:34:32.5697585+02:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-22T11:34:35.7459349+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-22T11:34:35.7459349+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-22T11:34:36.635167+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-22T11:34:36.7587043+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading data","runtime_seconds":0.1235373}],"total_operations":1}}
+{"time":"2025-04-22T11:34:36.8692438+02:00","level":"INFO","msg":"stream: closing","id":"orhel2lz"}
+{"time":"2025-04-22T11:34:36.8692438+02:00","level":"INFO","msg":"handler: closed","stream_id":"orhel2lz"}
+{"time":"2025-04-22T11:34:36.8692438+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"orhel2lz"}
+{"time":"2025-04-22T11:34:36.8702418+02:00","level":"INFO","msg":"sender: closed","stream_id":"orhel2lz"}
+{"time":"2025-04-22T11:34:36.8702418+02:00","level":"INFO","msg":"stream: closed","id":"orhel2lz"}
