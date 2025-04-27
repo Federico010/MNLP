@@ -301,7 +301,7 @@ def prepare_dataset(split: Literal['train', 'valid']) -> pd.DataFrame:
     df = df.drop(columns = ['item', 'name', 'description'])
     
     # Save the updated dataset to a new file
-    df.to_csv(output_file, index = False)
+    df.to_csv(output_file)
     print(f"Updated dataset saved to {output_file}")
 
     return df
