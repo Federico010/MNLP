@@ -5,10 +5,13 @@ Useful classes:
 - GraphNet
 """
 
+from typing import Any, Literal
+
 import lightning.pytorch as pl
 import torch
 import torch.nn as nn
 from torch.optim.adam import Adam
+from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch_geometric.data import Batch
 from torch_geometric.nn import GINConv, global_mean_pool, Sequential
 from torchmetrics.classification import MulticlassAccuracy, MulticlassF1Score, MulticlassPrecision, MulticlassRecall
@@ -70,18 +73,13 @@ class GraphNet(pl.LightningModule):
         self.lin: nn.Linear = nn.Linear(inner_dim, n_classes)
 
         # Loss
-        self.train_loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss()
-        self.val_loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss()
+        self.loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss()
 
         # Metrics
-        self.train_accuracy: MulticlassAccuracy = MulticlassAccuracy(3)
-        self.val_accuracy: MulticlassAccuracy = MulticlassAccuracy(3)
-        self.train_f1: MulticlassF1Score = MulticlassF1Score(3)
-        self.val_f1: MulticlassF1Score = MulticlassF1Score(3)
-        self.train_precision: MulticlassPrecision = MulticlassPrecision(3)
-        self.val_precision: MulticlassPrecision = MulticlassPrecision(3)
-        self.train_recall: MulticlassRecall = MulticlassRecall(3)
-        self.val_recall: MulticlassRecall = MulticlassRecall(3)
+        self.accuracy: MulticlassAccuracy = MulticlassAccuracy(3)
+        self.f1: MulticlassF1Score = MulticlassF1Score(3)
+        self.precision: MulticlassPrecision = MulticlassPrecision(3)
+        self.recall: MulticlassRecall = MulticlassRecall(3)
 
 
     def forward(self, data_batch: Batch) -> torch.Tensor:
@@ -107,62 +105,66 @@ class GraphNet(pl.LightningModule):
         x: torch.Tensor = self.lin(x_fc + x_graph)
         
         return x
+    
+
+    def _make_step(self, step: Literal["train", "val"], batch: Batch, batch_idx: int) -> torch.Tensor:
+        """
+        Make a step of the model.
+        """
+
+        # Make predictions
+        logits: torch.Tensor = self(batch)
+        predictions: torch.Tensor = torch.argmax(logits, dim = 1)
+
+        # Evaluate the model
+        labels: torch.Tensor = batch.y  # type: ignore
+
+        loss: torch.Tensor = self.loss(logits, labels)
+        accuracy: torch.Tensor = self.accuracy(predictions, labels)
+        f1: torch.Tensor = self.f1(predictions, labels)
+        precision: torch.Tensor = self.precision(predictions, labels)
+        recall: torch.Tensor = self.recall(predictions, labels)
+
+        # Log the metrics
+        batch_size: int = labels.shape[0]
+        self.log(f"{step}_loss", loss, prog_bar = True, batch_size = batch_size)
+        self.log(f"{step}_accuracy", accuracy, prog_bar = True, batch_size = batch_size)
+        self.log(f"{step}_f1", f1, prog_bar = True, batch_size = batch_size)
+        self.log(f"{step}_precision", precision, prog_bar = True, batch_size = batch_size)
+        self.log(f"{step}_recall", recall, prog_bar = True, batch_size = batch_size)
+
+        return loss
 
 
     def training_step(self, batch: Batch, batch_idx: int) -> torch.Tensor:
 
-        # Make predictions
-        logits: torch.Tensor = self(batch)
-        predictions: torch.Tensor = torch.argmax(logits, dim = 1)
-
-        # Evaluate the model
-        labels: torch.Tensor = batch.y  # type: ignore
-
-        loss: torch.Tensor = self.train_loss(logits, labels)
-        accuracy: torch.Tensor = self.train_accuracy(predictions, labels)
-        f1: torch.Tensor = self.train_f1(predictions, labels)
-        precision: torch.Tensor = self.train_precision(predictions, labels)
-        recall: torch.Tensor = self.train_recall(predictions, labels)
-
-        # Log the metrics
-        batch_size: int = labels.shape[0]
-        self.log("train_loss", loss, prog_bar=True, batch_size = batch_size)
-        self.log("train_accuracy", accuracy, prog_bar=True, batch_size = batch_size)
-        self.log("train_f1", f1, prog_bar=True, batch_size = batch_size)
-        self.log("train_precision", precision, prog_bar=True, batch_size = batch_size)
-        self.log("train_recall", recall, prog_bar=True, batch_size = batch_size)
-
-        return loss
+        return self._make_step("train", batch, batch_idx)
 
 
     def validation_step(self, batch: Batch, batch_idx: int) -> torch.Tensor:
 
-        # Make predictions
-        logits: torch.Tensor = self(batch)
-        predictions: torch.Tensor = torch.argmax(logits, dim = 1)
-
-        # Evaluate the model
-        labels: torch.Tensor = batch.y  # type: ignore
-
-        loss: torch.Tensor = self.val_loss(logits, labels)
-        accuracy: torch.Tensor = self.val_accuracy(predictions, labels)
-        f1: torch.Tensor = self.val_f1(predictions, labels)
-        precision: torch.Tensor = self.val_precision(predictions, labels)
-        recall: torch.Tensor = self.val_recall(predictions, labels)
-
-        # Log the metrics
-        batch_size: int = labels.shape[0]
-        self.log("val_loss", loss, prog_bar=True, batch_size = batch_size)
-        self.log("val_accuracy", accuracy, prog_bar=True, batch_size = batch_size)
-        self.log("val_f1", f1, prog_bar=True, batch_size = batch_size)
-        self.log("val_precision", precision, prog_bar=True, batch_size = batch_size)
-        self.log("val_recall", recall, prog_bar=True, batch_size = batch_size)
-
-        return loss
+        return self._make_step("val", batch, batch_idx)
 
 
-    def configure_optimizers(self) -> Adam:
+    def configure_optimizers(self) -> dict[str, Adam|dict[str, Any]]:   # type: ignore
 
-        return  Adam(self.parameters(),
-                     lr = self.hparams.lr  # type: ignore
-                     )
+        # Optimizer
+        optimizer: Adam = Adam(self.parameters(), lr = self.hparams.lr) # type: ignore
+
+        # Scheduler
+        scheduler: ReduceLROnPlateau = ReduceLROnPlateau(optimizer, patience = 0, factor = 0.5)
+
+        return {
+            'optimizer': optimizer, 
+            'lr_scheduler': {
+                'scheduler': scheduler,
+                'monitor': 'val_loss'
+            }
+        }
+    
+
+    def on_train_epoch_end(self) -> None:
+
+        # Log the lr
+        lr: float = self.trainer.lr_scheduler_configs[0].scheduler.get_last_lr()[0]
+        self.log("lr", lr)
