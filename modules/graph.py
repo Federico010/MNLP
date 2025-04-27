@@ -5,11 +5,12 @@ Useful classes:
 - SimilarityGraph
 """
 
-from collections import Counter
 from itertools import combinations
 
 import matplotlib.pyplot as plt
 import networkx as nx
+import numpy as np
+from numpy.typing import NDArray
 import pandas as pd
 import torch
 
@@ -22,14 +23,14 @@ class SimilarityGraph:
     - get_graphs
     """
 
-    def __init__(self, df: pd.DataFrame, threshold: float = 0.5, min_arity: int = 0, show: bool = False) -> None:
+    def __init__(self, df: pd.DataFrame, threshold: float = 0.5, connected: bool = False, show: bool = False) -> None:
         """
         Initialize the similarity graph.
 
         Args:
             df: DataFrame containing the data.
             threshold: Threshold for the correlation.
-            min_arity: Minimum arity for the nodes.
+            connected: if True, the graph will be connected.
             show: Whether to show the figure or not.
         """
 
@@ -37,7 +38,7 @@ class SimilarityGraph:
         similarity_matrix: pd.DataFrame = self._get_iou_matrix(df)
         
         # Set the edges of the graph
-        self._set_edges(similarity_matrix, threshold, min_arity)
+        self._set_edges(similarity_matrix, threshold, connected)
 
         # Show the graph if required
         if show:
@@ -75,36 +76,41 @@ class SimilarityGraph:
         return iou_matrix
 
 
-    def _set_edges(self, similarity_matrix: pd.DataFrame, threshold: float, min_arity: int) -> None:
+    def _set_edges(self, similarity_matrix: pd.DataFrame, threshold: float, connected: bool = False) -> None:
         """
         Set the edges of the graph from the similarity matrix.
 
         Args:
             similarity_matrix: Similarity matrix.
             threshold: Threshold for the correlation.
-            min_arity: Minimum arity for the nodes.
+            connected: if True, the graph will be connected.
         """
 
-        self._edges: set[tuple[str, str]] = set()
         self._nodes: set[str] = set(similarity_matrix.columns)
-        node_arities: Counter = Counter({node: 0 for node in self._nodes})
+        self._edges: set[tuple[str, str]]
 
-        for col1, col2 in combinations(similarity_matrix.columns, 2):
-            value: float = similarity_matrix.at[col1, col2]
-            if value >= threshold:
-                self._edges.add((col1, col2))
-                node_arities[col1] += 1
-                node_arities[col2] += 1
+        if connected:
+            # Create a fully connected graph
+            all_weighted_edges: set[tuple[str, str, float]] = {(col1, col2, similarity_matrix.at[col1, col2])
+                                                            for col1, col2 in combinations(similarity_matrix.columns, 2)
+                                                            }
+            fully_connected_graph: nx.Graph = nx.Graph()
+            fully_connected_graph.add_weighted_edges_from(all_weighted_edges)
 
-        # Add edges to get the minimum arity
-        for node1, arity in node_arities.items():
-            if arity < min_arity:
-                # add the best edges to the node
-                for node2 in similarity_matrix.nlargest(min_arity + 1, node1, 'all').index[1:]:
-                    self._edges.add((node1, node2))
-                    node_arities[node1] += 1
-                    node_arities[node2] += 1
-            
+            # Find a maximum spanning tree
+            spanning_tree: nx.Graph = nx.maximum_spanning_tree(fully_connected_graph)
+            self._edges = set(spanning_tree.edges())
+        else:
+            self._edges = set()
+    
+        # Add the edges above the threshold
+        rows: NDArray[np.intp]
+        cols: NDArray[np.intp]
+        rows, cols = np.where(similarity_matrix >= threshold)
+        for i, j in zip(rows, cols):
+            if i < j:
+                self._edges.add((similarity_matrix.columns[i], similarity_matrix.columns[j]))
+
 
     def _show_graph(self, G: nx.Graph) -> None:
         """
