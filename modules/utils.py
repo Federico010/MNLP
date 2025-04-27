@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from numpy.typing import NDArray, ArrayLike
 import seaborn as sns
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.preprocessing import LabelEncoder
 
 
@@ -96,20 +96,13 @@ def plot_confusion_matrix(true_y: ArrayLike, pred_y: ArrayLike, label_encoder: L
     confusion: NDArray[np.int_] = confusion_matrix(true_y, pred_y)
 
     # Plot the confusion matrix
-    sns.heatmap(confusion, annot = True)
+    disp: ConfusionMatrixDisplay = ConfusionMatrixDisplay(confusion,
+                                  display_labels = label_encoder.classes_ if label_encoder is not None else None
+                                  )
+    disp.plot(
+        cmap = 'Blues',
+        xticks_rotation = 45
+    )
     plt.title('Confusion Matrix')
-    plt.xlabel('Predicted')
-    plt.ylabel('True')
-
-    # Replace the labels
-    if label_encoder is not None:
-        plt.xticks(labels = label_encoder.classes_.tolist(),
-                   ticks = np.arange(len(label_encoder.classes_)) + 0.5,
-                   rotation = 45
-                   )
-        plt.yticks(labels = label_encoder.classes_.tolist(),
-                   ticks = np.arange(len(label_encoder.classes_)) + 0.5,
-                   rotation = 45
-                   )
 
     plt.show()
