@@ -13,7 +13,7 @@ import torch.nn as nn
 from torch.optim.adam import Adam
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch_geometric.data import Batch
-from torch_geometric.nn import GINConv, global_mean_pool, Sequential
+from torch_geometric.nn import GINConv, global_mean_pool, LayerNorm, Sequential
 from torchmetrics.classification import MulticlassAccuracy, MulticlassF1Score, MulticlassPrecision, MulticlassRecall
 
 
@@ -51,23 +51,23 @@ class GraphNet(pl.LightningModule):
                                       nn.ReLU(),
                                       nn.Dropout()
                                       )
+        
+        # Transform the node features
+        self.node_transform: nn.Linear = nn.Linear(node_features, inner_dim)
 
         # GIN blocks
         self.gin_blocks: nn.ModuleList = nn.ModuleList()
         for _ in range(depth):
             self.gin_blocks.append(Sequential('x, edge_index', [
-                                              (GINConv(nn.Sequential(nn.Linear(node_features, inner_dim),
+                                              (GINConv(nn.Sequential(nn.Linear(inner_dim, inner_dim),
                                                                      nn.ReLU(),
                                                                      nn.Linear(inner_dim, inner_dim)
                                                                      )),
                                                'x, edge_index -> x'),
+                                               LayerNorm(inner_dim),
                                                nn.ReLU(),
                                                nn.Dropout()
                                                ]))
-            
-            # Update the dimensions
-            fc_features = inner_dim
-            node_features = inner_dim
 
         # Merge layers
         self.lin: nn.Linear = nn.Linear(inner_dim, n_classes)
@@ -97,8 +97,9 @@ class GraphNet(pl.LightningModule):
         x_fc = self.fc_block(x_fc)
 
         # Graph layers
+        x_graph = self.node_transform(x_graph)
         for gin_block in self.gin_blocks:
-            x_graph = gin_block(x_graph, edge_index)
+            x_graph = gin_block(x_graph, edge_index) + x_graph
 
         # Merge layers
         x_graph = global_mean_pool(x_graph, batch = batch)
