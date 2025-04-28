@@ -47,7 +47,7 @@ class GraphNet(pl.LightningModule):
 
         # Fully connected block
         self.fc_block = nn.Sequential(nn.Linear(fc_features, inner_dim),
-                                      nn.BatchNorm1d(inner_dim),
+                                      nn.LayerNorm(inner_dim),
                                       nn.ReLU(),
                                       nn.Dropout()
                                       )
