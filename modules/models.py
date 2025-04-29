@@ -1,6 +1,9 @@
 """
 Module for the machine learning models.
 
+Useful functions:
+- transformer_metrics
+
 Useful classes:
 - GraphNet
 """
@@ -8,6 +11,9 @@ Useful classes:
 from typing import Any, Literal
 
 import lightning.pytorch as pl
+import numpy as np
+from numpy.typing import NDArray
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 import torch
 import torch.nn as nn
 from torch.optim.adam import Adam
@@ -15,6 +21,26 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch_geometric.data import Batch
 from torch_geometric.nn import GINConv, global_mean_pool, LayerNorm, Sequential
 from torchmetrics.classification import MulticlassAccuracy, MulticlassF1Score, MulticlassPrecision, MulticlassRecall
+from transformers.trainer_utils import EvalPrediction
+
+
+def transformer_metrics(prediction_item: EvalPrediction) -> dict[str, float]:
+    """
+    Calculate the metrics for the transformer model. To be used in the trainer.
+    """
+
+    # Find the predictions and labels
+    logits: NDArray[np.float32] = np.array(prediction_item.predictions)
+    predictions: NDArray[np.intp] = np.argmax(logits, axis = 1)
+    labels: NDArray[np.int_] = np.array(prediction_item.label_ids)
+
+    # Calculate the metrics
+    f1: float = float(f1_score(labels, predictions, average = 'macro'))
+    accuracy: float = float(accuracy_score(labels, predictions))
+    precision: float = float(precision_score(labels, predictions, average = 'macro'))
+    recall: float = float(recall_score(labels, predictions, average = 'macro'))
+
+    return {'f1': f1, 'accuracy': accuracy, 'precision': precision, 'recall': recall}
 
 
 class GraphNet(pl.LightningModule):
@@ -76,10 +102,10 @@ class GraphNet(pl.LightningModule):
         self.loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss()
 
         # Metrics
-        self.accuracy: MulticlassAccuracy = MulticlassAccuracy(3)
-        self.f1: MulticlassF1Score = MulticlassF1Score(3)
-        self.precision: MulticlassPrecision = MulticlassPrecision(3)
-        self.recall: MulticlassRecall = MulticlassRecall(3)
+        self.accuracy: MulticlassAccuracy = MulticlassAccuracy(n_classes)
+        self.f1: MulticlassF1Score = MulticlassF1Score(n_classes)
+        self.precision: MulticlassPrecision = MulticlassPrecision(n_classes)
+        self.recall: MulticlassRecall = MulticlassRecall(n_classes)
 
 
     def forward(self, data_batch: Batch) -> torch.Tensor:
