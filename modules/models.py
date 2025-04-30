@@ -45,7 +45,7 @@ def transformer_metrics(prediction_item: EvalPrediction) -> dict[str, float]:
 
 class GraphNet(pl.LightningModule):
     """
-    Mixed Graph Convolutional Network for classification in 3 classes.
+    Mixed Graph Convolutional Network for classification.
     """
 
     def __init__(self, fc_features: int, node_features: int, n_classes: int, depth: int, inner_dim: int, lr: float = 1e-3) -> None:
