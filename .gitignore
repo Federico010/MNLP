@@ -1,5 +1,7 @@
 __pycache__/
 data/*
+!data/dataset/
+data/dataset/*
 !data/dataset/test.csv
 DerfMax_output_model1.csv
 DerfMax_output_model2.csv
