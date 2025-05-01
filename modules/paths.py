@@ -11,6 +11,8 @@ Useful constants:
 - UPDATED_TRAINING_SET: Path to the updated training set file.
 - UPDATED_VALIDATION_SET: Path to the updated validation set file.
 - UPDATED_TEST_SET: Path to the updated test set file.
+- TRANSFORMER_PREDICTIONS: Path to the transformer model predictions.
+- GRAPH_PREDICTIONS: Path to the graph model predictions.
 """
 
 from pathlib import Path
@@ -27,6 +29,8 @@ TEST_SET: Path = DATASET_DIR / 'test.csv'
 UPDATED_TRAIN_SET: Path = DATASET_DIR / 'updated_train.csv'
 UPDATED_VALIDATION_SET: Path = DATASET_DIR / 'updated_validation.csv'
 UPDATED_TEST_SET: Path = DATASET_DIR / 'updated_test.csv'
+TRANSFORMER_PREDICITONS: Path = Path('DerfMax_output_model1.csv')
+GRAPH_PREDICTIONS: Path = Path('DerfMax_output_model2.csv')
 
 # Create the needed folders if they don't exist
 TRANSFORMER_MODEL_DIR.mkdir(parents = True, exist_ok = True)
