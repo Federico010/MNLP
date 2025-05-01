@@ -1,5 +1,5 @@
 """
-Module for the machine learning models.
+Module for the machine learning models creation.
 
 Useful functions:
 - transformer_metrics
@@ -162,14 +162,10 @@ class GraphNet(pl.LightningModule):
 
         return loss
 
-
     def training_step(self, batch: Batch, batch_idx: int) -> torch.Tensor:
-
         return self._make_step("train", batch, batch_idx)
 
-
     def validation_step(self, batch: Batch, batch_idx: int) -> torch.Tensor:
-
         return self._make_step("val", batch, batch_idx)
 
 

@@ -133,7 +133,7 @@ class SimilarityGraph:
     
     def get_graphs(self, df: pd.DataFrame) -> list[nx.Graph]:
         """
-        Populate the graphs with the data. Each node will be associated with the values in  the columns that start with the same name.
+        Populate the graphs with the data. Each node will be associated with the values in the columns that start with the same name.
         """
 
         graphs: list[nx.Graph] = []

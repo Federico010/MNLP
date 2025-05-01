@@ -4,7 +4,7 @@ Module to load and prepare the dataset.
 Useful functions:
 - prepare_dataset
 
-Imports: paths, utils
+Imports: utils.dataset
 """
 
 import asyncio
@@ -17,20 +17,7 @@ import pandas as pd
 from pathlib import Path
 from tqdm.asyncio import tqdm as async_tqdm
 
-from modules import paths, utils
-
-
-def get_split_paths(split: Literal['train', 'validation', 'test']) -> tuple[Path, Path]:
-    """
-    Function to get the paths of the original and updated datasets.
-    """
-
-    if split == 'train':
-        return paths.TRAIN_SET, paths.UPDATED_TRAIN_SET
-    elif split == 'validation':
-        return paths.VALIDATION_SET, paths.UPDATED_VALIDATION_SET
-    else:
-        return paths.TEST_SET, paths.UPDATED_TEST_SET
+from modules.utils import dataset as dataset_utils
 
 
 async def _get_sitelinks(entity_ids: Sequence[str], batch_size: int = 50) -> dict[str, dict[str, dict[str, Any]]]:
@@ -152,7 +139,7 @@ def _group_by_page(sitelinks: dict[str, dict[str, dict[str, Any]]], pages: Itera
 async def _get_common_pages_features(sitelinks: dict[str, dict[str, dict[str, Any]]],
                               batch_size: int = 50,
                               concurrent_requests: int = 10
-                              ) -> dict[str, dict[str, dict[str, int]]]:
+                              ) -> dict[str, dict[str, dict[str, Any]]]:
     """
     Get for each id the features in the most common pages asynchronously.
 
@@ -169,7 +156,7 @@ async def _get_common_pages_features(sitelinks: dict[str, dict[str, dict[str, An
     page_to_title_to_id: dict[str, dict[str, str]] = _group_by_page(sitelinks, _CommonPages.get())
 
     # Map the pages names to their URLs
-    site_map: dict[str, str] = await utils.PageHandler.get_site_to_url()
+    site_map: dict[str, str] = await dataset_utils.PageHandler.get_site_to_url()
 
     # Queue to hold the requests
     queue = asyncio.Queue()
@@ -209,6 +196,7 @@ async def _get_common_pages_features(sitelinks: dict[str, dict[str, dict[str, An
                 'lllimit': 'max',
                 'rdlimit': 'max',
                 'exlimit': 'max',
+                'exintro': '',
                 'explaintext': '',
                 'format': 'json'
             }
@@ -288,19 +276,19 @@ def extract_dataset(split: Literal['train', 'validation', 'test']) -> pd.DataFra
     """
 
     # Files paths
-    original_file: Path
+    original_file: Path|str
     output_file: Path
-    original_file, output_file = get_split_paths(split)
+    original_file, output_file = dataset_utils.get_split_paths(split)
 
     # Check if the updated dataset already exists
     if output_file.is_file():
-        return pd.read_csv(output_file)
+        return pd.read_csv(output_file, index_col = 'id')
 
     # Load the dataset
     df: pd.DataFrame = pd.read_csv(original_file)
 
     # Extract the IDs from the URLs and set them as the index
-    ids: pd.Series[str] = df['item'].map(utils.extract_id)
+    ids: pd.Series[str] = df['item'].map(dataset_utils.extract_id)
     df = df.set_index(ids)
    
     # Get the sitelinks for each id
@@ -311,15 +299,9 @@ def extract_dataset(split: Literal['train', 'validation', 'test']) -> pd.DataFra
         _CommonPages.set(sitelinks, max_pages = 10)
 
     # Create a dataframe with the new features
-    common_pages_features: dict[str, dict[str, dict[str, int]]] = asyncio.run(_get_common_pages_features(sitelinks))
-    common_pages_features_dict: dict[str, dict[str, int]] = {}
-    for id, page in common_pages_features.items():
-        if id not in common_pages_features_dict:
-            common_pages_features_dict[id] = {}
-        for page_name, features in page.items():
-            for feature, value in features.items():
-                common_pages_features_dict[id][f'{page_name}_{feature}'] = value
-    common_pages_features_df: pd.DataFrame = pd.DataFrame.from_dict(common_pages_features_dict, orient = 'index')
+    common_pages_features: dict[str, dict[str, dict[str, Any]]] = asyncio.run(_get_common_pages_features(sitelinks))
+    flattened_dict: dict[str, dict[str, Any]] = dataset_utils.flatten_dict(common_pages_features)
+    common_pages_features_df: pd.DataFrame = pd.DataFrame.from_dict(flattened_dict, orient = 'index')
 
     # Fill NaN and convert when necessary
     numerical_columns: pd.Index[str] = common_pages_features_df.select_dtypes(include = 'number').columns
@@ -332,7 +314,7 @@ def extract_dataset(split: Literal['train', 'validation', 'test']) -> pd.DataFra
     df = pd.concat([df, common_pages_features_df], axis = 1)
     
     # Save the updated dataset
-    df.to_csv(output_file)
+    df.to_csv(output_file, index_label = 'id')
     print(f"Dataset saved to {output_file}")
 
     return df
