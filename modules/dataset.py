@@ -282,7 +282,7 @@ def extract_dataset(split: Literal['train', 'validation', 'test']) -> pd.DataFra
 
     # Check if the updated dataset already exists
     if output_file.is_file():
-        return pd.read_csv(output_file, index_col = 'id')
+        return pd.read_csv(output_file, index_col = 'id', keep_default_na = False)
 
     # Load the dataset
     df: pd.DataFrame = pd.read_csv(original_file)
