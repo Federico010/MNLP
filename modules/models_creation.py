@@ -19,7 +19,7 @@ import torch.nn as nn
 from torch.optim.adam import Adam
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch_geometric.data import Batch
-from torch_geometric.nn import GINConv, global_mean_pool, LayerNorm, Sequential
+from torch_geometric.nn import DeepGCNLayer, GINConv, global_mean_pool, LayerNorm
 from torchmetrics.classification import MulticlassAccuracy, MulticlassF1Score, MulticlassPrecision, MulticlassRecall
 from transformers.trainer_utils import EvalPrediction
 
@@ -84,19 +84,26 @@ class GraphNet(pl.LightningModule):
         # GIN blocks
         self.gin_blocks: nn.ModuleList = nn.ModuleList()
         for _ in range(depth):
-            self.gin_blocks.append(Sequential('x, edge_index', [
-                                              (GINConv(nn.Sequential(nn.Linear(inner_dim, inner_dim),
-                                                                     nn.ReLU(),
-                                                                     nn.Linear(inner_dim, inner_dim)
-                                                                     )),
-                                               'x, edge_index -> x'),
-                                               LayerNorm(inner_dim),
-                                               nn.ReLU(),
-                                               nn.Dropout()
-                                               ]))
+            # GIN convolution
+            conv: GINConv = GINConv(nn.Sequential(nn.Linear(inner_dim, inner_dim),
+                                                  nn.ReLU(),
+                                                  nn.Linear(inner_dim, inner_dim)
+                                                  ),
+                                    train_eps = True
+                                    )
+            
+            # Residual connection + standard stuff
+            self.gin_blocks.append(DeepGCNLayer(conv = conv, norm = LayerNorm(inner_dim), act = nn.ReLU(), dropout = 0.5))
 
-        # Merge layers
-        self.lin: nn.Linear = nn.Linear(inner_dim, n_classes)
+        # Fully connected merge block
+        self.merge_block: nn.Module = nn.Sequential(nn.Linear(inner_dim, inner_dim),
+                                                    nn.LayerNorm(inner_dim),
+                                                    nn.ReLU(),
+                                                    nn.Dropout()
+                                                    )
+        
+        # Prediction layer
+        self.pred: nn.Linear = nn.Linear(inner_dim, n_classes)
 
         # Loss
         self.loss: nn.CrossEntropyLoss = nn.CrossEntropyLoss()
@@ -125,12 +132,15 @@ class GraphNet(pl.LightningModule):
         # Graph layers
         x_graph = self.node_transform(x_graph)
         for gin_block in self.gin_blocks:
-            x_graph = gin_block(x_graph, edge_index) + x_graph
+            x_graph = gin_block(x_graph, edge_index)
 
         # Merge layers
         x_graph = global_mean_pool(x_graph, batch = batch)
-        x: torch.Tensor = self.lin(x_fc + x_graph)
-        
+        x: torch.Tensor = self.merge_block(x_fc + x_graph)
+
+        # Make the predictions
+        x = self.pred(x)
+
         return x
     
 
