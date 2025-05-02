@@ -25,7 +25,7 @@ from wandb.sdk.wandb_run import Run
 from modules import paths
 
 
-def configure_wandb_logger(project: str, name: str, config: dict[str, Any]) -> WandbLogger:
+def configure_wandb_logger(project: str, name: str) -> WandbLogger:
     """
     Configure the wandb logger.
 
@@ -35,7 +35,6 @@ def configure_wandb_logger(project: str, name: str, config: dict[str, Any]) -> W
     # Initialize wandb
     wandb_run: Run = wandb.init(project = project,
                                 name = name,
-                                config = config,
                                 dir = paths.DATA_DIR,
                                 settings = wandb.Settings(quiet = True, console= 'off'),
                                 )
