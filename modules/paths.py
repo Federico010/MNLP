@@ -26,9 +26,9 @@ DATASET_URI: str = 'hf://datasets/sapienzanlp/nlp2025_hw1_cultural_dataset'
 TRAIN_SET: str = f'{DATASET_URI}/train.csv'
 VALIDATION_SET: str = f'{DATASET_URI}/valid.csv'
 TEST_SET: Path = DATASET_DIR / 'test.csv'
-UPDATED_TRAIN_SET: Path = DATASET_DIR / 'updated_train.csv'
-UPDATED_VALIDATION_SET: Path = DATASET_DIR / 'updated_validation.csv'
-UPDATED_TEST_SET: Path = DATASET_DIR / 'updated_test.csv'
+UPDATED_TRAIN_SET: Path = DATASET_DIR / 'updated_train.parquet'
+UPDATED_VALIDATION_SET: Path = DATASET_DIR / 'updated_validation.parquet'
+UPDATED_TEST_SET: Path = DATASET_DIR / 'updated_test.parquet'
 TRANSFORMER_PREDICITONS: Path = Path('DerfMax_output_model1.csv')
 GRAPH_PREDICTIONS: Path = Path('DerfMax_output_model2.csv')
 

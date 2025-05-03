@@ -3,16 +3,11 @@ This file contains utility functions for training and evaluating models.
 
 Useful functions:
 - configure_wandb_logger
-- rename_best_checkpoint
 - plot_confusion_matrix
 
 Imports: paths
 """
 
-from pathlib import Path
-from typing import Any
-
-from lightning.pytorch.callbacks import ModelCheckpoint
 from lightning.pytorch.loggers import WandbLogger
 import matplotlib.pyplot as plt
 import numpy as np
@@ -48,17 +43,6 @@ def configure_wandb_logger(project: str, name: str) -> WandbLogger:
 
     # Return the logger
     return WandbLogger(wandb_run = wandb_run)
-
-
-def rename_best_checkpoint(checkpoint: ModelCheckpoint, trial_number: int) -> Path:
-    """
-    Rename the best checkpoint file to include the trial number. This change is NOT reflected in the best_model_path attribute of the checkpoint.
-    """
-
-    checkpoint_path: Path = Path(checkpoint.best_model_path)
-    new_path: Path = checkpoint_path.parent / f'{checkpoint_path.stem}_trial={trial_number}{checkpoint_path.suffix}'
-    checkpoint_path.rename(new_path)
-    return new_path
 
 
 def plot_confusion_matrix(true_y: ArrayLike, pred_y: ArrayLike, label_encoder: LabelEncoder|None = None) -> None:

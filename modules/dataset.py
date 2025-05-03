@@ -282,7 +282,7 @@ def extract_dataset(split: Literal['train', 'validation', 'test']) -> pd.DataFra
 
     # Check if the updated dataset already exists
     if output_file.is_file():
-        return pd.read_csv(output_file, index_col = 'id', keep_default_na = False)
+        return pd.read_parquet(output_file)
 
     # Load the dataset
     df: pd.DataFrame = pd.read_csv(original_file)
@@ -314,7 +314,7 @@ def extract_dataset(split: Literal['train', 'validation', 'test']) -> pd.DataFra
     df = pd.concat([df, common_pages_features_df], axis = 1)
     
     # Save the updated dataset
-    df.to_csv(output_file, index_label = 'id')
+    df.to_parquet(output_file, index = True)
     print(f"Dataset saved to {output_file}")
 
     return df
