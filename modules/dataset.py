@@ -270,7 +270,7 @@ async def _get_common_pages_features(sitelinks: dict[str, dict[str, dict[str, An
     return results
 
 
-def extract_dataset(split: Literal['train', 'validation', 'test']) -> pd.DataFrame:
+def extract_dataset(split: Literal['train', 'validation', 'test'], force_reload: bool = False) -> pd.DataFrame:
     """
     Function to load the dataset and add the features.
     """
@@ -281,7 +281,7 @@ def extract_dataset(split: Literal['train', 'validation', 'test']) -> pd.DataFra
     original_file, output_file = dataset_utils.get_split_paths(split)
 
     # Check if the updated dataset already exists
-    if output_file.is_file():
+    if not force_reload and output_file.is_file():
         return pd.read_parquet(output_file)
 
     # Load the dataset
@@ -303,18 +303,21 @@ def extract_dataset(split: Literal['train', 'validation', 'test']) -> pd.DataFra
     flattened_dict: dict[str, dict[str, Any]] = dataset_utils.flatten_dict(common_pages_features)
     common_pages_features_df: pd.DataFrame = pd.DataFrame.from_dict(flattened_dict, orient = 'index')
 
-    # Fill NaN and convert when necessary
-    numerical_columns: pd.Index[str] = common_pages_features_df.select_dtypes(include = 'number').columns
-    string_columns: pd.Index[str] = common_pages_features_df.select_dtypes(include = 'object').columns
-    common_pages_features_df[numerical_columns] = common_pages_features_df[numerical_columns].fillna(0).astype(int)
-    common_pages_features_df[string_columns] = common_pages_features_df[string_columns].fillna('')
-
     # Add the new features to the original DataFrame
     df['sitelinks_count'] = df.index.map(lambda id: len(sitelinks.get(id, {})))
     df = pd.concat([df, common_pages_features_df], axis = 1)
+
+    # Fill NaN and convert when necessary
+    numerical_columns: pd.Index[str] = df.select_dtypes(include = 'number').columns
+    string_columns: pd.Index[str] = df.select_dtypes(include = 'object').columns
+    df[numerical_columns] = df[numerical_columns].fillna(0).astype(int)
+    df[string_columns] = df[string_columns].fillna('')
+
+    # Order the columns
+    df = df.sort_index(axis = 1)
     
     # Save the updated dataset
-    df.to_parquet(output_file, index = True)
+    df.to_parquet(output_file)
     print(f"Dataset saved to {output_file}")
 
     return df
