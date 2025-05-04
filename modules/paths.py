@@ -5,10 +5,10 @@ Useful constants:
 - DATA_DIR: Path to the data directory.
 - TRANSFORMER_MODEL_DIR: Path to everything related to the transformer model.
 - GRAPH_MODEL_DIR: Path to everything related to the graph model.
-- TRAINING_SET: URI to the training set file. It is downloaded from the Hugging Face Hub.
+- TRAIN_SET: URI to the training set file. It is downloaded from the Hugging Face Hub.
 - VALIDATION_SET: URI to the validation set file. It is downloaded from the Hugging Face Hub.
 - TEST_SET: Path to the test set file.
-- UPDATED_TRAINING_SET: Path to the updated training set file.
+- UPDATED_TRAIN_SET: Path to the updated training set file.
 - UPDATED_VALIDATION_SET: Path to the updated validation set file.
 - UPDATED_TEST_SET: Path to the updated test set file.
 - TRANSFORMER_PREDICTIONS: Path to the transformer model predictions.
