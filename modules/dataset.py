@@ -196,7 +196,6 @@ async def _get_common_pages_features(sitelinks: dict[str, dict[str, dict[str, An
                 'lllimit': 'max',
                 'rdlimit': 'max',
                 'exlimit': 'max',
-                'exintro': '',
                 'explaintext': '',
                 'format': 'json'
             }
