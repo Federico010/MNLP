@@ -37,8 +37,7 @@ def configure_wandb(project: str, name: str, library: Literal['lightning', 'tran
     wandb_run: Run = wandb.init(project = project,
                                 name = name,
                                 dir = paths.DATA_DIR,
-                                settings = wandb.Settings(quiet = True, console= 'off'),
-                                reinit = True
+                                settings = wandb.Settings(quiet = True, console= 'off')
                                 )
 
     # Set the metrics
